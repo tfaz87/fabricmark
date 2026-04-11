@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fabricmark reviews clothing brands on quality, ethics, transparency and price. The honest guide to clothing brands — fabricmark.co.uk">
+  <meta name="keywords" content="clothing brand reviews, fabric quality, ethical fashion, fast fashion reviews, UK clothing brands">
+  <meta property="og:title" content="Fabricmark — The honest guide to clothing brands">
+  <meta property="og:description" content="We review clothing brands on quality, ethics, transparency and price. Independent, impartial, honest.">
+  <meta property="og:url" content="https://www.fabricmark.co.uk">
+  <meta property="og:type" content="website">
+  <title>Fabricmark — The honest guide to clothing brands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ── THEME VARIABLES ── */
+    :root {
+      --bg: #ffffff;
+      --bg2: #f9f8f6;
+      --bg3: #f3f1ee;
+      --ink: #111111;
+      --ink2: #444444;
+      --ink3: #777777;
+      --ink4: #bbbbbb;
+      --border: #ddd9d4;
+      --border2: #c5c0b8;
+      --accent: #1a6b4a;
+      --accent-light: #eaf4ef;
+      --card: #ffffff;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Serif 4', Georgia, serif;
+      --font-ui: 'Inter', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0e0d0c;
+      --bg2: #161412;
+      --bg3: #1d1b18;
+      --ink: #edeae4;
+      --ink2: #9c9790;
+      --ink3: #5c5a55;
+      --ink4: #2e2c28;
+      --border: #272420;
+      --border2: #3a3730;
+      --accent: #4caf82;
+      --accent-light: #0e2a1e;
+      --card: #161412;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background: var(--bg);
+      color: var(--ink);
+      transition: background 0.2s ease, color 0.2s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAVIGATION ── */
+    .nav {
+      background: var(--bg);
+      border-bottom: 2.5px solid var(--ink);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background 0.2s ease;
+    }
+
+    .nav-band {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 48px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .nav-band-left {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-band-left a {
+      font-size: 11px;
+      color: var(--ink3);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      transition: color 0.1s;
+    }
+
+    .nav-band-left a:hover { color: var(--ink); }
+
+    .nav-band-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      width: 28px;
+      height: 28px;
+      border: 0.5px solid var(--border2);
+      background: transparent;
+      cursor: pointer;
+      color: var(--ink3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.1s, border-color 0.1s;
+    }
+
+    .icon-btn:hover { color: var(--ink); border-color: var(--ink); }
+    .icon-btn svg { width: 13px; height: 13px; }
+
+    /* Search overlay */
+    .search-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    .search-overlay.open { display: flex; }
+
+    .search-overlay-box {
+      background: var(--bg);
+      border: 1.5px solid var(--ink);
+      width: 100%;
+      max-width: 640px;
+      margin: 0 24px;
+    }
+
+    .search-overlay-inner {
+      display: flex;
+    }
+
+    .search-overlay-inner input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: var(--font-ui);
+      color: var(--ink);
+      outline: none;
+    }
+
+    .search-overlay-inner input::placeholder { color: var(--ink3); }
+
+    .search-overlay-inner button {
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      padding: 0 24px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: var(--font-ui);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .search-close {
+      display: block;
+      font-size: 11px;
+      color: var(--ink3);
+      text-align: center;
+      padding: 8px;
+      cursor: pointer;
+      border-top: 0.5px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .nav-core {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 48px;
+    }
+
+    .nav-links-left {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links-left a,
+    .nav-links-right a {
+      font-size: 11px;
+      color: var(--ink2);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      transition: color 0.1s;
+    }
+
+    .nav-links-left a:hover,
+    .nav-links-right a:hover { color: var(--ink); }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 16px 40px;
+      text-align: center;
+      display: block;
+      white-space: nowrap;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav-cta {
+      font-size: 11px;
+      padding: 7px 20px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      transition: background 0.1s, color 0.1s;
+    }
+
+    .nav-cta:hover { background: var(--ink); color: var(--bg); }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 2.5px solid var(--ink);
+      min-height: 440px;
+    }
+
+    .hero-left {
+      padding: 52px 48px;
+      border-right: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .hero-right {
+      padding: 52px 48px;
+      background: var(--bg2);
+    }
+
+    .hero-kicker {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ink3);
+      margin-bottom: 18px;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-serif);
+      font-size: 50px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.08;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero-deck {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--ink2);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      border-top: 0.5px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .hstat {
+      flex: 1;
+      padding-right: 20px;
+      border-right: 0.5px solid var(--border);
+      margin-right: 20px;
+    }
+
+    .hstat:last-child {
+      border-right: none;
+      margin-right: 0;
+    }
+
+    .hstat-num {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      color: var(--ink);
+    }
+
+    .hstat-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--ink3);
+      margin-top: 3px;
+    }
+
+    /* Search panel */
+    .srch-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--ink3);
+      margin-bottom: 12px;
+    }
+
+    .srch-bar {
+      display: flex;
+      border: 1.5px solid var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .srch-bar input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 13px 14px;
+      font-size: 14px;
+      font-family: var(--font-ui);
+      color: var(--ink);
+      outline: none;
+    }
+
+    .srch-bar input::placeholder { color: var(--ink3); }
+
+    .srch-bar button {
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      padding: 0 22px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: var(--font-ui);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      white-space: nowrap;
+      transition: opacity 0.1s;
+    }
+
+    .srch-bar button:hover { opacity: 0.85; }
+
+    .srch-section { margin-bottom: 18px; }
+
+    .srch-section-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ink3);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .pill {
+      padding: 5px 13px;
+      border: 0.5px solid var(--border2);
+      color: var(--ink2);
+      font-size: 12px;
+      cursor: pointer;
+      background: transparent;
+      font-family: var(--font-ui);
+      transition: all 0.12s;
+    }
+
+    .pill:hover,
+    .pill.active {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    .srch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .srch-select {
+      padding: 8px 10px;
+      border: 0.5px solid var(--border);
+      background: var(--bg);
+      color: var(--ink2);
+      font-size: 12px;
+      font-family: var(--font-ui);
+      outline: none;
+      cursor: pointer;
+      width: 100%;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 28px;
+    }
+
+    .srch-select:focus { border-color: var(--ink); }
+
+    /* ── SECTIONS ── */
+    .section { padding: 52px 48px; }
+    .section-alt { background: var(--bg2); }
+
+    .sec-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 28px;
+    }
+
+    .sec-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .sec-title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .sec-more {
+      font-size: 11px;
+      color: var(--ink3);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding-bottom: 1px;
+      border-bottom: 0.5px solid var(--ink3);
+      transition: color 0.1s, border-color 0.1s;
+      white-space: nowrap;
+    }
+
+    .sec-more:hover { color: var(--ink); border-color: var(--ink); }
+
+    /* ── HOW WE REVIEW ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 0.5px solid var(--border);
+    }
+
+    .proc {
+      padding: 28px 22px;
+      border-right: 0.5px solid var(--border);
+      background: var(--card);
+    }
+
+    .proc:last-child { border-right: none; }
+
+    .proc-num {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      color: var(--border2);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .proc-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      margin-bottom: 10px;
+    }
+
+    .proc-desc {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink3);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .proc-badge {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 0.5px solid var(--accent);
+      padding: 3px 10px;
+    }
+
+    /* ── BRAND CARDS ── */
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 0.5px solid var(--border);
+    }
+
+    .bcard {
+      border-right: 0.5px solid var(--border);
+      background: var(--card);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: background 0.1s;
+    }
+
+    .bcard:last-child { border-right: none; }
+    .bcard:hover { background: var(--bg2); }
+    .bcard:hover .bcard-name { text-decoration: underline; }
+
+    .bcard-accent { height: 3px; }
+    .bcard-accent-1 { background: var(--ink); }
+    .bcard-accent-2 { background: var(--ink3); }
+    .bcard-accent-3 { background: var(--border2); }
+
+    .bcard-body { padding: 20px; }
+
+    .bcard-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .bcard-tag {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    .bcard-date { font-size: 11px; color: var(--ink4); }
+
+    .bcard-name {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .bcard-sub {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink3);
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    .bcard-scores {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 12px 0;
+      border-top: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .bcs-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--ink3);
+      margin-bottom: 4px;
+    }
+
+    .bcs-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .bcard-link {
+      font-size: 12px;
+      color: var(--ink2);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── GUIDES ── */
+    .guides-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .guides-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 0.5px solid var(--border);
+    }
+
+    .gcard {
+      padding: 22px;
+      border-right: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+      background: var(--card);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: background 0.1s;
+    }
+
+    .gcard:nth-child(2n) { border-right: none; }
+    .gcard:nth-child(3),
+    .gcard:nth-child(4) { border-bottom: none; }
+    .gcard:hover { background: var(--bg2); }
+    .gcard:hover .gcard-title { text-decoration: underline; }
+
+    .gcard-tag {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .gcard-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .gcard-desc {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--ink3);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      border: 0.5px solid var(--border);
+      background: var(--card);
+    }
+
+    .sb-inner { padding: 24px; }
+
+    .sb-title {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .sb-desc {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink2);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .sb-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      background: var(--ink);
+      color: var(--bg);
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-ui);
+      text-decoration: none;
+      transition: opacity 0.1s;
+    }
+
+    .sb-btn:hover { opacity: 0.85; }
+
+    .sb-links { border-top: 0.5px solid var(--border); }
+
+    .sb-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--ink2);
+      text-decoration: none;
+      padding: 11px 24px;
+      border-bottom: 0.5px solid var(--border);
+      transition: background 0.1s, color 0.1s;
+    }
+
+    .sb-link:hover { background: var(--bg2); color: var(--ink); }
+
+    /* ── APP STRIP ── */
+    .app-strip {
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .app-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .app-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .app-desc {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink3);
+      font-weight: 300;
+      line-height: 1.65;
+      max-width: 400px;
+    }
+
+    .app-btns { display: flex; gap: 10px; flex-shrink: 0; }
+
+    .app-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 22px;
+      border: 0.5px solid var(--border2);
+      background: var(--card);
+      text-decoration: none;
+      color: var(--ink);
+      transition: border-color 0.1s;
+    }
+
+    .app-btn:hover { border-color: var(--ink); }
+
+    .app-btn-label {
+      font-size: 9px;
+      color: var(--ink3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+    }
+
+    .app-btn-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      display: block;
+    }
+
+    .app-icon { opacity: 0.55; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--ink); }
+
+    .footer-main { padding: 52px 48px 0; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 52px;
+      padding-bottom: 40px;
+      border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--bg);
+      margin-bottom: 12px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    .footer-domain {
+      font-size: 11px;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .footer-col-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.22);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    }
+
+    .footer-cols a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      margin-bottom: 9px;
+      font-weight: 300;
+      transition: color 0.1s;
+    }
+
+    .footer-cols a:hover { color: rgba(255,255,255,0.85); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); }
+
+    .footer-social { display: flex; gap: 18px; }
+
+    .footer-social a {
+      font-size: 11px;
+      color: rgba(255,255,255,0.22);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      transition: color 0.1s;
+    }
+
+    .footer-social a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .nav-band { padding: 8px 24px; }
+      .nav-core { padding: 0 24px; }
+      .nav-logo { padding: 14px 20px; font-size: 24px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 40px 24px; }
+      .hero-right { padding: 32px 24px; border-top: 0.5px solid var(--border); }
+      .hero-h1 { font-size: 38px; }
+      .section { padding: 40px 24px; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .proc:nth-child(2) { border-right: none; }
+      .proc:nth-child(3) { border-right: 0.5px solid var(--border); border-top: 0.5px solid var(--border); }
+      .proc:nth-child(4) { border-right: none; border-top: 0.5px solid var(--border); }
+      .brand-grid { grid-template-columns: 1fr; border: 0.5px solid var(--border); }
+      .bcard { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .bcard:last-child { border-bottom: none; }
+      .guides-layout { grid-template-columns: 1fr; }
+      .app-strip { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px 32px; }
+      .footer-main { padding: 0; }
+      .footer-cols { grid-template-columns: repeat(2, 1fr); }
+      .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links-left { display: none; }
+      .nav-logo { font-size: 20px; padding: 14px 12px; }
+      .hero-h1 { font-size: 32px; }
+      .srch-grid { grid-template-columns: 1fr; }
+      .guides-grid { grid-template-columns: 1fr; }
+      .gcard:nth-child(2n) { border-right: 0.5px solid var(--border); }
+      .gcard:nth-child(odd) { border-right: none; }
+      .gcard:nth-child(3) { border-bottom: 0.5px solid var(--border); }
+      .footer-cols { grid-template-columns: 1fr; }
+      .app-btns { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-band">
+      <div class="nav-band-left">
+        <a href="/about.html">About</a>
+        <a href="/how-we-review.html">How we review</a>
+        <a href="/advertise.html">Advertise</a>
+      </div>
+      <div class="nav-band-right">
+        <button class="icon-btn" onclick="openSearch()" aria-label="Search" title="Search brands">
+          <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="5.5" cy="5.5" r="4"/>
+            <path d="M9 9l2.5 2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="icon-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg id="theme-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="6" cy="6" r="2.5"/>
+            <path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav-core">
+      <div class="nav-links-left">
+        <a href="/brands.html">Brands</a>
+        <a href="/guides.html">Clothing guides</a>
+        <a href="/find-your-fit.html">Find your perfect fit</a>
+      </div>
+      <a href="/" class="nav-logo">Fabricmark</a>
+      <div class="nav-links-right">
+        <a href="/signup.html" class="nav-cta">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-label="Search">
+    <div class="search-overlay-box">
+      <div class="search-overlay-inner">
+        <input type="text" id="search-input" placeholder='Search brands — try "Zara" or "sustainable denim"...' onkeydown="handleSearch(event)">
+        <button onclick="doSearch()">Search</button>
+      </div>
+      <span class="search-close" onclick="closeSearch()">Close &times;</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div>
+          <div class="hero-kicker">fabricmark.co.uk &mdash; est. 2026</div>
+          <h1 class="hero-h1">The honest guide to clothing brands</h1>
+          <p class="hero-deck">We review clothing brands on quality, ethics, transparency and price &mdash; giving you the technical information the industry doesn&rsquo;t want you to have.</p>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat">
+            <div class="hstat-num">240+</div>
+            <div class="hstat-label">Brands reviewed</div>
+          </div>
+          <div class="hstat">
+            <div class="hstat-num">12</div>
+            <div class="hstat-label">Categories</div>
+          </div>
+          <div class="hstat">
+            <div class="hstat-num">4</div>
+            <div class="hstat-label">Score dimensions</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="srch-label">Search &amp; filter brands</div>
+        <div class="srch-bar">
+          <input type="text" id="hero-search" placeholder='Try &ldquo;Zara&rdquo;, &ldquo;wool coats&rdquo; or &ldquo;ethical denim&rdquo;...' onkeydown="handleHeroSearch(event)">
+          <button onclick="doHeroSearch()">Search brands</button>
+        </div>
+
+        <div class="srch-section">
+          <div class="srch-section-label">Category</div>
+          <div class="pill-row" role="group" aria-label="Filter by category">
+            <button class="pill active" onclick="setPill(this)">All</button>
+            <button class="pill" onclick="setPill(this)">Fast fashion</button>
+            <button class="pill" onclick="setPill(this)">Contemporary</button>
+            <button class="pill" onclick="setPill(this)">Premium</button>
+            <button class="pill" onclick="setPill(this)">Sustainable</button>
+            <button class="pill" onclick="setPill(this)">Luxury</button>
+            <button class="pill" onclick="setPill(this)">Sportswear</button>
+          </div>
+        </div>
+
+        <div class="srch-section">
+          <div class="srch-section-label">Refine further</div>
+          <div class="srch-grid">
+            <select class="srch-select" aria-label="Fabric preference">
+              <option value="">Fabric preference</option>
+              <option value="natural">Natural only</option>
+              <option value="mostly-natural">Mostly natural</option>
+              <option value="mixed">Mixed fabrics</option>
+              <option value="synthetic">Mostly synthetic</option>
+            </select>
+            <select class="srch-select" aria-label="Price range">
+              <option value="">Price range</option>
+              <option value="1">&pound; &mdash; Budget</option>
+              <option value="2">&pound;&pound; &mdash; Affordable</option>
+              <option value="3">&pound;&pound;&pound; &mdash; Mid-range</option>
+              <option value="4">&pound;&pound;&pound;&pound; &mdash; Premium</option>
+              <option value="5">&pound;&pound;&pound;&pound;&pound; &mdash; Luxury</option>
+            </select>
+            <select class="srch-select" aria-label="Ethics rating">
+              <option value="">Ethics rating</option>
+              <option value="5">5/5 &mdash; Exemplary</option>
+              <option value="4">4/5 &mdash; Good</option>
+              <option value="3">3/5 &mdash; Average</option>
+              <option value="2">2/5 or below</option>
+            </select>
+            <select class="srch-select" aria-label="Quality rating">
+              <option value="">Quality rating</option>
+              <option value="5">5/5 &mdash; Exceptional</option>
+              <option value="4">4/5 &mdash; Good</option>
+              <option value="3">3/5 &mdash; Average</option>
+              <option value="2">2/5 or below</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE REVIEW -->
+    <section class="section" aria-labelledby="methodology-heading">
+      <div class="sec-header">
+        <div>
+          <div class="sec-eyebrow">Our methodology</div>
+          <h2 class="sec-title" id="methodology-heading">How we review clothing brands</h2>
+        </div>
+        <a href="/how-we-review.html" class="sec-more">Our full methodology &rarr;</a>
+      </div>
+      <div class="process-grid">
+        <div class="proc">
+          <div class="proc-num">01</div>
+          <div class="proc-title">Quality</div>
+          <p class="proc-desc">Fabric composition, construction quality, stitching and longevity. What garments are actually made from &mdash; not what the marketing claims.</p>
+          <span class="proc-badge">Scored 1&ndash;5</span>
+        </div>
+        <div class="proc">
+          <div class="proc-num">02</div>
+          <div class="proc-title">Ethics</div>
+          <p class="proc-desc">Labour rights, environmental practices, chemical use, textile waste and diversity across the full supply chain and manufacturing base.</p>
+          <span class="proc-badge">Scored 1&ndash;5</span>
+        </div>
+        <div class="proc">
+          <div class="proc-num">03</div>
+          <div class="proc-title">Transparency</div>
+          <p class="proc-desc">How openly a brand publishes supplier data, fabric compositions and sustainability progress. Opacity scores lower &mdash; it is that simple.</p>
+          <span class="proc-badge">Scored 1&ndash;5</span>
+        </div>
+        <div class="proc">
+          <div class="proc-num">04</div>
+          <div class="proc-title">Price</div>
+          <p class="proc-desc">We benchmark pricing across the full range and assess whether cost genuinely reflects the quality of materials and construction.</p>
+          <span class="proc-badge">&pound; to &pound;&pound;&pound;&pound;&pound;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST BRAND REVIEWS -->
+    <section class="section section-alt" aria-labelledby="reviews-heading">
+      <div class="sec-header">
+        <div>
+          <div class="sec-eyebrow">Reviews</div>
+          <h2 class="sec-title" id="reviews-heading">Latest brand reviews</h2>
+        </div>
+        <a href="/brands.html" class="sec-more">View all brands &rarr;</a>
+      </div>
+      <div class="brand-grid">
+
+        <a href="/brands/zara.html" class="bcard">
+          <div class="bcard-accent bcard-accent-1"></div>
+          <div class="bcard-body">
+            <div class="bcard-meta">
+              <span class="bcard-tag">Fast fashion</span>
+              <span class="bcard-date">Apr 2026</span>
+            </div>
+            <div class="bcard-name">Zara</div>
+            <div class="bcard-sub">Inditex Group &middot; Spain</div>
+            <div class="bcard-scores">
+              <div><div class="bcs-label">Quality</div><div class="bcs-value">3/5</div></div>
+              <div><div class="bcs-label">Ethics</div><div class="bcs-value">3/5</div></div>
+              <div><div class="bcs-label">Transp.</div><div class="bcs-value">4/5</div></div>
+              <div><div class="bcs-label">Price</div><div class="bcs-value">&pound;&pound;&pound;</div></div>
+            </div>
+            <span class="bcard-link">Read full review &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/brands/arket.html" class="bcard">
+          <div class="bcard-accent bcard-accent-2"></div>
+          <div class="bcard-body">
+            <div class="bcard-meta">
+              <span class="bcard-tag">Contemporary</span>
+              <span class="bcard-date">Apr 2026</span>
+            </div>
+            <div class="bcard-name">Arket</div>
+            <div class="bcard-sub">H&amp;M Group &middot; Sweden</div>
+            <div class="bcard-scores">
+              <div><div class="bcs-label">Quality</div><div class="bcs-value">4/5</div></div>
+              <div><div class="bcs-label">Ethics</div><div class="bcs-value">3/5</div></div>
+              <div><div class="bcs-label">Transp.</div><div class="bcs-value">4/5</div></div>
+              <div><div class="bcs-label">Price</div><div class="bcs-value">&pound;&pound;&pound;&pound;</div></div>
+            </div>
+            <span class="bcard-link">Read full review &rarr;</span>
+          </div>
+        </a>
+
+        <a href="/brands/hm.html" class="bcard">
+          <div class="bcard-accent bcard-accent-3"></div>
+          <div class="bcard-body">
+            <div class="bcard-meta">
+              <span class="bcard-tag">Fast fashion</span>
+              <span class="bcard-date">Mar 2026</span>
+            </div>
+            <div class="bcard-name">H&amp;M</div>
+            <div class="bcard-sub">H&amp;M Group &middot; Sweden</div>
+            <div class="bcard-scores">
+              <div><div class="bcs-label">Quality</div><div class="bcs-value">2/5</div></div>
+              <div><div class="bcs-label">Ethics</div><div class="bcs-value">2/5</div></div>
+              <div><div class="bcs-label">Transp.</div><div class="bcs-value">3/5</div></div>
+              <div><div class="bcs-label">Price</div><div class="bcs-value">&pound;&pound;</div></div>
+            </div>
+            <span class="bcard-link">Read full review &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CLOTHING GUIDES -->
+    <section class="section" aria-labelledby="guides-heading">
+      <div class="guides-layout">
+        <div>
+          <div class="sec-header">
+            <div>
+              <div class="sec-eyebrow">Guides</div>
+              <h2 class="sec-title" id="guides-heading">Clothing guides</h2>
+            </div>
+            <a href="/guides.html" class="sec-more">All guides &rarr;</a>
+          </div>
+          <div class="guides-grid">
+            <a href="/guides/how-to-read-a-clothing-label.html" class="gcard">
+              <span class="gcard-tag">Fabrics</span>
+              <div class="gcard-title">How to read a clothing label</div>
+              <p class="gcard-desc">What fabric content percentages actually mean, and what to look for before you hand over your money.</p>
+            </a>
+            <a href="/guides/natural-vs-synthetic-fibres.html" class="gcard">
+              <span class="gcard-tag">Fabrics</span>
+              <div class="gcard-title">Natural vs synthetic fibres</div>
+              <p class="gcard-desc">The real difference between cotton, polyester, viscose, lyocell and everything in between.</p>
+            </a>
+            <a href="/guides/what-is-fast-fashion.html" class="gcard">
+              <span class="gcard-tag">Sustainability</span>
+              <div class="gcard-title">What is fast fashion?</div>
+              <p class="gcard-desc">The environmental and human cost of the fast fashion model &mdash; explained without the greenwashing.</p>
+            </a>
+            <a href="/guides/shopping-sustainably-on-a-budget.html" class="gcard">
+              <span class="gcard-tag">Buying</span>
+              <div class="gcard-title">Shopping sustainably on a budget</div>
+              <p class="gcard-desc">How to find better quality clothing without spending more than you need to.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="sb-inner">
+            <div class="sb-title">Find your perfect fit</div>
+            <p class="sb-desc">Tell us your budget, fabric preferences and ethical priorities. We will match you to brands that genuinely suit your needs.</p>
+            <a href="/find-your-fit.html" class="sb-btn">Start matching</a>
+          </div>
+          <div class="sb-links">
+            <a href="/brands.html" class="sb-link"><span>Browse all brands</span><span>&rarr;</span></a>
+            <a href="/brands/category/fast-fashion.html" class="sb-link"><span>Browse by category</span><span>&rarr;</span></a>
+            <a href="/guides/natural-vs-synthetic-fibres.html" class="sb-link"><span>Browse by fabric type</span><span>&rarr;</span></a>
+            <a href="/brands/category/sustainable.html" class="sb-link"><span>Sustainable brands</span><span>&rarr;</span></a>
+            <a href="/brands/best-value.html" class="sb-link"><span>Best value brands</span><span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP DOWNLOAD STRIP -->
+    <div class="app-strip">
+      <div>
+        <div class="app-eyebrow">Fabricmark on mobile</div>
+        <div class="app-title">Research brands in-store, on the go</div>
+        <p class="app-desc">Check what a brand&rsquo;s clothes are actually made of before you buy. Compare alternatives, read reviews and find better options &mdash; all from your phone.</p>
+      </div>
+      <div class="app-btns">
+        <a href="#" class="app-btn">
+          <svg class="app-icon" width="22" height="22" viewBox="0 0 22 22" fill="currentColor">
+            <path d="M16 11.5c0-2.4 2-3.6 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.9.9-3.6.9-.8 0-1.9-.8-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8 1.4 0 1.8.8 3 .8 1.3 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.8z"/>
+            <path d="M13.5 5c.7-.8 1.1-1.9 1-3-.9.1-2 .7-2.7 1.4-.6.6-1.1 1.6-1 2.6 1 .1 2.1-.5 2.7-1z"/>
+          </svg>
+          <div>
+            <span class="app-btn-label">Download on the</span>
+            <span class="app-btn-name">App Store</span>
+          </div>
+        </a>
+        <a href="#" class="app-btn">
+          <svg class="app-icon" width="22" height="22" viewBox="0 0 22 22" fill="currentColor">
+            <path d="M4 3.5l9 7.5-9 7.5V3.5z" opacity=".35"/>
+            <path d="M4 3.5l7 2-2.5 2.8L4 3.5z" opacity=".55"/>
+            <path d="M4 18.5l7-2-2.5-2.8L4 18.5z" opacity=".55"/>
+            <path d="M11 5.5l6.5 5.5-6.5 5.5 2.5-5.5-2.5-5.5z" opacity=".45"/>
+          </svg>
+          <div>
+            <span class="app-btn-label">Get it on</span>
+            <span class="app-btn-name">Google Play</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-main">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="footer-logo">Fabricmark</a>
+          <p class="footer-tagline">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p>
+          <div class="footer-domain">fabricmark.co.uk</div>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <div class="footer-col-title">Brands</div>
+            <a href="/brands/category/fast-fashion.html">Fast fashion</a>
+            <a href="/brands/category/contemporary.html">Contemporary</a>
+            <a href="/brands/category/premium.html">Premium</a>
+            <a href="/brands/category/luxury.html">Luxury</a>
+            <a href="/brands/category/sustainable.html">Sustainable</a>
+            <a href="/brands/category/sportswear.html">Sportswear</a>
+          </div>
+          <div>
+            <div class="footer-col-title">Guides</div>
+            <a href="/guides/natural-vs-synthetic-fibres.html">Fabric types explained</a>
+            <a href="/guides/how-to-read-a-clothing-label.html">Reading clothing labels</a>
+            <a href="/guides/what-is-fast-fashion.html">Ethical fashion</a>
+            <a href="/guides/shopping-sustainably-on-a-budget.html">How to buy better</a>
+            <a href="/guides.html">All guides</a>
+          </div>
+          <div>
+            <div class="footer-col-title">Fabricmark</div>
+            <a href="/about.html">About us</a>
+            <a href="/how-we-review.html">How we review</a>
+            <a href="/submit-a-brand.html">Submit a brand</a>
+            <a href="/advertise.html">Advertise</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy-policy.html">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 Fabricmark &middot; fabricmark.co.uk &middot; All rights reserved</div>
+        <div class="footer-social">
+          <a href="https://instagram.com/fabricmark" rel="noopener">Instagram</a>
+          <a href="https://x.com/fabricmark" rel="noopener">X</a>
+          <a href="https://pinterest.com/fabricmark" rel="noopener">Pinterest</a>
+          <a href="https://facebook.com/fabricmark" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── THEME ──
+    (function() {
+      var saved = localStorage.getItem('fm-theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        setDarkIcon();
+      }
+    })();
+
+    function setDarkIcon() {
+      var icon = document.getElementById('theme-icon');
+      if (icon) icon.innerHTML = '<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';
+    }
+
+    function setLightIcon() {
+      var icon = document.getElementById('theme-icon');
+      if (icon) icon.innerHTML = '<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';
+    }
+
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      if (current === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('fm-theme', 'light');
+        setLightIcon();
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('fm-theme', 'dark');
+        setDarkIcon();
+      }
+    }
+
+    // ── SEARCH ──
+    function openSearch() {
+      document.getElementById('search-overlay').classList.add('open');
+      setTimeout(function() { document.getElementById('search-input').focus(); }, 50);
+    }
+
+    function closeSearch() {
+      document.getElementById('search-overlay').classList.remove('open');
+    }
+
+    function doSearch() {
+      var q = document.getElementById('search-input').value.trim();
+      if (q) window.location.href = '/search.html?q=' + encodeURIComponent(q);
+    }
+
+    function handleSearch(e) {
+      if (e.key === 'Enter') doSearch();
+      if (e.key === 'Escape') closeSearch();
+    }
+
+    function doHeroSearch() {
+      var q = document.getElementById('hero-search').value.trim();
+      if (q) window.location.href = '/search.html?q=' + encodeURIComponent(q);
+    }
+
+    function handleHeroSearch(e) {
+      if (e.key === 'Enter') doHeroSearch();
+    }
+
+    document.getElementById('search-overlay').addEventListener('click', function(e) {
+      if (e.target === this) closeSearch();
+    });
+
+    // ── CATEGORY PILLS ──
+    function setPill(el) {
+      document.querySelectorAll('.pill').forEach(function(p) { p.classList.remove('active'); });
+      el.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
