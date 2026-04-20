@@ -1,861 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zara clothing brand review — quality, ethics, transparency and price rating. Is Zara worth buying? What fabrics does Zara use? Fabricmark's honest review.">
-  <meta name="keywords" content="Zara review, Zara quality, Zara ethics, what fabrics does Zara use, is Zara ethical, Zara clothing review UK">
-  <meta property="og:title" content="Zara Review — Quality, Ethics & Transparency | Fabricmark">
-  <meta property="og:description" content="We review Zara on quality, ethics, transparency and price. Find out what fabrics Zara uses, where their clothes are made, and whether they are worth buying.">
-  <meta property="og:url" content="https://www.fabricmark.co.uk/brands/zara.html">
-  <meta property="og:type" content="article">
-  <title>Zara Review — Quality, Ethics &amp; Transparency | Fabricmark</title>
-  <link rel="canonical" href="https://www.fabricmark.co.uk/brands/zara.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    :root {
-      --bg: #ffffff;
-      --bg2: #f9f8f6;
-      --bg3: #f3f1ee;
-      --ink: #111111;
-      --ink2: #444444;
-      --ink3: #777777;
-      --ink4: #bbbbbb;
-      --border: #ddd9d4;
-      --border2: #c5c0b8;
-      --accent: #1a6b4a;
-      --card: #ffffff;
-      --font-serif: 'Playfair Display', Georgia, serif;
-      --font-body: 'Source Serif 4', Georgia, serif;
-      --font-ui: 'Inter', system-ui, sans-serif;
-    }
-
-    [data-theme="dark"] {
-      --bg: #0e0d0c;
-      --bg2: #161412;
-      --bg3: #1d1b18;
-      --ink: #edeae4;
-      --ink2: #9c9790;
-      --ink3: #5c5a55;
-      --ink4: #2e2c28;
-      --border: #272420;
-      --border2: #3a3730;
-      --accent: #4caf82;
-      --card: #161412;
-    }
-
-    body {
-      font-family: var(--font-ui);
-      background: var(--bg);
-      color: var(--ink);
-      transition: background 0.2s, color 0.2s;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; }
-
-    /* ── NAV ── */
-    .nav {
-      background: var(--bg);
-      border-bottom: 2.5px solid var(--ink);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-band {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 8px 48px;
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .nav-band-left { display: flex; gap: 22px; }
-    .nav-band-left a {
-      font-size: 11px; color: var(--ink3); text-decoration: none;
-      text-transform: uppercase; letter-spacing: 0.7px;
-    }
-    .nav-band-left a:hover { color: var(--ink); }
-
-    .nav-band-right { display: flex; align-items: center; gap: 10px; }
-
-    .icon-btn {
-      width: 28px; height: 28px;
-      border: 0.5px solid var(--border2);
-      background: transparent; cursor: pointer;
-      color: var(--ink3); display: flex;
-      align-items: center; justify-content: center;
-    }
-    .icon-btn:hover { color: var(--ink); border-color: var(--ink); }
-    .icon-btn svg { width: 13px; height: 13px; }
-
-    .nav-core {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      padding: 0 48px;
-    }
-
-    .nav-links-left { display: flex; gap: 28px; }
-    .nav-links-left a, .nav-links-right a {
-      font-size: 11px; color: var(--ink2); text-decoration: none;
-      text-transform: uppercase; letter-spacing: 0.9px;
-    }
-    .nav-links-left a:hover, .nav-links-right a:hover { color: var(--ink); }
-
-    .nav-logo {
-      font-family: var(--font-serif);
-      font-size: 28px; font-weight: 400;
-      color: var(--ink); text-decoration: none;
-      padding: 16px 40px; text-align: center;
-      display: block; white-space: nowrap;
-    }
-
-    .nav-links-right { display: flex; justify-content: flex-end; }
-
-    .nav-cta {
-      font-size: 11px; padding: 7px 20px;
-      border: 1px solid var(--ink); color: var(--ink);
-      text-decoration: none; text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-    .nav-cta:hover { background: var(--ink); color: var(--bg); }
-
-    /* ── BREADCRUMB ── */
-    .breadcrumb {
-      padding: 10px 48px;
-      border-bottom: 0.5px solid var(--border);
-      font-size: 11px; color: var(--ink3);
-      display: flex; gap: 6px; align-items: center;
-    }
-    .breadcrumb a { color: var(--ink3); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--ink); }
-    .breadcrumb-sep { color: var(--ink4); }
-
-    /* ── BRAND BANNER ── */
-    .brand-banner {
-      background: var(--ink);
-      padding: 40px 48px 0;
-      border-bottom: 2.5px solid var(--ink);
-    }
-
-    .bb-top {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 28px;
-    }
-
-    .bb-category {
-      font-size: 10px; letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 10px;
-    }
-
-    .bb-name {
-      font-family: var(--font-serif);
-      font-size: 64px; font-weight: 400;
-      color: #ffffff; line-height: 1;
-      letter-spacing: -1.5px; margin-bottom: 8px;
-    }
-
-    .bb-sub {
-      font-size: 13px;
-      color: rgba(255,255,255,0.38);
-      font-weight: 300;
-    }
-
-    .bb-meta { text-align: right; }
-    .bb-updated {
-      font-size: 11px;
-      color: rgba(255,255,255,0.22);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      line-height: 1.8;
-    }
-
-    /* ── SCORE BAR ── */
-    .score-bar {
-      display: flex;
-      background: var(--bg);
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .score-item {
-      flex: 1; padding: 16px 20px;
-      border-right: 0.5px solid var(--border);
-    }
-    .score-item:last-child { border-right: none; }
-
-    .score-label {
-      font-size: 9px; text-transform: uppercase;
-      letter-spacing: 1.2px; color: var(--ink3);
-      margin-bottom: 6px;
-    }
-
-    .score-num {
-      font-family: var(--font-serif);
-      font-size: 26px; color: var(--ink);
-    }
-
-    .score-dots { display: flex; gap: 4px; margin-top: 6px; }
-    .dot { width: 9px; height: 9px; background: var(--border); }
-    .dot.on { background: var(--ink); }
-
-    .score-badge {
-      display: inline-block; margin-top: 10px;
-      font-size: 10px; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--accent);
-      border: 0.5px solid var(--accent); padding: 3px 10px;
-    }
-
-    .score-sub {
-      font-size: 11px; color: var(--ink3); margin-top: 6px;
-    }
-
-    /* ── PAGE LAYOUT ── */
-    .page-layout {
-      display: grid;
-      grid-template-columns: 1fr 268px;
-      border-bottom: 2.5px solid var(--ink);
-    }
-
-    /* ── ARTICLE ── */
-    .article {
-      padding: 40px 48px;
-      border-right: 0.5px solid var(--border);
-    }
-
-    .article h2 {
-      font-family: var(--font-serif);
-      font-size: 22px; font-weight: 400;
-      color: var(--ink);
-      margin: 2.2rem 0 0.7rem;
-      padding-bottom: 8px;
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .article h2:first-child { margin-top: 0; }
-
-    .article p {
-      font-family: var(--font-body);
-      font-size: 15px; line-height: 1.85;
-      color: var(--ink2); margin-bottom: 0.9rem;
-      font-weight: 300;
-    }
-
-    .article p strong {
-      font-weight: 400; color: var(--ink);
-    }
-
-    /* Inline guide link */
-    .inline-link {
-      display: flex; align-items: center; gap: 12px;
-      padding: 12px 0;
-      border-top: 0.5px solid var(--border);
-      border-bottom: 0.5px solid var(--border);
-      margin: 1rem 0; text-decoration: none;
-      transition: background 0.1s;
-    }
-    .inline-link:hover { background: var(--bg2); padding-left: 8px; }
-    .inline-link:hover .il-text { text-decoration: underline; }
-    .il-arrow { font-size: 14px; color: var(--ink3); flex-shrink: 0; }
-    .il-label {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 1px; color: var(--accent); margin-bottom: 2px;
-    }
-    .il-text { font-size: 13px; color: var(--ink); font-family: var(--font-ui); }
-
-    /* Fabric chips */
-    .fabric-row {
-      display: flex; flex-wrap: wrap;
-      gap: 6px; margin: 10px 0 1.2rem;
-    }
-
-    .chip {
-      font-size: 11px; padding: 4px 11px;
-      border: 0.5px solid var(--border);
-      color: var(--ink3);
-    }
-
-    .chip.nat { border-color: var(--accent); color: var(--accent); }
-    .chip.syn { border-color: #b03030; color: #b03030; }
-    [data-theme="dark"] .chip.syn { border-color: #e07070; color: #e07070; }
-
-    /* Manufacturing rows */
-    .mfg { margin: 12px 0 1.2rem; }
-
-    .mfg-row {
-      display: flex; gap: 14px;
-      margin-bottom: 12px;
-    }
-
-    .mfg-line {
-      width: 2px; background: var(--ink);
-      flex-shrink: 0; margin-top: 4px;
-      align-self: stretch;
-    }
-    .mfg-line.dim { background: var(--border2); }
-
-    .mfg-text {
-      font-family: var(--font-body);
-      font-size: 14px; color: var(--ink2);
-      line-height: 1.65; font-weight: 300;
-    }
-    .mfg-text strong { font-weight: 400; color: var(--ink); }
-
-    /* Verdict */
-    .verdict {
-      border-top: 2px solid var(--ink);
-      border-bottom: 2px solid var(--ink);
-      padding: 20px 0; margin: 2.2rem 0 0;
-    }
-
-    .verdict-label {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 1.5px; color: var(--ink3);
-      margin-bottom: 10px;
-    }
-
-    .verdict p {
-      font-family: var(--font-body);
-      font-size: 15px; font-weight: 300;
-      line-height: 1.85; color: var(--ink);
-      margin: 0;
-    }
-
-    /* ── SIDEBAR ── */
-    .sidebar {
-      padding: 28px 24px;
-      background: var(--bg2);
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
-    .sb-section {}
-
-    .sb-title {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 1.5px; color: var(--ink3);
-      margin-bottom: 14px; padding-bottom: 8px;
-      border-bottom: 2px solid var(--ink);
-    }
-
-    /* Score mini grid */
-    .score-mini-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .smg {
-      padding: 10px; background: var(--card);
-      border: 0.5px solid var(--border);
-    }
-    .smg-label {
-      font-size: 9px; text-transform: uppercase;
-      letter-spacing: 0.8px; color: var(--ink3);
-      margin-bottom: 4px;
-    }
-    .smg-value {
-      font-family: var(--font-serif);
-      font-size: 20px; color: var(--ink);
-    }
-
-    /* Alternatives */
-    .alt-item {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 0.5px solid var(--border);
-      cursor: pointer; text-decoration: none;
-      transition: background 0.1s;
-    }
-    .alt-item:last-child { border-bottom: none; }
-    .alt-item:hover { background: var(--bg3); padding-left: 6px; }
-    .alt-item:hover .alt-name { text-decoration: underline; }
-    .alt-name {
-      font-family: var(--font-serif);
-      font-size: 16px; color: var(--ink); margin-bottom: 2px;
-    }
-    .alt-meta { font-size: 11px; color: var(--ink3); }
-    .alt-score { font-size: 12px; color: var(--ink3); white-space: nowrap; }
-
-    /* Guide links */
-    .guide-link {
-      display: flex; align-items: flex-start;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 0.5px solid var(--border);
-      text-decoration: none;
-      transition: background 0.1s;
-    }
-    .guide-link:last-child { border-bottom: none; }
-    .guide-link:hover { background: var(--bg3); padding-left: 6px; }
-    .guide-link:hover .gl-title { text-decoration: underline; }
-    .gl-title { font-size: 13px; color: var(--ink); line-height: 1.4; }
-    .gl-arrow { font-size: 12px; color: var(--ink3); flex-shrink: 0; margin-left: 8px; margin-top: 2px; }
-
-    /* Similar brands */
-    .similar-item {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 0.5px solid var(--border);
-      text-decoration: none;
-      transition: background 0.1s;
-    }
-    .similar-item:last-child { border-bottom: none; }
-    .similar-item:hover { background: var(--bg3); padding-left: 6px; }
-    .similar-item:hover .sim-name { text-decoration: underline; }
-    .sim-name {
-      font-family: var(--font-serif);
-      font-size: 15px; color: var(--ink); margin-bottom: 2px;
-    }
-    .sim-meta { font-size: 11px; color: var(--ink3); }
-    .sim-score { font-size: 12px; color: var(--ink3); }
-
-    /* ── FOOTER ── */
-    .footer { background: var(--ink); }
-    .footer-main { padding: 52px 48px 0; }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 52px; padding-bottom: 40px;
-      border-bottom: 0.5px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-logo {
-      font-family: var(--font-serif);
-      font-size: 22px; color: var(--bg);
-      margin-bottom: 12px; text-decoration: none;
-      display: block;
-    }
-
-    .footer-tagline {
-      font-family: var(--font-body);
-      font-size: 13px; color: rgba(255,255,255,0.3);
-      line-height: 1.8; font-weight: 300;
-    }
-
-    .footer-cols {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .footer-col-title {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 1.5px; color: rgba(255,255,255,0.22);
-      margin-bottom: 14px; padding-bottom: 8px;
-      border-bottom: 0.5px solid rgba(255,255,255,0.07);
-    }
-
-    .footer-cols a {
-      display: block; font-size: 13px;
-      color: rgba(255,255,255,0.4);
-      text-decoration: none; margin-bottom: 9px;
-      font-weight: 300; transition: color 0.1s;
-    }
-    .footer-cols a:hover { color: rgba(255,255,255,0.85); }
-
-    .footer-bottom {
-      display: flex; align-items: center;
-      justify-content: space-between; padding: 16px 0;
-    }
-
-    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); }
-
-    .footer-social { display: flex; gap: 18px; }
-    .footer-social a {
-      font-size: 11px; color: rgba(255,255,255,0.22);
-      text-decoration: none; text-transform: uppercase;
-      letter-spacing: 0.7px; transition: color 0.1s;
-    }
-    .footer-social a:hover { color: rgba(255,255,255,0.7); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .nav-band, .breadcrumb { padding-left: 24px; padding-right: 24px; }
-      .nav-core { padding: 0 24px; }
-      .nav-logo { padding: 14px 20px; font-size: 24px; }
-      .brand-banner { padding: 32px 24px 0; }
-      .bb-name { font-size: 48px; }
-      .page-layout { grid-template-columns: 1fr; }
-      .article { padding: 32px 24px; border-right: none; border-bottom: 0.5px solid var(--border); }
-      .sidebar { padding: 28px 24px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-main { padding: 40px 24px 0; }
-      .footer-bottom { padding: 16px 0; flex-direction: column; gap: 12px; }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links-left { display: none; }
-      .bb-name { font-size: 36px; }
-      .score-bar { flex-wrap: wrap; }
-      .score-item { min-width: 50%; border-bottom: 0.5px solid var(--border); }
-      .footer-cols { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zara clothing brand review — quality, ethics, transparency and price. Is Zara worth buying? What fabrics does Zara use? FabricMark's honest review.">
+<title>Zara Review — Quality, Ethics &amp; Transparency | FabricMark</title>
+<link rel="canonical" href="https://www.fabricmark.co.uk/brands/zara.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--blue:#0368a2;--blue-dk:#065F92;--navy:#063798;--charcoal:#2d3236;--bg:#fff;--bg2:#f7f8fa;--bg-blue:#e8f2fa;--bg-navy:#e6eaf7;--ink:#2d3236;--ink2:#4a5260;--ink3:#7a8494;--ink4:#b8bfc9;--bd:#dde2ea;--bd2:#c4ccd8;--ui:'Montserrat',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;--body:'Source Serif 4',Georgia,serif}
+[data-theme=dark]{--bg:#0d1117;--bg2:#161b22;--bg-blue:#0a1e2e;--bg-navy:#0a1228;--ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;--bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;--charcoal:#e6eaf0}
+body{font-family:var(--ui);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
+a{color:inherit;text-decoration:none}
+.nav{background:var(--bg);border-bottom:3px solid var(--charcoal);position:sticky;top:0;z-index:100}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:7px 48px;border-bottom:1px solid var(--bd)}
+.nav-top-left{display:flex;gap:20px}
+.nav-top-left a{font-size:11px;font-weight:400;color:var(--ink3);letter-spacing:.5px;text-transform:uppercase}
+.nav-top-left a:hover{color:var(--ink)}
+.nav-top-right{display:flex;align-items:center;gap:8px}
+.ibtn{width:28px;height:28px;border:1px solid var(--bd2);background:transparent;cursor:pointer;color:var(--ink3);display:flex;align-items:center;justify-content:center;border-radius:3px}
+.ibtn svg{width:13px;height:13px;pointer-events:none}
+.ibtn:hover{color:var(--ink);border-color:var(--ink)}
+.nav-mid{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:11px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.8px}
+.nav-links a:hover{color:var(--blue)}
+.nav-logo{display:flex;align-items:center;justify-content:center;padding:14px 32px}
+.nl-f{font-family:var(--ui);font-size:22px;font-weight:600;color:var(--charcoal);letter-spacing:-.3px}
+.nl-m{font-family:var(--ui);font-size:22px;font-weight:600;color:var(--blue);letter-spacing:-.3px}
+.nav-right{display:flex;justify-content:flex-end}
+.btn-cta{font-size:11px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:3px;text-transform:uppercase;letter-spacing:.8px;border:none;cursor:pointer;font-family:var(--ui)}
+.btn-cta:hover{background:var(--blue-dk)}
+.bc{padding:10px 48px;border-bottom:1px solid var(--bd);font-size:11px;color:var(--ink3);display:flex;gap:6px;align-items:center}
+.bc a{color:var(--ink3)}
+.bc a:hover{color:var(--blue)}
+.bc-sep{color:var(--ink4)}
+.banner{background:var(--navy);padding:44px 48px 0}
+[data-theme=dark] .banner{background:#080e1e}
+.banner-inner{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px}
+.ban-cat{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px}
+.ban-name{font-family:var(--serif);font-size:72px;font-weight:400;color:#fff;line-height:1;letter-spacing:-2px;margin-bottom:10px}
+.ban-sub{font-size:13px;color:rgba(255,255,255,.35)}
+.ban-meta{text-align:right;font-size:11px;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:.8px;line-height:2}
+.score-bar{display:flex;background:var(--bg);border-bottom:1px solid var(--bd)}
+.sc-item{flex:1;padding:16px 20px;border-right:1px solid var(--bd)}
+.sc-item:last-child{border-right:none}
+.sc-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink3);margin-bottom:6px}
+.sc-num{font-family:var(--serif);font-size:28px;color:var(--ink)}
+.sc-dots{display:flex;gap:4px;margin-top:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bd)}
+.dot.on{background:var(--blue)}
+.sc-badge{display:inline-block;margin-top:10px;font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:4px 10px;border-radius:2px}
+.sc-sub{font-size:11px;color:var(--ink3);margin-top:6px}
+.layout{display:grid;grid-template-columns:1fr 280px}
+.article{padding:40px 48px;border-right:1px solid var(--bd)}
+.article h2{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--ink);margin:2.4rem 0 .8rem;padding-bottom:10px;border-bottom:2px solid var(--charcoal)}
+[data-theme=dark] .article h2{border-bottom-color:var(--bd2)}
+.article h2:first-child{margin-top:0}
+.article p{font-family:var(--body);font-size:16px;line-height:1.85;color:var(--ink2);margin-bottom:1rem}
+.article p strong{font-weight:500;color:var(--ink)}
+.ilink{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--bd);border-radius:4px;margin:1.2rem 0;background:var(--bg2);transition:border-color .15s,background .15s}
+.ilink:hover{border-color:var(--blue);background:var(--bg-blue)}
+.ilink:hover .il-t{color:var(--blue)}
+.il-arr{font-size:16px;color:var(--blue);flex-shrink:0}
+.il-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-bottom:2px}
+.il-t{font-size:13px;font-weight:500;color:var(--ink);transition:color .15s}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 1.2rem}
+.chip{font-size:11px;font-weight:500;padding:5px 12px;border:1px solid var(--bd);border-radius:2px;color:var(--ink3)}
+.chip.nat{border-color:#1a7a4a;color:#1a7a4a;background:#edf7f1}
+.chip.mix{border-color:var(--bd2);color:var(--ink3);background:var(--bg2)}
+.chip.syn{border-color:#b03030;color:#b03030;background:#fdf0f0}
+[data-theme=dark] .chip.nat{border-color:#3db870;color:#3db870;background:#0a2018}
+[data-theme=dark] .chip.syn{border-color:#e07070;color:#e07070;background:#2a1010}
+.mfg{margin:14px 0 1.2rem;display:flex;flex-direction:column;gap:14px}
+.mfg-row{display:flex;gap:16px}
+.mfg-bar{width:3px;background:var(--blue);border-radius:2px;flex-shrink:0;margin-top:3px}
+.mfg-bar.dim{background:var(--bd2)}
+.mfg-txt{font-family:var(--body);font-size:15px;color:var(--ink2);line-height:1.7}
+.mfg-txt strong{font-weight:500;color:var(--ink)}
+.verdict{background:var(--bg-navy);border-left:4px solid var(--blue);border-radius:0 4px 4px 0;padding:20px 24px;margin:2rem 0 0}
+.verdict-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);margin-bottom:10px}
+.verdict p{font-family:var(--body);font-size:16px;line-height:1.8;color:var(--ink);margin:0}
+.sidebar{padding:28px 24px;background:var(--bg2);display:flex;flex-direction:column;gap:28px}
+.sb-sec-ti{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--charcoal)}
+[data-theme=dark] .sb-sec-ti{border-bottom-color:var(--bd2)}
+.smg-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.smg{padding:12px;background:var(--bg);border:1px solid var(--bd);border-radius:4px}
+.smg-l{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3);margin-bottom:4px}
+.smg-v{font-family:var(--serif);font-size:22px;color:var(--blue)}
+.alt{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--bd);transition:padding-left .1s}
+.alt:last-child{border-bottom:none}
+.alt:hover{padding-left:4px}
+.alt:hover .alt-nm{color:var(--blue)}
+.alt-nm{font-family:var(--serif);font-size:17px;color:var(--ink);margin-bottom:2px;transition:color .15s}
+.alt-meta{font-size:11px;color:var(--ink3)}
+.alt-sc{font-size:12px;color:var(--blue);font-weight:600;white-space:nowrap}
+.gl{display:flex;align-items:flex-start;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--bd);transition:padding-left .1s}
+.gl:last-child{border-bottom:none}
+.gl:hover{padding-left:4px}
+.gl:hover .gl-ti{color:var(--blue)}
+.gl-ti{font-size:13px;color:var(--ink);line-height:1.4;transition:color .15s}
+.gl-arr{font-size:12px;color:var(--blue);flex-shrink:0;margin-left:8px;margin-top:2px;font-weight:600}
+.footer{background:var(--charcoal)}
+[data-theme=dark] .footer{background:#080b10}
+.ft-main{padding:52px 48px 0}
+.ft-grid{display:grid;grid-template-columns:260px 1fr;gap:52px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-logo{display:flex;align-items:center;margin-bottom:14px}
+.ft-lf{font-family:var(--ui);font-size:20px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:-.3px}
+.ft-lm{font-family:var(--ui);font-size:20px;font-weight:600;color:var(--blue);letter-spacing:-.3px}
+.ft-tag{font-family:var(--body);font-size:13px;color:rgba(255,255,255,.3);line-height:1.8}
+.ft-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.ft-col-ti{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.22);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ft-cols a{display:block;font-size:13px;color:rgba(255,255,255,.42);margin-bottom:9px;transition:color .1s}
+.ft-cols a:hover{color:rgba(255,255,255,.85)}
+.ft-btm{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.ft-copy{font-size:11px;color:rgba(255,255,255,.18)}
+.ft-social{display:flex;gap:18px}
+.ft-social a{font-size:11px;font-weight:500;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:.7px;transition:color .1s}
+.ft-social a:hover{color:rgba(255,255,255,.7)}
+@media(max-width:1024px){.nav-top,.nav-mid,.bc,.ft-main{padding-left:24px;padding-right:24px}.nav-logo{padding:14px 16px}.banner{padding:32px 24px 0}.ban-name{font-size:52px}.layout{grid-template-columns:1fr}.article{padding:32px 24px;border-right:none;border-bottom:1px solid var(--bd)}.sidebar{padding:28px 24px}.ft-grid{grid-template-columns:1fr;gap:32px}.ft-main{padding:40px 24px 0}.ft-cols{grid-template-columns:repeat(2,1fr)}.ft-btm{flex-direction:column;gap:10px}}
+@media(max-width:640px){.nav-links{display:none}.ban-name{font-size:40px}.score-bar{flex-wrap:wrap}.sc-item{min-width:50%;border-bottom:1px solid var(--bd)}.ft-cols{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-band">
-      <div class="nav-band-left">
-        <a href="/about.html">About</a>
-        <a href="/how-we-review.html">How we review</a>
-        <a href="/advertise.html">Advertise</a>
-      </div>
-      <div class="nav-band-right">
-        <button class="icon-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">
-          <svg id="theme-icon" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4">
-            <circle cx="6" cy="6" r="2.5"/>
-            <path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="nav-core">
-      <div class="nav-links-left">
-        <a href="/brands.html">Brands</a>
-        <a href="/guides.html">Clothing guides</a>
-        <a href="/find-your-fit.html">Find your perfect fit</a>
-      </div>
-      <a href="/" class="nav-logo">Fabricmark</a>
-      <div class="nav-links-right">
-        <a href="/signup.html" class="nav-cta">Sign up</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a>
-    <span class="breadcrumb-sep">/</span>
-    <a href="/brands.html">Brands</a>
-    <span class="breadcrumb-sep">/</span>
-    <a href="/brands/category/fast-fashion.html">Fast fashion</a>
-    <span class="breadcrumb-sep">/</span>
-    <span>Zara</span>
+<nav class="nav">
+  <div class="nav-top">
+    <div class="nav-top-left"><a href="../about.html">About</a><a href="../how-we-review.html">How we review</a><a href="../advertise.html">Advertise</a></div>
+    <div class="nav-top-right"><button class="ibtn" id="thbtn" onclick="toggleTheme()" aria-label="Toggle dark mode"><svg id="thico" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/></svg></button></div>
   </div>
-
-  <div class="brand-banner">
-    <div class="bb-top">
-      <div>
-        <div class="bb-category">Fast fashion &nbsp;&middot;&nbsp; Spain &nbsp;&middot;&nbsp; Inditex Group</div>
-        <h1 class="bb-name">Zara</h1>
-        <div class="bb-sub">Reviewed by Fabricmark &nbsp;&middot;&nbsp; fabricmark.co.uk</div>
-      </div>
-      <div class="bb-meta">
-        <div class="bb-updated">Last reviewed<br>April 2026<br><br>Next review<br>October 2026</div>
-      </div>
-    </div>
-    <div class="score-bar" role="region" aria-label="Brand scores">
-      <div class="score-item">
-        <div class="score-label">Quality</div>
-        <div class="score-num">3/5</div>
-        <div class="score-dots" aria-label="3 out of 5">
-          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
-        </div>
-      </div>
-      <div class="score-item">
-        <div class="score-label">Ethics</div>
-        <div class="score-num">3/5</div>
-        <div class="score-dots" aria-label="3 out of 5">
-          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
-        </div>
-      </div>
-      <div class="score-item">
-        <div class="score-label">Transparency</div>
-        <div class="score-num">4/5</div>
-        <div class="score-dots" aria-label="4 out of 5">
-          <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
-        </div>
-      </div>
-      <div class="score-item">
-        <div class="score-label">Price</div>
-        <div class="score-num">&pound;&pound;&pound;</div>
-        <div class="score-sub">Mid-range</div>
-      </div>
-      <div class="score-item">
-        <div class="score-label">Category</div>
-        <span class="score-badge">Fast Fashion</span>
-      </div>
-    </div>
+  <div class="nav-mid">
+    <div class="nav-links"><a href="../brands.html">Brands</a><a href="../guides.html">Clothing guides</a><a href="../find-your-fit.html">Find your perfect fit</a></div>
+    <a href="../index.html" class="nav-logo"><span class="nl-f">Fabric</span><span class="nl-m">Mark</span></a>
+    <div class="nav-right"><a href="../signup.html" class="btn-cta">Sign up</a></div>
   </div>
-
-  <div class="page-layout">
-    <article class="article">
-
-      <h2>What is Zara?</h2>
-      <p>Zara is a Spanish fast fashion brand and the flagship label of the Inditex group &mdash; the world&rsquo;s largest fashion retailer. With over 2,200 stores across 96 markets and an online store available in 154 countries, it occupies the premium end of fast fashion. The brand is known for bringing runway-influenced designs to consumers at a fraction of luxury prices, producing around 20,000 new designs per year with new styles reaching stores every two to three weeks.</p>
-      <p>As part of Inditex, Zara sits alongside brands including Pull&amp;Bear, Massimo Dutti, Bershka and Stradivarius. Zara&rsquo;s revenue of approximately &dollar;18 billion USD makes it the third biggest fashion retailer by revenue globally.</p>
-
-      <h2>Quality &mdash; what are you actually buying?</h2>
-      <p>Zara sits above most fast fashion competitors on quality, but the experience varies considerably from item to item. Their tailored and outerwear lines use meaningfully better materials &mdash; a well-constructed wool-blend coat or structured trouser can be a genuine find at the price point. The brand has historically positioned itself as a copycat of luxury labels, and that ambition shows in its better garments.</p>
-      <p>Casualwear and occasion pieces, however, frequently rely on polyester, viscose blends and cotton-poly mixes that will not survive many seasons. Pilling, snagging and seam failure are common complaints with their lower-priced lines. <strong>The key is learning to read the label before you commit.</strong> Look for items with higher natural fibre content, check that seams are even and flat, and avoid anything that feels thin or flimsy to the touch.</p>
-
-      <a class="inline-link" href="/guides/how-to-read-a-clothing-label.html">
-        <span class="il-arrow">&rarr;</span>
-        <div>
-          <div class="il-label">Fabricmark guide</div>
-          <div class="il-text">How to read a clothing label &mdash; what fabric content tells you</div>
-        </div>
-      </a>
-
-      <h2>What fabrics does Zara use?</h2>
-      <p>Fabric composition varies dramatically across their range. A 75% wool coat may sit on the same rail as a fully synthetic jumpsuit. Natural fibres indicate better longevity and breathability; synthetics are cheaper to produce, less durable and have a higher environmental impact. Below is a representative sample of what you will find across Zara&rsquo;s range.</p>
-
-      <div class="fabric-row" role="list" aria-label="Fabric types used by Zara">
-        <span class="chip nat" role="listitem" title="Natural fibre">Cotton</span>
-        <span class="chip nat" role="listitem" title="Natural fibre">Wool</span>
-        <span class="chip nat" role="listitem" title="Natural fibre">Linen</span>
-        <span class="chip nat" role="listitem" title="Natural fibre">Silk</span>
-        <span class="chip" role="listitem" title="Semi-synthetic fibre">Viscose</span>
-        <span class="chip" role="listitem" title="Semi-synthetic fibre">Lyocell</span>
-        <span class="chip" role="listitem" title="Semi-synthetic fibre">Modal</span>
-        <span class="chip syn" role="listitem" title="Synthetic fibre">Polyester</span>
-        <span class="chip syn" role="listitem" title="Synthetic fibre">Polyamide</span>
-        <span class="chip syn" role="listitem" title="Synthetic fibre">Acrylic</span>
-        <span class="chip syn" role="listitem" title="Synthetic fibre">Elastane</span>
-      </div>
-
-      <p>The colour coding above indicates natural fibres (green), semi-synthetic fibres derived from plant cellulose (grey), and synthetic petroleum-based fibres (red). As a general rule, the higher the proportion of natural fibres in a garment, the better its quality and longevity are likely to be.</p>
-
-      <a class="inline-link" href="/guides/natural-vs-synthetic-fibres.html">
-        <span class="il-arrow">&rarr;</span>
-        <div>
-          <div class="il-label">Fabricmark guide</div>
-          <div class="il-text">Natural vs synthetic fibres &mdash; which to look for and which to avoid</div>
-        </div>
-      </a>
-
-      <h2>Where are Zara&rsquo;s clothes made?</h2>
-      <p>Zara operates a distinctive two-tier manufacturing model built around speed to market. Around 57% of production takes place in proximity markets that allow rapid replenishment of trending styles.</p>
-
-      <div class="mfg">
-        <div class="mfg-row">
-          <div class="mfg-line"></div>
-          <div class="mfg-text"><strong>Seasonal and trend-led pieces</strong> &mdash; Manufactured in Spain, Portugal, Morocco and Turkey. These proximity markets enable Zara&rsquo;s 2&ndash;3 week design-to-store pipeline for its most time-sensitive styles.</div>
-        </div>
-        <div class="mfg-row">
-          <div class="mfg-line dim"></div>
-          <div class="mfg-text"><strong>Basics and non-seasonal lines</strong> &mdash; Produced in China, Bangladesh, Vietnam, Brazil and other lower-cost manufacturing markets. These garments are less time-sensitive and are produced in higher volumes.</div>
-        </div>
-      </div>
-
-      <p>All of Zara&rsquo;s suppliers are required to comply with Inditex&rsquo;s Code of Conduct for Manufacturers and Suppliers, which sets standards on responsible management, human rights and international labour conventions.</p>
-
-      <h2>Is Zara ethical?</h2>
-      <p>Zara scores better than most fast fashion brands on transparency and supplier accountability, though this should be understood in context. The 2018 Ethical Fashion Report rated Zara A+ on policies, auditing and supplier relations, an A for knowing their suppliers, and a B for worker empowerment. Their Code of Conduct for Manufacturers imposes a complete ban on child labour and prohibits discrimination across the supply chain.</p>
-      <p>Inditex has published ambitious sustainability targets: eliminating hazardous chemicals by 2020, transitioning all cotton, linen and polyester to organic, sustainable or recycled sources by 2025, and stopping all waste going to landfill by 2025. Progress against these targets has been mixed.</p>
-      <p><strong>The honest caveat:</strong> producing 20,000 new designs per year makes genuine sustainability inherently difficult to achieve. The company&rsquo;s core business model &mdash; rapid production of trend-led garments at low prices &mdash; is structurally in tension with environmental sustainability. Their published commitments are more credible than many competitors, but warrant ongoing scrutiny.</p>
-
-      <a class="inline-link" href="/guides/how-to-assess-sustainability-claims.html">
-        <span class="il-arrow">&rarr;</span>
-        <div>
-          <div class="il-label">Fabricmark guide</div>
-          <div class="il-text">How to assess a brand&rsquo;s sustainability claims &mdash; what to look for</div>
-        </div>
-      </a>
-
-      <h2>Worker rights at Zara</h2>
-      <p>Zara&rsquo;s supplier code of conduct has played a meaningful role in shaping responsible management. The prohibition on child labour and the promotion of international labour conventions are genuine positives. However, concerns remain about working conditions and wages in lower-cost manufacturing markets, where Zara has less visibility and control over subcontracted production.</p>
-      <p>On diversity, Inditex&rsquo;s board of directors has historically been male-dominated, though the company has made commitments to improve representation at senior levels.</p>
-
-      <div class="verdict">
-        <div class="verdict-label">The verdict</div>
-        <p>Zara is one of the more considered options within fast fashion &mdash; if you shop with intention. Their tailored and structured pieces, particularly outerwear, offer genuine quality relative to price. Avoid purely synthetic casualwear if longevity matters to you. Always read the label before buying, look for higher natural fibre content, and treat their sustainability communications with appropriate scepticism. If you can stretch your budget further, brands like Arket and COS offer meaningfully better quality at a modest premium.</p>
-      </div>
-
-    </article>
-
-    <aside class="sidebar" role="complementary">
-
-      <div class="sb-section">
-        <div class="sb-title">Scores at a glance</div>
-        <div class="score-mini-grid">
-          <div class="smg"><div class="smg-label">Quality</div><div class="smg-value">3/5</div></div>
-          <div class="smg"><div class="smg-label">Ethics</div><div class="smg-value">3/5</div></div>
-          <div class="smg"><div class="smg-label">Transparency</div><div class="smg-value">4/5</div></div>
-          <div class="smg"><div class="smg-label">Price</div><div class="smg-value">&pound;&pound;&pound;</div></div>
-        </div>
-      </div>
-
-      <div class="sb-section">
-        <div class="sb-title">Better alternatives</div>
-        <a href="/brands/arket.html" class="alt-item">
-          <div>
-            <div class="alt-name">Arket</div>
-            <div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div>
-          </div>
-          <div class="alt-score">Quality 4/5 &rarr;</div>
-        </a>
-        <a href="/brands/cos.html" class="alt-item">
-          <div>
-            <div class="alt-name">COS</div>
-            <div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div>
-          </div>
-          <div class="alt-score">Quality 4/5 &rarr;</div>
-        </a>
-        <a href="/brands/uniqlo.html" class="alt-item">
-          <div>
-            <div class="alt-name">Uniqlo</div>
-            <div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;</div>
-          </div>
-          <div class="alt-score">Quality 4/5 &rarr;</div>
-        </a>
-        <a href="/brands/other-stories.html" class="alt-item">
-          <div>
-            <div class="alt-name">&amp; Other Stories</div>
-            <div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div>
-          </div>
-          <div class="alt-score">Quality 4/5 &rarr;</div>
-        </a>
-      </div>
-
-      <div class="sb-section">
-        <div class="sb-title">Related guides</div>
-        <a href="/guides/how-to-read-a-clothing-label.html" class="guide-link">
-          <span class="gl-title">How to read a clothing label</span>
-          <span class="gl-arrow">&rarr;</span>
-        </a>
-        <a href="/guides/natural-vs-synthetic-fibres.html" class="guide-link">
-          <span class="gl-title">Natural vs synthetic fibres</span>
-          <span class="gl-arrow">&rarr;</span>
-        </a>
-        <a href="/guides/what-is-fast-fashion.html" class="guide-link">
-          <span class="gl-title">What is fast fashion?</span>
-          <span class="gl-arrow">&rarr;</span>
-        </a>
-        <a href="/guides/shopping-sustainably-on-a-budget.html" class="guide-link">
-          <span class="gl-title">Shopping sustainably on a budget</span>
-          <span class="gl-arrow">&rarr;</span>
-        </a>
-        <a href="/guides/how-to-assess-sustainability-claims.html" class="guide-link">
-          <span class="gl-title">How to assess sustainability claims</span>
-          <span class="gl-arrow">&rarr;</span>
-        </a>
-      </div>
-
-      <div class="sb-section">
-        <div class="sb-title">Similar brands reviewed</div>
-        <a href="/brands/hm.html" class="similar-item">
-          <div>
-            <div class="sim-name">H&amp;M</div>
-            <div class="sim-meta">Fast fashion &middot; &pound;&pound;</div>
-          </div>
-          <div class="sim-score">2/5 &rarr;</div>
-        </a>
-        <a href="/brands/mango.html" class="similar-item">
-          <div>
-            <div class="sim-name">Mango</div>
-            <div class="sim-meta">Fast fashion &middot; &pound;&pound;&pound;</div>
-          </div>
-          <div class="sim-score">3/5 &rarr;</div>
-        </a>
-        <a href="/brands/next.html" class="similar-item">
-          <div>
-            <div class="sim-name">Next</div>
-            <div class="sim-meta">Contemporary &middot; &pound;&pound;&pound;</div>
-          </div>
-          <div class="sim-score">3/5 &rarr;</div>
-        </a>
-        <a href="/brands/massimo-dutti.html" class="similar-item">
-          <div>
-            <div class="sim-name">Massimo Dutti</div>
-            <div class="sim-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div>
-          </div>
-          <div class="sim-score">4/5 &rarr;</div>
-        </a>
-      </div>
-
-    </aside>
+</nav>
+<div class="bc"><a href="../index.html">Home</a><span class="bc-sep">/</span><a href="../brands.html">Brands</a><span class="bc-sep">/</span><a href="../brands/category/fast-fashion.html">Fast fashion</a><span class="bc-sep">/</span><span>Zara</span></div>
+<div class="banner">
+  <div class="banner-inner">
+    <div><div class="ban-cat">Fast fashion &nbsp;&middot;&nbsp; Spain &nbsp;&middot;&nbsp; Inditex Group</div><h1 class="ban-name">Zara</h1><div class="ban-sub">Reviewed by FabricMark &nbsp;&middot;&nbsp; fabricmark.co.uk</div></div>
+    <div class="ban-meta">Last reviewed<br>April 2026<br><br>Next review<br>October 2026</div>
   </div>
-
-  <footer class="footer" role="contentinfo">
-    <div class="footer-main">
-      <div class="footer-grid">
-        <div>
-          <a href="/" class="footer-logo">Fabricmark</a>
-          <p class="footer-tagline">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p>
-        </div>
-        <div class="footer-cols">
-          <div>
-            <div class="footer-col-title">Brands</div>
-            <a href="/brands/category/fast-fashion.html">Fast fashion</a>
-            <a href="/brands/category/contemporary.html">Contemporary</a>
-            <a href="/brands/category/premium.html">Premium</a>
-            <a href="/brands/category/sustainable.html">Sustainable</a>
-          </div>
-          <div>
-            <div class="footer-col-title">Guides</div>
-            <a href="/guides/natural-vs-synthetic-fibres.html">Fabric types</a>
-            <a href="/guides/how-to-read-a-clothing-label.html">Reading labels</a>
-            <a href="/guides/what-is-fast-fashion.html">Ethical fashion</a>
-            <a href="/guides.html">All guides</a>
-          </div>
-          <div>
-            <div class="footer-col-title">Fabricmark</div>
-            <a href="/about.html">About us</a>
-            <a href="/how-we-review.html">How we review</a>
-            <a href="/advertise.html">Advertise</a>
-            <a href="/privacy-policy.html">Privacy policy</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026 Fabricmark &middot; fabricmark.co.uk</div>
-        <div class="footer-social">
-          <a href="https://instagram.com/fabricmark" rel="noopener">Instagram</a>
-          <a href="https://x.com/fabricmark" rel="noopener">X</a>
-          <a href="https://pinterest.com/fabricmark" rel="noopener">Pinterest</a>
-        </div>
+  <div class="score-bar">
+    <div class="sc-item"><div class="sc-lbl">Quality</div><div class="sc-num">3/5</div><div class="sc-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></div>
+    <div class="sc-item"><div class="sc-lbl">Ethics</div><div class="sc-num">3/5</div><div class="sc-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></div>
+    <div class="sc-item"><div class="sc-lbl">Transparency</div><div class="sc-num">4/5</div><div class="sc-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></div>
+    <div class="sc-item"><div class="sc-lbl">Price</div><div class="sc-num">&pound;&pound;&pound;</div><div class="sc-sub">Mid-range</div></div>
+    <div class="sc-item"><div class="sc-lbl">Category</div><span class="sc-badge">Fast Fashion</span></div>
+  </div>
+</div>
+<div class="layout">
+  <article class="article">
+    <h2>What is Zara?</h2>
+    <p>Zara is a Spanish fast fashion brand and the flagship label of the Inditex group &mdash; the world&rsquo;s largest fashion retailer. With over 2,200 stores across 96 markets and an online store available in 154 countries, it occupies the premium end of fast fashion. The brand is known for bringing runway-influenced designs to consumers at a fraction of luxury prices, producing around 20,000 new designs per year with new styles reaching stores every two to three weeks.</p>
+    <p>As part of Inditex, Zara sits alongside brands including Pull&amp;Bear, Massimo Dutti, Bershka and Stradivarius. Zara&rsquo;s revenue of approximately $18 billion USD makes it one of the three biggest fashion retailers by revenue globally.</p>
+    <h2>Quality &mdash; what are you actually buying?</h2>
+    <p>Zara sits above most fast fashion competitors on quality, but the experience varies considerably from item to item. Their tailored and outerwear lines use meaningfully better materials &mdash; a well-constructed wool-blend coat or structured trouser can be a genuine find at the price point.</p>
+    <p>Casualwear and occasion pieces frequently rely on polyester, viscose blends and cotton-poly mixes that will not survive many seasons. Pilling, snagging and seam failure are common complaints with lower-priced lines. <strong>The key is learning to read the label before you commit.</strong> Look for higher natural fibre content, even and flat seams, and avoid anything that feels thin or flimsy to the touch.</p>
+    <a class="ilink" href="../guides/how-to-read-a-clothing-label.html"><span class="il-arr">&rarr;</span><div><div class="il-lbl">FabricMark guide</div><div class="il-t">How to read a clothing label &mdash; what fabric content tells you</div></div></a>
+    <h2>What fabrics does Zara use?</h2>
+    <p>Fabric composition varies dramatically across their range. A 75% wool coat may sit on the same rail as a fully synthetic jumpsuit. Natural fibres indicate better longevity and breathability; synthetics are cheaper to produce, less durable and have a higher environmental impact. Always check the label.</p>
+    <div class="chips"><span class="chip nat">Cotton</span><span class="chip nat">Wool</span><span class="chip nat">Linen</span><span class="chip nat">Silk</span><span class="chip mix">Viscose</span><span class="chip mix">Lyocell</span><span class="chip mix">Modal</span><span class="chip syn">Polyester</span><span class="chip syn">Polyamide</span><span class="chip syn">Acrylic</span><span class="chip syn">Elastane</span></div>
+    <p>Green indicates natural fibres. Grey indicates semi-synthetic fibres from plant cellulose. Red indicates synthetic petroleum-based fibres. The higher the proportion of natural fibres, the better the quality and longevity.</p>
+    <a class="ilink" href="../guides/natural-vs-synthetic-fibres.html"><span class="il-arr">&rarr;</span><div><div class="il-lbl">FabricMark guide</div><div class="il-t">Natural vs synthetic fibres &mdash; which to look for and which to avoid</div></div></a>
+    <h2>Where are Zara&rsquo;s clothes made?</h2>
+    <p>Zara operates a two-tier manufacturing model built around speed to market. Around 57% of production takes place in proximity markets enabling rapid replenishment of trending styles.</p>
+    <div class="mfg">
+      <div class="mfg-row"><div class="mfg-bar"></div><div class="mfg-txt"><strong>Seasonal and trend-led pieces</strong> &mdash; Manufactured in Spain, Portugal, Morocco and Turkey. These proximity markets enable Zara&rsquo;s 2&ndash;3 week design-to-store pipeline.</div></div>
+      <div class="mfg-row"><div class="mfg-bar dim"></div><div class="mfg-txt"><strong>Basics and non-seasonal lines</strong> &mdash; Produced in China, Bangladesh, Vietnam, Brazil and other lower-cost markets. Less time-sensitive, produced in higher volumes.</div></div>
+    </div>
+    <p>All of Zara&rsquo;s suppliers must comply with Inditex&rsquo;s Code of Conduct for Manufacturers and Suppliers, which sets standards on responsible management, human rights and international labour conventions.</p>
+    <h2>Is Zara ethical?</h2>
+    <p>Zara scores better than most fast fashion brands on transparency and supplier accountability. The 2018 Ethical Fashion Report rated Zara A+ on policies, auditing and supplier relations, an A for knowing their suppliers, and a B for worker empowerment. Their Code of Conduct imposes a complete ban on child labour and prohibits discrimination across the supply chain.</p>
+    <p>Inditex has published ambitious sustainability targets: eliminating hazardous chemicals, transitioning all cotton, linen and polyester to organic, sustainable or recycled sources by 2025, and stopping all waste going to landfill by 2025. Progress against these targets has been mixed.</p>
+    <p><strong>The honest assessment:</strong> producing 20,000 new designs per year makes genuine sustainability structurally difficult. Their published commitments are more credible than many competitors, but warrant scrutiny.</p>
+    <a class="ilink" href="../guides/how-to-assess-sustainability-claims.html"><span class="il-arr">&rarr;</span><div><div class="il-lbl">FabricMark guide</div><div class="il-t">How to assess a brand&rsquo;s sustainability claims &mdash; what to look for</div></div></a>
+    <h2>Worker rights at Zara</h2>
+    <p>Zara&rsquo;s supplier code of conduct has played a meaningful role in shaping responsible management. The prohibition on child labour and promotion of international labour conventions are genuine positives. Concerns remain about working conditions in lower-cost markets where subcontracting can reduce visibility and accountability.</p>
+    <div class="verdict"><div class="verdict-lbl">The verdict</div><p>Zara is one of the more considered options within fast fashion &mdash; if you shop with intention. Their tailored and structured pieces, particularly outerwear, offer genuine quality relative to price. Avoid purely synthetic casualwear if longevity matters. Always read the label, look for higher natural fibre content, and treat their sustainability communications with appropriate scepticism. If budget allows, brands like Arket and Uniqlo offer meaningfully better quality at a modest premium.</p></div>
+  </article>
+  <aside class="sidebar">
+    <div class="sb-sec">
+      <div class="sb-sec-ti">Scores at a glance</div>
+      <div class="smg-grid"><div class="smg"><div class="smg-l">Quality</div><div class="smg-v">3/5</div></div><div class="smg"><div class="smg-l">Ethics</div><div class="smg-v">3/5</div></div><div class="smg"><div class="smg-l">Transparency</div><div class="smg-v">4/5</div></div><div class="smg"><div class="smg-l">Price</div><div class="smg-v">&pound;&pound;&pound;</div></div></div>
+    </div>
+    <div class="sb-sec">
+      <div class="sb-sec-ti">Better alternatives</div>
+      <a href="arket.html" class="alt"><div><div class="alt-nm">Arket</div><div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div></div><div class="alt-sc">4/5 &rarr;</div></a>
+      <a href="cos.html" class="alt"><div><div class="alt-nm">COS</div><div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div></div><div class="alt-sc">4/5 &rarr;</div></a>
+      <a href="uniqlo.html" class="alt"><div><div class="alt-nm">Uniqlo</div><div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;</div></div><div class="alt-sc">4/5 &rarr;</div></a>
+      <a href="other-stories.html" class="alt"><div><div class="alt-nm">&amp; Other Stories</div><div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div></div><div class="alt-sc">4/5 &rarr;</div></a>
+    </div>
+    <div class="sb-sec">
+      <div class="sb-sec-ti">Related guides</div>
+      <a href="../guides/how-to-read-a-clothing-label.html" class="gl"><span class="gl-ti">How to read a clothing label</span><span class="gl-arr">&rarr;</span></a>
+      <a href="../guides/natural-vs-synthetic-fibres.html" class="gl"><span class="gl-ti">Natural vs synthetic fibres</span><span class="gl-arr">&rarr;</span></a>
+      <a href="../guides/what-is-fast-fashion.html" class="gl"><span class="gl-ti">What is fast fashion?</span><span class="gl-arr">&rarr;</span></a>
+      <a href="../guides/shopping-sustainably-on-a-budget.html" class="gl"><span class="gl-ti">Shopping sustainably on a budget</span><span class="gl-arr">&rarr;</span></a>
+      <a href="../guides/how-to-assess-sustainability-claims.html" class="gl"><span class="gl-ti">How to assess sustainability claims</span><span class="gl-arr">&rarr;</span></a>
+    </div>
+    <div class="sb-sec">
+      <div class="sb-sec-ti">Similar brands</div>
+      <a href="hm.html" class="alt"><div><div class="alt-nm">H&amp;M</div><div class="alt-meta">Fast fashion &middot; &pound;&pound;</div></div><div class="alt-sc">2/5 &rarr;</div></a>
+      <a href="mango.html" class="alt"><div><div class="alt-nm">Mango</div><div class="alt-meta">Fast fashion &middot; &pound;&pound;&pound;</div></div><div class="alt-sc">3/5 &rarr;</div></a>
+      <a href="next.html" class="alt"><div><div class="alt-nm">Next</div><div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;</div></div><div class="alt-sc">3/5 &rarr;</div></a>
+      <a href="massimo-dutti.html" class="alt"><div><div class="alt-nm">Massimo Dutti</div><div class="alt-meta">Contemporary &middot; &pound;&pound;&pound;&pound;</div></div><div class="alt-sc">4/5 &rarr;</div></a>
+    </div>
+  </aside>
+</div>
+<footer class="footer">
+  <div class="ft-main">
+    <div class="ft-grid">
+      <div><a href="../index.html" class="ft-logo"><span class="ft-lf">Fabric</span><span class="ft-lm">Mark</span></a><p class="ft-tag">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p></div>
+      <div class="ft-cols">
+        <div><div class="ft-col-ti">Brands</div><a href="../brands/category/fast-fashion.html">Fast fashion</a><a href="../brands/category/contemporary.html">Contemporary</a><a href="../brands/category/premium.html">Premium</a><a href="../brands/category/sustainable.html">Sustainable</a></div>
+        <div><div class="ft-col-ti">Guides</div><a href="../guides/natural-vs-synthetic-fibres.html">Fabric types</a><a href="../guides/how-to-read-a-clothing-label.html">Reading labels</a><a href="../guides/what-is-fast-fashion.html">Ethical fashion</a><a href="../guides.html">All guides</a></div>
+        <div><div class="ft-col-ti">FabricMark</div><a href="../about.html">About us</a><a href="../how-we-review.html">How we review</a><a href="../advertise.html">Advertise</a><a href="../privacy-policy.html">Privacy policy</a></div>
       </div>
     </div>
-  </footer>
-
-  <script>
-    (function() {
-      var saved = localStorage.getItem('fm-theme');
-      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        setDarkIcon();
-      }
-    })();
-
-    function setDarkIcon() {
-      var icon = document.getElementById('theme-icon');
-      if (icon) icon.innerHTML = '<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';
-    }
-
-    function setLightIcon() {
-      var icon = document.getElementById('theme-icon');
-      if (icon) icon.innerHTML = '<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';
-    }
-
-    function toggleTheme() {
-      var current = document.documentElement.getAttribute('data-theme');
-      if (current === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('fm-theme', 'light');
-        setLightIcon();
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('fm-theme', 'dark');
-        setDarkIcon();
-      }
-    }
-  </script>
-
+    <div class="ft-btm"><div class="ft-copy">&copy; 2026 FabricMark &middot; fabricmark.co.uk</div><div class="ft-social"><a href="https://instagram.com/fabricmark" rel="noopener">Instagram</a><a href="https://x.com/fabricmark" rel="noopener">X</a><a href="https://pinterest.com/fabricmark" rel="noopener">Pinterest</a></div></div>
+  </div>
+</footer>
+<script>
+(function(){var s=localStorage.getItem('fm-theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');setDark();}})();
+function setDark(){var i=document.getElementById('thico');if(i)i.innerHTML='<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';}
+function setLight(){var i=document.getElementById('thico');if(i)i.innerHTML='<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';}
+function toggleTheme(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fm-theme','light');setLight();}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fm-theme','dark');setDark();}}
+</script>
 </body>
 </html>
