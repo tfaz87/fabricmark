@@ -3,18 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FabricMark reviews clothing brands on quality, ethics, transparency and price. The honest guide to clothing brands.">
-<title>FabricMark — The honest guide to clothing brands</title>
+<meta name="description" content="FabricMark Suppliers — the B2B directory of verified fabric suppliers, manufacturers and textile producers. Connect with ethical, quality-verified suppliers.">
+<title>FabricMark Suppliers — Verified fabric supplier directory</title>
+<link rel="canonical" href="https://www.fabricmark.co.uk/suppliers/index.html">
+<!-- Algolia: suppliers index, facets: country, fabricTypes[], certifications[], verified -->
+<!-- Sanity: supplier schema with verification workflow -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-:root{--blue:#0368a2;--blue-dk:#065F92;--navy:#063798;--charcoal:#2d3236;--bg:#fff;--bg2:#f7f8fa;--bg3:#eef1f7;--bg-blue:#e8f2fa;--bg-navy:#e6eaf7;--ink:#2d3236;--ink2:#4a5260;--ink3:#7a8494;--ink4:#b8bfc9;--bd:#dde2ea;--bd2:#c4ccd8;--ui:'Montserrat',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;--body:'Source Serif 4',Georgia,serif}
-[data-theme=dark]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;--ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;--bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;--charcoal:#e6eaf0}
+:root{--blue:#0368a2;--blue-dk:#065F92;--navy:#063798;--charcoal:#2d3236;--bg:#fff;--bg2:#f7f8fa;--bg3:#eef1f7;--bg-blue:#e8f2fa;--bg-navy:#e6eaf7;--ink:#2d3236;--ink2:#4a5260;--ink3:#7a8494;--ink4:#b8bfc9;--bd:#dde2ea;--bd2:#c4ccd8;--green:#1a7a4a;--green-bg:#edf7f1;--ui:'Montserrat',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;--body:'Source Serif 4',Georgia,serif}
+[data-theme=dark]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;--ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;--bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;--charcoal:#e6eaf0;--green:#3db870;--green-bg:#0a2018}
 body{font-family:var(--ui);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
 a{color:inherit;text-decoration:none}
+
+/* NAV */
 .nav{background:var(--bg);border-bottom:3px solid var(--charcoal);position:sticky;top:0;z-index:100}
 .nav-top{display:flex;align-items:center;justify-content:space-between;padding:7px 48px;border-bottom:1px solid var(--bd)}
 .nav-top-left{display:flex;gap:20px}
@@ -28,108 +33,118 @@ a{color:inherit;text-decoration:none}
 .nav-links{display:flex;gap:28px}
 .nav-links a{font-size:11px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.8px}
 .nav-links a:hover{color:var(--blue)}
-.nav-logo{display:flex;align-items:center;justify-content:center;padding:14px 32px}
+.nav-logo{display:flex;align-items:center;justify-content:center;padding:14px 32px;flex-direction:column;gap:2px}
 .nl-f{font-family:var(--ui);font-size:22px;font-weight:600;color:var(--charcoal);letter-spacing:-.3px}
 .nl-m{font-family:var(--ui);font-size:22px;font-weight:600;color:var(--blue);letter-spacing:-.3px}
-.nav-right{display:flex;justify-content:flex-end}
+.nl-sup{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-top:-2px}
+.nav-right{display:flex;justify-content:flex-end;gap:8px}
 .btn-cta{font-size:11px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:3px;text-transform:uppercase;letter-spacing:.8px;border:none;cursor:pointer;font-family:var(--ui)}
 .btn-cta:hover{background:var(--blue-dk)}
-.sov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:flex-start;justify-content:center;padding-top:80px}
-.sov.open{display:flex}
-.sov-box{background:var(--bg);border:2px solid var(--blue);border-radius:6px;width:100%;max-width:640px;margin:0 24px;overflow:hidden}
-.sov-row{display:flex}
-.sov-row input{flex:1;border:none;background:transparent;padding:16px 20px;font-size:16px;font-family:var(--ui);color:var(--ink);outline:none}
-.sov-row input::placeholder{color:var(--ink3)}
-.sov-row button{background:var(--blue);color:#fff;border:none;padding:0 28px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px}
-.sov-row button:hover{background:var(--blue-dk)}
-.sov-close{display:block;font-size:11px;color:var(--ink3);text-align:center;padding:8px;cursor:pointer;border-top:1px solid var(--bd);font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px}
-.hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid var(--charcoal);min-height:420px}
-.hero-l{padding:52px 48px;border-right:1px solid var(--bd);display:flex;flex-direction:column;justify-content:space-between;gap:32px}
-.hero-r{padding:52px 48px;background:var(--bg2)}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
-.kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
-h1{font-family:var(--serif);font-size:50px;font-weight:400;color:var(--ink);line-height:1.08;letter-spacing:-.5px;margin-bottom:18px}
-.deck{font-family:var(--body);font-size:17px;color:var(--ink2);line-height:1.75}
-.stats{display:flex;gap:0;padding-top:22px;border-top:1px solid var(--bd)}
-.stat{flex:1;padding-right:20px;border-right:1px solid var(--bd);margin-right:20px}
-.stat:last-child{border-right:none;margin-right:0;padding-right:0}
-.stat-n{font-family:var(--serif);font-size:32px;color:var(--blue);line-height:1;margin-bottom:4px}
-.stat-l{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3)}
-.srch-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:6px}
-.srch-bar{display:flex;border:2px solid var(--charcoal);border-radius:4px;overflow:hidden;margin-bottom:20px}
+.btn-outline{font-size:11px;font-weight:600;padding:8px 22px;background:transparent;color:var(--blue);border:1px solid var(--blue);border-radius:3px;text-transform:uppercase;letter-spacing:.8px;cursor:pointer;font-family:var(--ui)}
+.btn-outline:hover{background:var(--bg-blue)}
+
+/* B2B HERO */
+.b2b-hero{background:var(--navy);padding:64px 48px;display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center;border-bottom:3px solid var(--charcoal)}
+[data-theme=dark] .b2b-hero{background:#080e1e;border-bottom-color:var(--bd2)}
+.b2b-hero-left{}
+.b2b-eyebrow{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.b2b-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.b2b-h1{font-family:var(--serif);font-size:48px;font-weight:400;color:#fff;line-height:1.1;letter-spacing:-.5px;margin-bottom:16px}
+.b2b-deck{font-family:var(--body);font-size:17px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:32px}
+.b2b-btns{display:flex;gap:12px;flex-wrap:wrap}
+.b2b-btn-primary{font-size:13px;font-weight:600;padding:12px 28px;background:var(--blue);color:#fff;border-radius:3px;text-transform:uppercase;letter-spacing:.8px;border:none;cursor:pointer;font-family:var(--ui)}
+.b2b-btn-primary:hover{background:var(--blue-dk)}
+.b2b-btn-secondary{font-size:13px;font-weight:600;padding:12px 28px;background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3);border-radius:3px;text-transform:uppercase;letter-spacing:.8px;cursor:pointer;font-family:var(--ui)}
+.b2b-btn-secondary:hover{border-color:rgba(255,255,255,.6);color:#fff}
+.b2b-stats{display:flex;gap:0;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
+.b2b-stat{flex:1;padding-right:24px;border-right:1px solid rgba(255,255,255,.12);margin-right:24px}
+.b2b-stat:last-child{border-right:none;margin-right:0;padding-right:0}
+.b2b-stat-n{font-family:var(--serif);font-size:32px;color:var(--blue);line-height:1;margin-bottom:4px}
+.b2b-stat-l{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.35)}
+
+/* Search panel — B2B version */
+.b2b-srch{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:28px}
+.b2b-srch-ti{font-size:13px;font-weight:600;color:#fff;margin-bottom:16px;text-transform:uppercase;letter-spacing:.8px}
+.srch-bar{display:flex;border:2px solid rgba(255,255,255,.25);border-radius:4px;overflow:hidden;margin-bottom:16px}
 .srch-bar:focus-within{border-color:var(--blue)}
-.srch-bar input{flex:1;border:none;background:transparent;padding:13px 16px;font-size:14px;font-family:var(--ui);color:var(--ink);outline:none}
-.srch-bar input::placeholder{color:var(--ink3)}
-.srch-bar button{background:var(--blue);color:#fff;border:none;padding:0 22px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.srch-bar input{flex:1;border:none;background:transparent;padding:12px 16px;font-size:14px;font-family:var(--ui);color:#fff;outline:none}
+.srch-bar input::placeholder{color:rgba(255,255,255,.35)}
+.srch-bar button{background:var(--blue);color:#fff;border:none;padding:0 20px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
 .srch-bar button:hover{background:var(--blue-dk)}
-.srch-sec{margin-bottom:18px}
-.srch-sec-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--bd)}
-.pills{display:flex;flex-wrap:wrap;gap:6px}
-.pill{padding:5px 14px;border:1px solid var(--bd2);color:var(--ink2);font-size:11px;font-weight:500;cursor:pointer;background:transparent;font-family:var(--ui);border-radius:2px;transition:all .12s}
-.pill:hover,.pill.on{background:var(--blue);color:#fff;border-color:var(--blue)}
-.srch-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-select{padding:9px 12px;border:1px solid var(--bd);background:var(--bg);color:var(--ink2);font-size:12px;font-family:var(--ui);outline:none;cursor:pointer;width:100%;border-radius:3px}
-select:focus{border-color:var(--blue)}
+.b2b-filter-row{display:flex;flex-direction:column;gap:10px}
+.b2b-filter-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:6px}
+.b2b-pills{display:flex;flex-wrap:wrap;gap:5px}
+.b2b-pill{padding:4px 12px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);font-size:11px;font-weight:500;cursor:pointer;background:transparent;font-family:var(--ui);border-radius:2px;transition:all .12s}
+.b2b-pill:hover,.b2b-pill.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+select.b2b-select{padding:9px 12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);font-size:12px;font-family:var(--ui);outline:none;cursor:pointer;width:100%;border-radius:3px}
+select.b2b-select:focus{border-color:var(--blue)}
+
+/* SECTION */
 .sec{padding:52px 48px}
 .sec-alt{background:var(--bg2)}
 .sec-blue{background:var(--bg-blue)}
 .sec-hd{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid var(--charcoal);margin-bottom:30px}
+[data-theme=dark] .sec-hd{border-bottom-color:var(--bd2)}
 .sec-ey{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
 .sec-ti{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink)}
 .sec-more{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
 .sec-more:hover{opacity:.7}
-.proc-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd);border-radius:6px;overflow:hidden}
-.proc{padding:28px 22px;border-right:1px solid var(--bd);background:var(--bg)}
-.proc:last-child{border-right:none}
-.proc-n{font-family:var(--serif);font-size:40px;color:var(--blue);opacity:.2;line-height:1;margin-bottom:14px}
-.proc-t{font-size:12px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
-.proc-d{font-family:var(--body);font-size:14px;color:var(--ink2);line-height:1.7}
-.proc-b{display:inline-block;margin-top:14px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:4px 10px;border-radius:2px}
-.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.bcard{border:1px solid var(--bd);border-radius:6px;background:var(--bg);overflow:hidden;display:block;transition:border-color .15s}
-.bcard:hover{border-color:var(--blue)}
-.bcard:hover .bc-nm{color:var(--blue)}
-.bc-top{height:5px}
-.bc-t1{background:linear-gradient(90deg,#0368a2,#065F92)}
-.bc-t2{background:linear-gradient(90deg,#063798,#050A9D)}
-.bc-t3{background:linear-gradient(90deg,#050A9D,#2E04A3)}
-.bc-body{padding:20px}
-.bc-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.bc-tag{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:3px 8px;border-radius:2px}
-.bc-dt{font-size:11px;color:var(--ink4)}
-.bc-nm{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--ink);margin-bottom:3px;transition:color .15s}
-.bc-sub{font-size:12px;color:var(--ink3);margin-bottom:16px}
-.bc-scores{display:grid;grid-template-columns:repeat(4,1fr);padding:12px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);margin-bottom:14px}
-.bcs-l{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:var(--ink3);margin-bottom:4px}
-.bcs-v{font-size:15px;font-weight:600;color:var(--ink)}
-.bc-lnk{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.5px}
-.guide-wrap{display:grid;grid-template-columns:1fr 288px;gap:40px;align-items:start}
-.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.gcard{padding:22px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);display:block;transition:border-color .15s}
-.gcard:hover{border-color:var(--blue)}
-.gcard:hover .gc-ti{color:var(--blue)}
-.gc-tag{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;display:block}
-.gc-ti{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:6px;transition:color .15s}
-.gc-de{font-family:var(--body);font-size:13px;color:var(--ink3);line-height:1.7}
-.sidebar{border:1px solid var(--bd);border-radius:6px;background:var(--bg);overflow:hidden}
-.sb-pad{padding:24px}
-.sb-ti{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);margin-bottom:8px}
-.sb-de{font-family:var(--body);font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:20px}
-.sb-btn{display:block;width:100%;padding:12px;text-align:center;background:var(--blue);color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border:none;font-family:var(--ui);border-radius:3px}
-.sb-btn:hover{background:var(--blue-dk)}
-.sb-lks{border-top:1px solid var(--bd)}
-.sb-lk{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--ink2);padding:12px 24px;border-bottom:1px solid var(--bd);transition:background .1s,color .1s}
-.sb-lk:last-child{border-bottom:none}
-.sb-lk:hover{background:var(--bg2);color:var(--blue)}
-.app-strip{background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px}
-.app-ey{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px}
-.app-ti{font-family:var(--serif);font-size:26px;font-weight:400;color:#fff;margin-bottom:8px}
-.app-de{font-family:var(--body);font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;max-width:420px}
-.app-btns{display:flex;gap:12px;flex-shrink:0}
-.app-btn{display:flex;align-items:center;gap:12px;padding:12px 22px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:5px;transition:background .15s}
-.app-btn:hover{background:rgba(255,255,255,.14)}
-.app-bl{font-size:9px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;display:block}
-.app-bn{font-size:14px;font-weight:600;color:#fff;display:block}
+
+/* SUPPLIER CARDS */
+.supplier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.scard{border:1px solid var(--bd);border-radius:6px;background:var(--bg);overflow:hidden;display:block;transition:border-color .15s}
+.scard:hover{border-color:var(--blue)}
+.scard:hover .sc-name{color:var(--blue)}
+.scard-top{height:5px;background:linear-gradient(90deg,var(--blue),var(--navy))}
+.scard-top.verified{background:linear-gradient(90deg,var(--green),#1a6b4a)}
+.scard-body{padding:20px}
+.scard-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.scard-country{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--ink3)}
+.verified-badge{font-size:10px;font-weight:600;color:var(--green);background:var(--green-bg);padding:3px 8px;border-radius:2px;letter-spacing:.5px}
+.sc-name{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:4px;transition:color .15s}
+.sc-spec{font-size:12px;color:var(--ink3);margin-bottom:14px;line-height:1.5}
+.sc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.sc-tag{font-size:10px;font-weight:500;padding:3px 9px;border:1px solid var(--bd);border-radius:2px;color:var(--ink3)}
+.sc-tag.nat{border-color:#1a7a4a;color:#1a7a4a;background:#edf7f1}
+.sc-divider{border-top:1px solid var(--bd);padding-top:12px;margin-top:2px;display:flex;align-items:center;justify-content:space-between}
+.sc-moq{font-size:11px;color:var(--ink3)}<br>.sc-moq strong{color:var(--ink);font-weight:500}
+.sc-lnk{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.5px}
+
+/* VALUE PROPS */
+.vp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.vp{padding:28px 24px;border:1px solid var(--bd);border-radius:6px;background:var(--bg)}
+.vp-icon{width:40px;height:40px;background:var(--bg-blue);border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.vp-icon svg{width:20px;height:20px;color:var(--blue)}
+.vp-ti{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ink);margin-bottom:8px}
+.vp-de{font-family:var(--body);font-size:14px;color:var(--ink3);line-height:1.7}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{padding:32px 28px;border:1px solid var(--bd);border-radius:6px;background:var(--bg)}
+.price-card.featured{border-color:var(--blue);border-width:2px}
+.price-badge{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:16px}
+.price-ti{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--ink);margin-bottom:6px}
+.price-amt{font-size:36px;font-weight:600;color:var(--ink);font-family:var(--ui);margin-bottom:4px}
+.price-period{font-size:12px;color:var(--ink3);margin-bottom:20px}
+.price-de{font-family:var(--body);font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:24px}
+.price-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.price-feature{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2)}
+.pf-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.price-btn{display:block;width:100%;padding:12px;text-align:center;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border-radius:3px;font-family:var(--ui);border:none}
+.price-btn.primary{background:var(--blue);color:#fff}
+.price-btn.primary:hover{background:var(--blue-dk)}
+.price-btn.outline{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+.price-btn.outline:hover{background:var(--bg-blue)}
+
+/* CTA STRIP */
+.cta-strip{background:var(--navy);padding:56px 48px;text-align:center}
+[data-theme=dark] .cta-strip{background:#080e1e}
+.cta-ey{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px}
+.cta-ti{font-family:var(--serif);font-size:40px;font-weight:400;color:#fff;margin-bottom:12px;letter-spacing:-.3px}
+.cta-de{font-family:var(--body);font-size:16px;color:rgba(255,255,255,.55);line-height:1.7;max-width:520px;margin:0 auto 32px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
 .footer{background:var(--charcoal)}
 [data-theme=dark] .footer{background:#080b10}
 .ft-main{padding:52px 48px 0}
@@ -138,7 +153,7 @@ select:focus{border-color:var(--blue)}
 .ft-lf{font-family:var(--ui);font-size:20px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:-.3px}
 .ft-lm{font-family:var(--ui);font-size:20px;font-weight:600;color:var(--blue);letter-spacing:-.3px}
 .ft-tag{font-family:var(--body);font-size:13px;color:rgba(255,255,255,.3);line-height:1.8}
-.ft-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .ft-col-ti{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.22);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.07)}
 .ft-cols a{display:block;font-size:13px;color:rgba(255,255,255,.42);margin-bottom:9px;transition:color .1s}
 .ft-cols a:hover{color:rgba(255,255,255,.85)}
@@ -147,135 +162,264 @@ select:focus{border-color:var(--blue)}
 .ft-social{display:flex;gap:18px}
 .ft-social a{font-size:11px;font-weight:500;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:.7px;transition:color .1s}
 .ft-social a:hover{color:rgba(255,255,255,.7)}
-@media(max-width:1024px){.nav-top,.nav-mid,.sec,.ft-main{padding-left:24px;padding-right:24px}.nav-logo{padding:14px 16px}.hero{grid-template-columns:1fr}.hero-l{padding:40px 24px;border-right:none;border-bottom:1px solid var(--bd)}.hero-r{padding:40px 24px}h1{font-size:38px}.proc-row{grid-template-columns:1fr 1fr}.proc:nth-child(2){border-right:none}.proc:nth-child(3),.proc:nth-child(4){border-top:1px solid var(--bd)}.proc:nth-child(4){border-right:none}.brand-grid{grid-template-columns:1fr}.guide-wrap{grid-template-columns:1fr}.app-strip{flex-direction:column;align-items:flex-start;padding:32px 24px}.ft-grid{grid-template-columns:1fr;gap:32px}.ft-main{padding:40px 24px 0}.ft-cols{grid-template-columns:repeat(2,1fr)}.ft-btm{flex-direction:column;gap:10px}}
-@media(max-width:640px){.nav-links{display:none}h1{font-size:32px}.srch-grid{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}.app-btns{flex-direction:column;width:100%}.ft-cols{grid-template-columns:1fr}}
+
+@media(max-width:1024px){.nav-top,.nav-mid,.sec,.ft-main{padding-left:24px;padding-right:24px}.nav-logo{padding:14px 16px}.b2b-hero{grid-template-columns:1fr;padding:40px 24px;gap:32px}.b2b-h1{font-size:36px}.supplier-grid,.vp-grid,.pricing-grid{grid-template-columns:1fr}.ft-grid{grid-template-columns:1fr;gap:32px}.ft-main{padding:40px 24px 0}.ft-cols{grid-template-columns:repeat(2,1fr)}.ft-btm{flex-direction:column;gap:10px}}
+@media(max-width:640px){.nav-links{display:none}.b2b-h1{font-size:28px}.b2b-stats{flex-direction:column;gap:16px}.ft-cols{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <nav class="nav">
   <div class="nav-top">
-    <div class="nav-top-left"><a href="about.html">About</a><a href="how-we-review.html">How we review</a><a href="advertise.html">Advertise</a></div>
+    <div class="nav-top-left">
+      <a href="../index.html">Consumer reviews</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
     <div class="nav-top-right">
-      <button class="ibtn" onclick="openSearch()" aria-label="Search"><svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5.5" cy="5.5" r="4"/><path d="M9 9l2.5 2.5" stroke-linecap="round"/></svg></button>
       <button class="ibtn" id="thbtn" onclick="toggleTheme()" aria-label="Toggle dark mode"><svg id="thico" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/></svg></button>
     </div>
   </div>
   <div class="nav-mid">
-    <div class="nav-links"><a href="brands.html">Brands</a><a href="guides.html">Clothing guides</a><a href="find-your-fit.html">Find your perfect fit</a></div>
-    <a href="index.html" class="nav-logo"><span class="nl-f">Fabric</span><span class="nl-m">Mark</span></a>
-    <div class="nav-right"><a href="signup.html" class="btn-cta">Sign up</a></div>
+    <div class="nav-links">
+      <a href="index.html">Suppliers</a>
+      <a href="brands.html">Brands</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <a href="index.html" class="nav-logo">
+      <div style="display:flex"><span class="nl-f">Fabric</span><span class="nl-m">Mark</span></div>
+      <div class="nl-sup">Suppliers</div>
+    </a>
+    <div class="nav-right">
+      <a href="login.html" class="btn-outline">Log in</a>
+      <a href="register.html" class="btn-cta">List your business</a>
+    </div>
   </div>
 </nav>
-<div class="sov" id="sov">
-  <div class="sov-box">
-    <div class="sov-row"><input type="text" id="sinput" placeholder='Search brands — try "Zara" or "ethical denim"...' onkeydown="if(event.key==='Enter')doSearch();if(event.key==='Escape')closeSov()"><button onclick="doSearch()">Search</button></div>
-    <span class="sov-close" onclick="closeSov()">Close &times;</span>
-  </div>
-</div>
-<main>
-<section class="hero">
-  <div class="hero-l">
-    <div>
-      <div class="kicker"><span class="kicker-dot"></span>fabricmark.co.uk</div>
-      <h1>The honest guide to clothing brands</h1>
-      <p class="deck">We review clothing brands on quality, ethics, transparency and price &mdash; giving you the technical information the industry doesn&rsquo;t want you to have.</p>
+
+<section class="b2b-hero">
+  <div class="b2b-hero-left">
+    <div class="b2b-eyebrow"><span class="b2b-eyebrow-dot"></span>FabricMark Suppliers &mdash; B2B platform</div>
+    <h1 class="b2b-h1">The verified directory of fabric suppliers</h1>
+    <p class="b2b-deck">Connect with ethically verified, quality-assessed fabric suppliers, manufacturers and textile producers. Trusted by clothing brands across the UK and Europe.</p>
+    <div class="b2b-btns">
+      <button class="b2b-btn-primary" onclick="window.location.href='register.html'">List your business</button>
+      <button class="b2b-btn-secondary" onclick="window.location.href='#suppliers'">Browse suppliers</button>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-n">240+</div><div class="stat-l">Brands reviewed</div></div>
-      <div class="stat"><div class="stat-n">12</div><div class="stat-l">Categories</div></div>
-      <div class="stat"><div class="stat-n">4</div><div class="stat-l">Score dimensions</div></div>
+    <div class="b2b-stats">
+      <div class="b2b-stat"><div class="b2b-stat-n">340+</div><div class="b2b-stat-l">Verified suppliers</div></div>
+      <div class="b2b-stat"><div class="b2b-stat-n">28</div><div class="b2b-stat-l">Countries</div></div>
+      <div class="b2b-stat"><div class="b2b-stat-n">60+</div><div class="b2b-stat-l">Fabric types</div></div>
     </div>
   </div>
-  <div class="hero-r">
-    <div class="srch-lbl"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5" cy="5" r="3.5"/><path d="M8 8l2 2" stroke-linecap="round"/></svg>Search &amp; filter brands</div>
-    <div class="srch-bar"><input type="text" id="hsrch" placeholder='Try "Zara", "wool coats" or "ethical denim"...' onkeydown="if(event.key==='Enter')doHeroSearch()"><button onclick="doHeroSearch()">Search brands</button></div>
-    <div class="srch-sec">
-      <div class="srch-sec-lbl">Category</div>
-      <div class="pills"><button class="pill on" onclick="setPill(this)">All</button><button class="pill" onclick="setPill(this)">Fast fashion</button><button class="pill" onclick="setPill(this)">Contemporary</button><button class="pill" onclick="setPill(this)">Premium</button><button class="pill" onclick="setPill(this)">Sustainable</button><button class="pill" onclick="setPill(this)">Luxury</button><button class="pill" onclick="setPill(this)">Sportswear</button></div>
+  <div class="b2b-srch">
+    <div class="b2b-srch-ti">Find suppliers</div>
+    <div class="srch-bar">
+      <input type="text" id="ssrch" placeholder='Try "organic cotton", "Portugal" or "GOTS certified"...' onkeydown="if(event.key==='Enter')doSupplierSearch()">
+      <button onclick="doSupplierSearch()">Search</button>
     </div>
-    <div class="srch-sec">
-      <div class="srch-sec-lbl">Refine further</div>
-      <div class="srch-grid">
-        <select><option value="">Fabric preference</option><option>Natural only</option><option>Mostly natural</option><option>Mixed fabrics</option><option>Mostly synthetic</option></select>
-        <select><option value="">Price range</option><option>&pound; &mdash; Budget</option><option>&pound;&pound; &mdash; Affordable</option><option>&pound;&pound;&pound; &mdash; Mid-range</option><option>&pound;&pound;&pound;&pound; &mdash; Premium</option><option>&pound;&pound;&pound;&pound;&pound; &mdash; Luxury</option></select>
-        <select><option value="">Ethics rating</option><option>5/5 &mdash; Exemplary</option><option>4/5 &mdash; Good</option><option>3/5 &mdash; Average</option><option>2/5 or below</option></select>
-        <select><option value="">Quality rating</option><option>5/5 &mdash; Exceptional</option><option>4/5 &mdash; Good</option><option>3/5 &mdash; Average</option><option>2/5 or below</option></select>
+    <div class="b2b-filter-row">
+      <div>
+        <div class="b2b-filter-lbl">Fabric type</div>
+        <div class="b2b-pills">
+          <button class="b2b-pill on" onclick="setBPill(this)">All</button>
+          <button class="b2b-pill" onclick="setBPill(this)">Cotton</button>
+          <button class="b2b-pill" onclick="setBPill(this)">Wool</button>
+          <button class="b2b-pill" onclick="setBPill(this)">Linen</button>
+          <button class="b2b-pill" onclick="setBPill(this)">Silk</button>
+          <button class="b2b-pill" onclick="setBPill(this)">Sustainable</button>
+          <button class="b2b-pill" onclick="setBPill(this)">Recycled</button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+        <select class="b2b-select"><option value="">Country</option><option>United Kingdom</option><option>Portugal</option><option>Turkey</option><option>India</option><option>Bangladesh</option><option>China</option><option>Italy</option><option>Spain</option></select>
+        <select class="b2b-select"><option value="">Certification</option><option>GOTS</option><option>OEKO-TEX</option><option>BCI</option><option>Fairtrade</option><option>B Corp</option><option>ISO 9001</option></select>
       </div>
     </div>
   </div>
 </section>
+
+<section class="sec" id="suppliers">
+  <div class="sec-hd">
+    <div><div class="sec-ey">Directory</div><h2 class="sec-ti">Featured suppliers</h2></div>
+    <a href="all.html" class="sec-more">View all suppliers &rarr;</a>
+  </div>
+  <div class="supplier-grid">
+
+    <a href="supplier/albini-group.html" class="scard">
+      <div class="scard-top verified"></div>
+      <div class="scard-body">
+        <div class="scard-meta"><span class="scard-country">Italy</span><span class="verified-badge">Verified</span></div>
+        <div class="sc-name">Albini Group</div>
+        <div class="sc-spec">Premium shirting fabrics &mdash; cotton, linen, wool &amp; blends. Est. 1876. Supplying luxury and premium brands globally.</div>
+        <div class="sc-tags"><span class="sc-tag nat">Cotton</span><span class="sc-tag nat">Linen</span><span class="sc-tag nat">Wool</span><span class="sc-tag">GOTS</span><span class="sc-tag">OEKO-TEX</span></div>
+        <div class="sc-divider"><span class="sc-moq">MOQ: <strong>500m</strong></span><span class="sc-lnk">View profile &rarr;</span></div>
+      </div>
+    </a>
+
+    <a href="supplier/somelos-tecidos.html" class="scard">
+      <div class="scard-top verified"></div>
+      <div class="scard-body">
+        <div class="scard-meta"><span class="scard-country">Portugal</span><span class="verified-badge">Verified</span></div>
+        <div class="sc-name">Somelos Tecidos</div>
+        <div class="sc-spec">Woven cotton and cotton-blend fabrics for shirting and casualwear. Proximity supplier serving European brands.</div>
+        <div class="sc-tags"><span class="sc-tag nat">Cotton</span><span class="sc-tag">BCI</span><span class="sc-tag">OEKO-TEX</span></div>
+        <div class="sc-divider"><span class="sc-moq">MOQ: <strong>300m</strong></span><span class="sc-lnk">View profile &rarr;</span></div>
+      </div>
+    </a>
+
+    <a href="supplier/camira-fabrics.html" class="scard">
+      <div class="scard-top verified"></div>
+      <div class="scard-body">
+        <div class="scard-meta"><span class="scard-country">United Kingdom</span><span class="verified-badge">Verified</span></div>
+        <div class="sc-name">Camira Fabrics</div>
+        <div class="sc-spec">Sustainable wool and natural fibre fabrics. UK manufacturer with deep expertise in ethical sourcing and circular production.</div>
+        <div class="sc-tags"><span class="sc-tag nat">Wool</span><span class="sc-tag nat">Recycled</span><span class="sc-tag">B Corp</span><span class="sc-tag">ISO 9001</span></div>
+        <div class="sc-divider"><span class="sc-moq">MOQ: <strong>200m</strong></span><span class="sc-lnk">View profile &rarr;</span></div>
+      </div>
+    </a>
+
+    <a href="supplier/arvind-limited.html" class="scard">
+      <div class="scard-top"></div>
+      <div class="scard-body">
+        <div class="scard-meta"><span class="scard-country">India</span><span style="font-size:10px;color:var(--ink4)">Pending verification</span></div>
+        <div class="sc-name">Arvind Limited</div>
+        <div class="sc-spec">Denim, woven and knit fabrics at scale. One of India&rsquo;s largest integrated textile companies with extensive sustainable fabric ranges.</div>
+        <div class="sc-tags"><span class="sc-tag">Denim</span><span class="sc-tag nat">Cotton</span><span class="sc-tag">Recycled</span><span class="sc-tag">BCI</span></div>
+        <div class="sc-divider"><span class="sc-moq">MOQ: <strong>1,000m</strong></span><span class="sc-lnk">View profile &rarr;</span></div>
+      </div>
+    </a>
+
+    <a href="supplier/taypa-tekstil.html" class="scard">
+      <div class="scard-top verified"></div>
+      <div class="scard-body">
+        <div class="scard-meta"><span class="scard-country">Turkey</span><span class="verified-badge">Verified</span></div>
+        <div class="sc-name">Taypa Tekstil</div>
+        <div class="sc-spec">Denim manufacturing and development. Vertically integrated producer supplying European fast fashion and premium brands.</div>
+        <div class="sc-tags"><span class="sc-tag">Denim</span><span class="sc-tag nat">Cotton</span><span class="sc-tag">OEKO-TEX</span><span class="sc-tag">Fairtrade</span></div>
+        <div class="sc-divider"><span class="sc-moq">MOQ: <strong>600m</strong></span><span class="sc-lnk">View profile &rarr;</span></div>
+      </div>
+    </a>
+
+    <a href="supplier/marchi-fildi.html" class="scard">
+      <div class="scard-top verified"></div>
+      <div class="scard-body">
+        <div class="scard-meta"><span class="scard-country">Italy</span><span class="verified-badge">Verified</span></div>
+        <div class="sc-name">Marchi &amp; Fildi</div>
+        <div class="sc-spec">Recycled and sustainable yarns — cotton, wool and blends. Certified circular textile producer with full traceability.</div>
+        <div class="sc-tags"><span class="sc-tag nat">Recycled cotton</span><span class="sc-tag nat">Recycled wool</span><span class="sc-tag">GOTS</span><span class="sc-tag">GRS</span></div>
+        <div class="sc-divider"><span class="sc-moq">MOQ: <strong>250kg</strong></span><span class="sc-lnk">View profile &rarr;</span></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
 <section class="sec sec-alt">
-  <div class="sec-hd"><div><div class="sec-ey">Our methodology</div><h2 class="sec-ti">How we review clothing brands</h2></div><a href="how-we-review.html" class="sec-more">Full methodology &rarr;</a></div>
-  <div class="proc-row">
-    <div class="proc"><div class="proc-n">01</div><div class="proc-t">Quality</div><p class="proc-d">Fabric composition, construction quality, stitching and longevity. What garments are actually made from &mdash; not what the marketing claims.</p><span class="proc-b">Scored 1&ndash;5</span></div>
-    <div class="proc"><div class="proc-n">02</div><div class="proc-t">Ethics</div><p class="proc-d">Labour rights, environmental practices, chemical use, textile waste and diversity across the full supply chain and manufacturing base.</p><span class="proc-b">Scored 1&ndash;5</span></div>
-    <div class="proc"><div class="proc-n">03</div><div class="proc-t">Transparency</div><p class="proc-d">How openly a brand publishes supplier data, fabric compositions and sustainability progress. Opacity scores lower &mdash; it is that simple.</p><span class="proc-b">Scored 1&ndash;5</span></div>
-    <div class="proc"><div class="proc-n">04</div><div class="proc-t">Price</div><p class="proc-d">We benchmark pricing across the full range and assess whether cost genuinely reflects the quality of materials and construction.</p><span class="proc-b">&pound; to &pound;&pound;&pound;&pound;&pound;</span></div>
-  </div>
-</section>
-<section class="sec">
-  <div class="sec-hd"><div><div class="sec-ey">Reviews</div><h2 class="sec-ti">Latest brand reviews</h2></div><a href="brands.html" class="sec-more">View all brands &rarr;</a></div>
-  <div class="brand-grid">
-    <a href="brands/zara.html" class="bcard"><div class="bc-top bc-t1"></div><div class="bc-body"><div class="bc-meta"><span class="bc-tag">Fast fashion</span><span class="bc-dt">Apr 2026</span></div><div class="bc-nm">Zara</div><div class="bc-sub">Inditex Group &middot; Spain</div><div class="bc-scores"><div><div class="bcs-l">Quality</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Ethics</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Transp.</div><div class="bcs-v">4/5</div></div><div><div class="bcs-l">Price</div><div class="bcs-v">&pound;&pound;&pound;</div></div></div><span class="bc-lnk">Read full review &rarr;</span></div></a>
-    <a href="brands/arket.html" class="bcard"><div class="bc-top bc-t2"></div><div class="bc-body"><div class="bc-meta"><span class="bc-tag">Contemporary</span><span class="bc-dt">Apr 2026</span></div><div class="bc-nm">Arket</div><div class="bc-sub">H&amp;M Group &middot; Sweden</div><div class="bc-scores"><div><div class="bcs-l">Quality</div><div class="bcs-v">4/5</div></div><div><div class="bcs-l">Ethics</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Transp.</div><div class="bcs-v">4/5</div></div><div><div class="bcs-l">Price</div><div class="bcs-v">&pound;&pound;&pound;&pound;</div></div></div><span class="bc-lnk">Read full review &rarr;</span></div></a>
-    <a href="brands/hm.html" class="bcard"><div class="bc-top bc-t3"></div><div class="bc-body"><div class="bc-meta"><span class="bc-tag">Fast fashion</span><span class="bc-dt">Mar 2026</span></div><div class="bc-nm">H&amp;M</div><div class="bc-sub">H&amp;M Group &middot; Sweden</div><div class="bc-scores"><div><div class="bcs-l">Quality</div><div class="bcs-v">2/5</div></div><div><div class="bcs-l">Ethics</div><div class="bcs-v">2/5</div></div><div><div class="bcs-l">Transp.</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Price</div><div class="bcs-v">&pound;&pound;</div></div></div><span class="bc-lnk">Read full review &rarr;</span></div></a>
-  </div>
-</section>
-<section class="sec sec-blue">
-  <div class="guide-wrap">
-    <div>
-      <div class="sec-hd"><div><div class="sec-ey">Guides</div><h2 class="sec-ti">Clothing guides</h2></div><a href="guides.html" class="sec-more">All guides &rarr;</a></div>
-      <div class="guide-grid">
-        <a href="guides/how-to-read-a-clothing-label.html" class="gcard"><span class="gc-tag">Fabrics</span><div class="gc-ti">How to read a clothing label</div><p class="gc-de">What fabric content percentages actually mean, and what to look for before you buy.</p></a>
-        <a href="guides/natural-vs-synthetic-fibres.html" class="gcard"><span class="gc-tag">Fabrics</span><div class="gc-ti">Natural vs synthetic fibres</div><p class="gc-de">The real difference between cotton, polyester, viscose, lyocell and everything in between.</p></a>
-        <a href="guides/what-is-fast-fashion.html" class="gcard"><span class="gc-tag">Sustainability</span><div class="gc-ti">What is fast fashion?</div><p class="gc-de">The environmental and human cost of the fast fashion model &mdash; without the greenwashing.</p></a>
-        <a href="guides/shopping-sustainably-on-a-budget.html" class="gcard"><span class="gc-tag">Buying</span><div class="gc-ti">Shopping sustainably on a budget</div><p class="gc-de">How to find better quality clothing without spending more than you need to.</p></a>
-      </div>
+  <div class="sec-hd"><div><div class="sec-ey">Why FabricMark Suppliers</div><h2 class="sec-ti">What we offer</h2></div></div>
+  <div class="vp-grid">
+    <div class="vp">
+      <div class="vp-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8L10 2z"/></svg></div>
+      <div class="vp-ti">Verified supplier profiles</div>
+      <p class="vp-de">Every verified supplier has been independently assessed for quality standards, certifications, minimum order quantities and lead times. No unverified claims.</p>
     </div>
-    <div class="sidebar">
-      <div class="sb-pad"><div class="sb-ti">Find your perfect fit</div><p class="sb-de">Tell us your budget, fabric preferences and ethical priorities. We will match you to brands that genuinely suit your needs.</p><a href="find-your-fit.html" class="sb-btn">Start matching</a></div>
-      <div class="sb-lks">
-        <a href="brands.html" class="sb-lk"><span>Browse all brands</span><span>&rarr;</span></a>
-        <a href="brands/category/fast-fashion.html" class="sb-lk"><span>Browse by category</span><span>&rarr;</span></a>
-        <a href="guides/natural-vs-synthetic-fibres.html" class="sb-lk"><span>Browse by fabric type</span><span>&rarr;</span></a>
-        <a href="brands/category/sustainable.html" class="sb-lk"><span>Sustainable brands</span><span>&rarr;</span></a>
-        <a href="brands/best-value.html" class="sb-lk"><span>Best value brands</span><span>&rarr;</span></a>
-      </div>
+    <div class="vp">
+      <div class="vp-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v4l2.5 2.5"/></svg></div>
+      <div class="vp-ti">Connected to brand data</div>
+      <p class="vp-de">Supplier data feeds directly into FabricMark&rsquo;s consumer brand reviews. When a brand claims to use a certified supplier, we can verify it. Transparency in both directions.</p>
+    </div>
+    <div class="vp">
+      <div class="vp-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h14M10 3l7 7-7 7"/></svg></div>
+      <div class="vp-ti">Direct connection</div>
+      <p class="vp-de">Brands can contact suppliers directly through the platform. No intermediaries, no hidden fees on transactions. Your listing, your relationships.</p>
     </div>
   </div>
 </section>
-<div class="app-strip">
-  <div><div class="app-ey">FabricMark on mobile</div><div class="app-ti">Research brands in-store, on the go</div><p class="app-de">Check what a brand&rsquo;s clothes are actually made of before you buy. Compare alternatives and find better options &mdash; all from your phone.</p></div>
-  <div class="app-btns">
-    <a href="#" class="app-btn"><svg width="22" height="22" viewBox="0 0 22 22" fill="white" opacity=".7"><path d="M16 11.5c0-2.4 2-3.6 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.9.9-3.6.9-.8 0-1.9-.8-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8 1.4 0 1.8.8 3 .8 1.3 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.8z"/><path d="M13.5 5c.7-.8 1.1-1.9 1-3-.9.1-2 .7-2.7 1.4-.6.6-1.1 1.6-1 2.6 1 .1 2.1-.5 2.7-1z"/></svg><div><span class="app-bl">Download on the</span><span class="app-bn">App Store</span></div></a>
-    <a href="#" class="app-btn"><svg width="22" height="22" viewBox="0 0 22 22" fill="white" opacity=".7"><path d="M4 3.5l9 7.5-9 7.5V3.5z" opacity=".4"/><path d="M4 3.5l7 2-2.5 2.8L4 3.5z" opacity=".7"/><path d="M4 18.5l7-2-2.5-2.8L4 18.5z" opacity=".7"/><path d="M11 5.5l6.5 5.5-6.5 5.5 2.5-5.5-2.5-5.5z" opacity=".55"/></svg><div><span class="app-bl">Get it on</span><span class="app-bn">Google Play</span></div></a>
+
+<section class="sec" id="pricing">
+  <div class="sec-hd"><div><div class="sec-ey">Pricing</div><h2 class="sec-ti">Supplier listing plans</h2></div></div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <span class="price-badge">Basic</span>
+      <div class="price-ti">Listed</div>
+      <div class="price-amt">Free</div>
+      <div class="price-period">Forever</div>
+      <p class="price-de">Get your business listed on FabricMark Suppliers with a basic profile visible to all brands.</p>
+      <div class="price-features">
+        <div class="price-feature"><div class="pf-dot"></div>Company name and location</div>
+        <div class="price-feature"><div class="pf-dot"></div>Fabric types listed</div>
+        <div class="price-feature"><div class="pf-dot"></div>Basic contact details</div>
+        <div class="price-feature"><div class="pf-dot"></div>Appears in search results</div>
+      </div>
+      <a href="register.html" class="price-btn outline">Get listed free</a>
+    </div>
+    <div class="price-card featured">
+      <span class="price-badge">Most popular</span>
+      <div class="price-ti">Verified</div>
+      <div class="price-amt">&pound;49</div>
+      <div class="price-period">per month + one-time verification fee</div>
+      <p class="price-de">Full verification, enhanced profile and priority placement in search results. Connected to brand review data.</p>
+      <div class="price-features">
+        <div class="price-feature"><div class="pf-dot"></div>Everything in Listed</div>
+        <div class="price-feature"><div class="pf-dot"></div>Verified badge</div>
+        <div class="price-feature"><div class="pf-dot"></div>Full profile with photos</div>
+        <div class="price-feature"><div class="pf-dot"></div>Certifications displayed</div>
+        <div class="price-feature"><div class="pf-dot"></div>Priority in search</div>
+        <div class="price-feature"><div class="pf-dot"></div>Direct enquiry inbox</div>
+        <div class="price-feature"><div class="pf-dot"></div>Linked to brand reviews</div>
+      </div>
+      <a href="register.html?plan=verified" class="price-btn primary">Get verified</a>
+    </div>
+    <div class="price-card">
+      <span class="price-badge">Enterprise</span>
+      <div class="price-ti">Partner</div>
+      <div class="price-amt">Custom</div>
+      <div class="price-period">bespoke pricing</div>
+      <p class="price-de">For large manufacturers and groups wanting deep integration, co-branded content and API data access.</p>
+      <div class="price-features">
+        <div class="price-feature"><div class="pf-dot"></div>Everything in Verified</div>
+        <div class="price-feature"><div class="pf-dot"></div>Multiple locations</div>
+        <div class="price-feature"><div class="pf-dot"></div>API data access</div>
+        <div class="price-feature"><div class="pf-dot"></div>Co-branded content</div>
+        <div class="price-feature"><div class="pf-dot"></div>Analytics dashboard</div>
+        <div class="price-feature"><div class="pf-dot"></div>Dedicated account manager</div>
+      </div>
+      <a href="contact.html?enquiry=partner" class="price-btn outline">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-ey">Ready to get started?</div>
+  <div class="cta-ti">List your business on FabricMark Suppliers</div>
+  <p class="cta-de">Join hundreds of verified fabric suppliers connecting with clothing brands looking for ethical, quality-assessed manufacturing partners.</p>
+  <div class="cta-btns">
+    <button class="b2b-btn-primary" onclick="window.location.href='register.html'">List your business free</button>
+    <button class="b2b-btn-secondary" onclick="window.location.href='contact.html'">Talk to us first</button>
   </div>
 </div>
-</main>
+
 <footer class="footer">
   <div class="ft-main">
     <div class="ft-grid">
-      <div><a href="index.html" class="ft-logo"><span class="ft-lf">Fabric</span><span class="ft-lm">Mark</span></a><p class="ft-tag">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p></div>
+      <div><a href="index.html" class="ft-logo"><span class="ft-lf">Fabric</span><span class="ft-lm">Mark</span></a><p class="ft-tag">The verified directory of fabric suppliers. A FabricMark platform.</p></div>
       <div class="ft-cols">
-        <div><div class="ft-col-ti">Brands</div><a href="brands/category/fast-fashion.html">Fast fashion</a><a href="brands/category/contemporary.html">Contemporary</a><a href="brands/category/premium.html">Premium</a><a href="brands/category/luxury.html">Luxury</a><a href="brands/category/sustainable.html">Sustainable</a><a href="brands/category/sportswear.html">Sportswear</a></div>
-        <div><div class="ft-col-ti">Guides</div><a href="guides/natural-vs-synthetic-fibres.html">Fabric types explained</a><a href="guides/how-to-read-a-clothing-label.html">Reading clothing labels</a><a href="guides/what-is-fast-fashion.html">Ethical fashion</a><a href="guides.html">All guides</a></div>
-        <div><div class="ft-col-ti">FabricMark</div><a href="about.html">About us</a><a href="how-we-review.html">How we review</a><a href="submit-a-brand.html">Submit a brand</a><a href="advertise.html">Advertise</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy policy</a></div>
+        <div><div class="ft-col-ti">Suppliers</div><a href="all.html">All suppliers</a><a href="category/cotton.html">Cotton</a><a href="category/wool.html">Wool</a><a href="category/sustainable.html">Sustainable</a><a href="certifications.html">Certifications</a></div>
+        <div><div class="ft-col-ti">Brands</div><a href="brands.html">Find suppliers</a><a href="../index.html">Consumer reviews</a><a href="../brands.html">Brand directory</a></div>
+        <div><div class="ft-col-ti">Platform</div><a href="pricing.html">Pricing</a><a href="register.html">List your business</a><a href="login.html">Log in</a><a href="api.html">API access</a></div>
+        <div><div class="ft-col-ti">Company</div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy policy</a><a href="terms.html">Terms of service</a></div>
       </div>
     </div>
-    <div class="ft-btm"><div class="ft-copy">&copy; 2026 FabricMark &middot; fabricmark.co.uk &middot; All rights reserved</div><div class="ft-social"><a href="https://instagram.com/fabricmark" rel="noopener">Instagram</a><a href="https://x.com/fabricmark" rel="noopener">X</a><a href="https://pinterest.com/fabricmark" rel="noopener">Pinterest</a><a href="https://facebook.com/fabricmark" rel="noopener">Facebook</a></div></div>
+    <div class="ft-btm"><div class="ft-copy">&copy; 2026 FabricMark &middot; fabricmark.co.uk &middot; All rights reserved</div><div class="ft-social"><a href="https://instagram.com/fabricmark" rel="noopener">Instagram</a><a href="https://x.com/fabricmark" rel="noopener">X</a><a href="https://linkedin.com/company/fabricmark" rel="noopener">LinkedIn</a></div></div>
   </div>
 </footer>
+
 <script>
-(function(){var s=localStorage.getItem('fm-theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');setDark();}})();
-function setDark(){var i=document.getElementById('thico');if(i)i.innerHTML='<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';}
-function setLight(){var i=document.getElementById('thico');if(i)i.innerHTML='<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';}
-function toggleTheme(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fm-theme','light');setLight();}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fm-theme','dark');setDark();}}
-function openSearch(){document.getElementById('sov').classList.add('open');setTimeout(function(){document.getElementById('sinput').focus();},50);}
-function closeSov(){document.getElementById('sov').classList.remove('open');}
-function doSearch(){var q=document.getElementById('sinput').value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
-function doHeroSearch(){var q=document.getElementById('hsrch').value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
-document.getElementById('sov').addEventListener('click',function(e){if(e.target===this)closeSov();});
-function setPill(el){document.querySelectorAll('.pill').forEach(function(p){p.classList.remove('on');});el.classList.add('on');}
+(function(){var s=localStorage.getItem('fm-theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');var i=document.getElementById('thico');if(i)i.innerHTML='<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';}})();
+function toggleTheme(){var d=document.documentElement.getAttribute('data-theme')==='dark';var i=document.getElementById('thico');if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fm-theme','light');if(i)i.innerHTML='<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fm-theme','dark');if(i)i.innerHTML='<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';}}
+function doSupplierSearch(){var q=document.getElementById('ssrch').value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
+function setBPill(el){document.querySelectorAll('.b2b-pill').forEach(function(p){p.classList.remove('on');});el.classList.add('on');}
 </script>
 </body>
 </html>
