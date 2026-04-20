@@ -1,0 +1,9 @@
+# FabricMark redirects — Cloudflare Pages
+# Upload this file to the ROOT of your GitHub repository
+
+/brands    /brands.html    301
+/guides    /guides.html    301
+/suppliers /suppliers/index.html    301
+
+# Custom 404
+/*    /404.html    404
