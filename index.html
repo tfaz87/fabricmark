@@ -3,274 +3,634 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FabricMark reviews clothing brands on quality, ethics, transparency and price. The honest guide to clothing brands.">
-<meta name="algolia-site-verification"  content="B24526556B390E25" />
 <title>FabricMark — The honest guide to clothing brands</title>
+<meta name="description" content="Independent reviews of 100+ UK clothing brands on fabric quality, ethics, transparency and price. Find out what your clothes are really made of — and who made them.">
+<meta name="keywords" content="clothing brand reviews, ethical fashion UK, fabric quality ratings, sustainable brands, fast fashion ratings, is Zara ethical, FabricMark">
+<link rel="canonical" href="https://fabricmark.co.uk/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fabricmark.co.uk/">
+<meta property="og:title" content="FabricMark — The honest guide to clothing brands">
+<meta property="og:description" content="Independent reviews of 100+ UK clothing brands on fabric quality, ethics, transparency and price. Find out what your clothes are really made of.">
+<meta property="og:image" content="https://fabricmark.co.uk/og-home.jpg">
+<meta property="og:site_name" content="FabricMark">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@fabricmark">
+<meta name="twitter:title" content="FabricMark — The honest guide to clothing brands">
+<meta name="twitter:description" content="Independent reviews of 100+ UK clothing brands on fabric quality, ethics and price.">
+<meta name="twitter:image" content="https://fabricmark.co.uk/og-home.jpg">
+
+<!-- Algolia verification -->
+<meta name="algolia-site-verification" content="B24526556B390E25">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://fabricmark.co.uk/#website",
+      "url": "https://fabricmark.co.uk/",
+      "name": "FabricMark",
+      "description": "Independent reviews of clothing brands on fabric quality, ethics, transparency and price",
+      "publisher": { "@id": "https://fabricmark.co.uk/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://fabricmark.co.uk/search.html?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://fabricmark.co.uk/#organization",
+      "name": "FabricMark",
+      "url": "https://fabricmark.co.uk/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fabricmark.co.uk/og-home.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "sameAs": [
+        "https://instagram.com/fabricmark",
+        "https://x.com/fabricmark",
+        "https://pinterest.com/fabricmark",
+        "https://facebook.com/fabricmark"
+      ],
+      "description": "FabricMark reviews UK clothing brands independently on fabric quality, ethics, supply-chain transparency and price.",
+      "areaServed": "GB",
+      "knowsAbout": ["clothing brand reviews","sustainable fashion","fabric quality","ethical fashion","fast fashion"]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Latest brand reviews",
+      "url": "https://fabricmark.co.uk/brands.html",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "https://fabricmark.co.uk/brands/zara" },
+        { "@type": "ListItem", "position": 2, "url": "https://fabricmark.co.uk/brands/arket" },
+        { "@type": "ListItem", "position": 3, "url": "https://fabricmark.co.uk/brands/hm" }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-:root{--blue:#0368a2;--blue-dk:#065F92;--navy:#063798;--charcoal:#2d3236;--bg:#fff;--bg2:#f7f8fa;--bg3:#eef1f7;--bg-blue:#e8f2fa;--bg-navy:#e6eaf7;--ink:#2d3236;--ink2:#4a5260;--ink3:#7a8494;--ink4:#b8bfc9;--bd:#dde2ea;--bd2:#c4ccd8;--ui:'Montserrat',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;--body:'Source Serif 4',Georgia,serif}
-[data-theme=dark]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;--ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;--bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;--charcoal:#e6eaf0}
-body{font-family:var(--ui);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
+:root{
+  --blue:#0368a2;--blue-dk:#065F92;--navy:#063798;--charcoal:#2d3236;
+  --bg:#fff;--bg2:#f7f8fa;--bg3:#eef1f7;--bg-blue:#e8f2fa;--bg-navy:#e6eaf7;
+  --ink:#2d3236;--ink2:#4a5260;--ink3:#7a8494;--ink4:#b8bfc9;
+  --bd:#dde2ea;--bd2:#c4ccd8;
+  --display:'Cormorant Garamond',Georgia,serif;
+  --ui:'DM Sans',system-ui,sans-serif;
+  --data:'Space Grotesk',system-ui,sans-serif;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;
+  --ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;
+  --bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;--charcoal:#e6eaf0;
+  color-scheme:dark;
+}}
+:root[data-theme=dark]{
+  --bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;
+  --ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;
+  --bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;--charcoal:#e6eaf0;
+  color-scheme:dark;
+}
+body{font-family:var(--ui);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .2s,color .2s;line-height:1.5}
 a{color:inherit;text-decoration:none}
+img{max-width:100%}
+
+/* ── NAV ── */
 .nav{background:var(--bg);border-bottom:3px solid var(--charcoal);position:sticky;top:0;z-index:100}
-.nav-top{display:flex;align-items:center;justify-content:space-between;padding:7px 48px;border-bottom:1px solid var(--bd)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;padding:6px 48px;border-bottom:1px solid var(--bd)}
 .nav-top-left{display:flex;gap:20px}
-.nav-top-left a{font-size:11px;font-weight:400;color:var(--ink3);letter-spacing:.5px;text-transform:uppercase}
+.nav-top-left a{font-family:var(--data);font-size:10px;font-weight:500;color:var(--ink3);letter-spacing:.6px;text-transform:uppercase}
 .nav-top-left a:hover{color:var(--ink)}
 .nav-top-right{display:flex;align-items:center;gap:8px}
-.ibtn{width:28px;height:28px;border:1px solid var(--bd2);background:transparent;cursor:pointer;color:var(--ink3);display:flex;align-items:center;justify-content:center;border-radius:3px}
+.ibtn{width:28px;height:28px;border:1px solid var(--bd2);background:transparent;cursor:pointer;color:var(--ink3);display:flex;align-items:center;justify-content:center;border-radius:2px}
 .ibtn svg{width:13px;height:13px;pointer-events:none}
 .ibtn:hover{color:var(--ink);border-color:var(--ink)}
 .nav-mid{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px}
 .nav-links{display:flex;gap:28px}
-.nav-links a{font-size:11px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.8px}
+.nav-links a{font-family:var(--data);font-size:10.5px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.9px}
 .nav-links a:hover{color:var(--blue)}
-.nav-logo{display:flex;align-items:center;justify-content:center;padding:14px 32px}
-.nl-f{font-family:var(--ui);font-size:22px;font-weight:600;color:var(--charcoal);letter-spacing:-.3px}
-.nl-m{font-family:var(--ui);font-size:22px;font-weight:600;color:var(--blue);letter-spacing:-.3px}
+.nav-logo{display:flex;align-items:center;justify-content:center;padding:13px 32px;gap:0}
+.nl-f{font-family:var(--display);font-size:26px;font-weight:600;color:var(--charcoal);letter-spacing:-.2px;font-style:italic}
+.nl-m{font-family:var(--display);font-size:26px;font-weight:600;color:var(--blue);letter-spacing:-.2px;font-style:italic}
 .nav-right{display:flex;justify-content:flex-end}
-.btn-cta{font-size:11px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:3px;text-transform:uppercase;letter-spacing:.8px;border:none;cursor:pointer;font-family:var(--ui)}
+.btn-cta{font-family:var(--data);font-size:10px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:2px;text-transform:uppercase;letter-spacing:.9px;border:none;cursor:pointer}
 .btn-cta:hover{background:var(--blue-dk)}
-.sov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:flex-start;justify-content:center;padding-top:80px}
+
+/* ── SEARCH OVERLAY ── */
+.sov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:flex-start;justify-content:center;padding-top:80px}
 .sov.open{display:flex}
-.sov-box{background:var(--bg);border:2px solid var(--blue);border-radius:6px;width:100%;max-width:640px;margin:0 24px;overflow:hidden}
+.sov-box{background:var(--bg);border:2px solid var(--blue);border-radius:4px;width:100%;max-width:640px;margin:0 24px;overflow:hidden}
 .sov-row{display:flex}
 .sov-row input{flex:1;border:none;background:transparent;padding:16px 20px;font-size:16px;font-family:var(--ui);color:var(--ink);outline:none}
 .sov-row input::placeholder{color:var(--ink3)}
-.sov-row button{background:var(--blue);color:#fff;border:none;padding:0 28px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px}
+.sov-row button{background:var(--blue);color:#fff;border:none;padding:0 28px;font-size:11px;font-weight:600;cursor:pointer;font-family:var(--data);text-transform:uppercase;letter-spacing:.9px}
 .sov-row button:hover{background:var(--blue-dk)}
-.sov-close{display:block;font-size:11px;color:var(--ink3);text-align:center;padding:8px;cursor:pointer;border-top:1px solid var(--bd);font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px}
-.hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid var(--charcoal);min-height:420px}
-.hero-l{padding:52px 48px;border-right:1px solid var(--bd);display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.sov-close{display:block;font-size:10px;color:var(--ink3);text-align:center;padding:8px;cursor:pointer;border-top:1px solid var(--bd);font-family:var(--data);text-transform:uppercase;letter-spacing:.8px}
+
+/* ── HERO ── */
+.hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid var(--charcoal)}
+.hero-l{padding:60px 48px 52px;border-right:1px solid var(--bd);display:flex;flex-direction:column;justify-content:space-between;gap:36px}
 .hero-r{padding:52px 48px;background:var(--bg2)}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
-.kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
-h1{font-family:var(--serif);font-size:50px;font-weight:400;color:var(--ink);line-height:1.08;letter-spacing:-.5px;margin-bottom:18px}
-.deck{font-family:var(--body);font-size:18px;color:var(--ink2);line-height:1.75}
-.stats{display:flex;gap:0;padding-top:22px;border-top:1px solid var(--bd)}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--data);font-size:9.5px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+.kicker-rule{width:28px;height:1px;background:var(--blue)}
+h1{font-family:var(--display);font-size:56px;font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-.5px;margin-bottom:20px;text-wrap:balance}
+h1 em{font-style:italic;color:var(--blue)}
+.deck{font-family:var(--ui);font-size:16.5px;color:var(--ink2);line-height:1.8;font-weight:300;max-width:420px}
+.stats{display:flex;gap:0;padding-top:24px;border-top:1px solid var(--bd)}
 .stat{flex:1;padding-right:20px;border-right:1px solid var(--bd);margin-right:20px}
 .stat:last-child{border-right:none;margin-right:0;padding-right:0}
-.stat-n{font-family:var(--serif);font-size:32px;color:var(--blue);line-height:1;margin-bottom:4px}
-.stat-l{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.8px;color:var(--ink3)}
-.srch-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:6px}
-.srch-bar{display:flex;border:2px solid var(--charcoal);border-radius:4px;overflow:hidden;margin-bottom:20px}
+.stat-n{font-family:var(--display);font-size:36px;color:var(--blue);line-height:1;margin-bottom:5px;font-weight:400}
+.stat-l{font-family:var(--data);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink3)}
+
+/* search panel */
+.srch-lbl{font-family:var(--data);font-size:9.5px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.srch-bar{display:flex;border:2px solid var(--charcoal);border-radius:3px;overflow:hidden;margin-bottom:22px}
 .srch-bar:focus-within{border-color:var(--blue)}
 .srch-bar input{flex:1;border:none;background:transparent;padding:13px 16px;font-size:14px;font-family:var(--ui);color:var(--ink);outline:none}
 .srch-bar input::placeholder{color:var(--ink3)}
-.srch-bar button{background:var(--blue);color:#fff;border:none;padding:0 22px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--ui);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.srch-bar button{background:var(--blue);color:#fff;border:none;padding:0 22px;font-size:11px;font-weight:600;cursor:pointer;font-family:var(--data);text-transform:uppercase;letter-spacing:.9px;white-space:nowrap}
 .srch-bar button:hover{background:var(--blue-dk)}
 .srch-sec{margin-bottom:18px}
-.srch-sec-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--bd)}
+.srch-sec-lbl{font-family:var(--data);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--bd)}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
-.pill{padding:5px 14px;border:1px solid var(--bd2);color:var(--ink2);font-size:11px;font-weight:500;cursor:pointer;background:transparent;font-family:var(--ui);border-radius:2px;transition:all .12s}
+.pill{padding:5px 13px;border:1px solid var(--bd2);color:var(--ink2);font-family:var(--data);font-size:10.5px;font-weight:500;cursor:pointer;background:transparent;border-radius:2px;transition:all .12s;letter-spacing:.3px}
 .pill:hover,.pill.on{background:var(--blue);color:#fff;border-color:var(--blue)}
 .srch-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-select{padding:9px 12px;border:1px solid var(--bd);background:var(--bg);color:var(--ink2);font-size:12px;font-family:var(--ui);outline:none;cursor:pointer;width:100%;border-radius:3px}
+select{padding:9px 12px;border:1px solid var(--bd);background:var(--bg);color:var(--ink2);font-size:12px;font-family:var(--data);outline:none;cursor:pointer;width:100%;border-radius:2px}
 select:focus{border-color:var(--blue)}
-.sec{padding:52px 48px}
+
+/* ── SECTIONS ── */
+.sec{padding:56px 48px}
 .sec-alt{background:var(--bg2)}
 .sec-blue{background:var(--bg-blue)}
-.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid var(--charcoal);margin-bottom:30px}
-.sec-ey{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
-.sec-ti{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ink)}
-.sec-more{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.sec-hd{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid var(--charcoal);margin-bottom:32px}
+.sec-ey{font-family:var(--data);font-size:9px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:7px}
+.sec-ti{font-family:var(--display);font-size:30px;font-weight:500;color:var(--ink);text-wrap:balance}
+.sec-more{font-family:var(--data);font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.9px;white-space:nowrap}
 .sec-more:hover{opacity:.7}
-.proc-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd);border-radius:6px;overflow:hidden}
-.proc{padding:28px 22px;border-right:1px solid var(--bd);background:var(--bg)}
+
+/* ── HOW WE REVIEW ── */
+.proc-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd);overflow:hidden}
+.proc{padding:28px 24px;border-right:1px solid var(--bd);background:var(--bg)}
 .proc:last-child{border-right:none}
-.proc-n{font-family:var(--serif);font-size:40px;color:var(--blue);opacity:.2;line-height:1;margin-bottom:14px}
-.proc-t{font-size:12px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
-.proc-d{font-family:var(--body);font-size:15px;color:var(--ink2);line-height:1.7}
-.proc-b{display:inline-block;margin-top:14px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:4px 10px;border-radius:2px}
+.proc-n{font-family:var(--display);font-size:44px;color:var(--blue);opacity:.15;line-height:1;margin-bottom:16px;font-weight:400}
+.proc-t{font-family:var(--data);font-size:11px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:1px;margin-bottom:11px}
+.proc-d{font-family:var(--ui);font-size:14.5px;color:var(--ink2);line-height:1.75;font-weight:300}
+.proc-b{display:inline-block;margin-top:16px;font-family:var(--data);font-size:9.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:4px 10px;border-radius:2px}
+
+/* ── BRAND CARDS ── */
 .brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.bcard{border:1px solid var(--bd);border-radius:6px;background:var(--bg);overflow:hidden;display:block;transition:border-color .15s}
+.bcard{border:1px solid var(--bd);background:var(--bg);overflow:hidden;display:block;transition:border-color .15s}
 .bcard:hover{border-color:var(--blue)}
 .bcard:hover .bc-nm{color:var(--blue)}
-.bc-top{height:5px}
+.bc-top{height:4px}
 .bc-t1{background:linear-gradient(90deg,#0368a2,#065F92)}
 .bc-t2{background:linear-gradient(90deg,#063798,#050A9D)}
 .bc-t3{background:linear-gradient(90deg,#050A9D,#2E04A3)}
-.bc-body{padding:20px}
-.bc-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.bc-tag{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:3px 8px;border-radius:2px}
-.bc-dt{font-size:11px;color:var(--ink4)}
-.bc-nm{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--ink);margin-bottom:3px;transition:color .15s}
-.bc-sub{font-size:12px;color:var(--ink3);margin-bottom:16px}
-.bc-scores{display:grid;grid-template-columns:repeat(4,1fr);padding:12px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);margin-bottom:14px}
-.bcs-l{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:var(--ink3);margin-bottom:4px}
-.bcs-v{font-size:15px;font-weight:600;color:var(--ink)}
-.bc-lnk{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.5px}
+.bc-body{padding:22px}
+.bc-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
+.bc-tag{font-family:var(--data);font-size:9.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--blue);background:var(--bg-blue);padding:3px 8px;border-radius:2px}
+.bc-dt{font-family:var(--data);font-size:10px;color:var(--ink4)}
+.bc-nm{font-family:var(--display);font-size:28px;font-weight:500;color:var(--ink);margin-bottom:3px;transition:color .15s;line-height:1.1}
+.bc-sub{font-family:var(--data);font-size:11px;color:var(--ink3);margin-bottom:18px;letter-spacing:.2px}
+.bc-scores{display:grid;grid-template-columns:repeat(4,1fr);padding:13px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);margin-bottom:14px}
+.bcs-l{font-family:var(--data);font-size:8.5px;font-weight:500;text-transform:uppercase;letter-spacing:.7px;color:var(--ink3);margin-bottom:4px}
+.bcs-v{font-family:var(--data);font-size:14px;font-weight:600;color:var(--ink)}
+.bc-lnk{font-family:var(--data);font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.6px}
+
+/* ── GUIDES ── */
 .guide-wrap{display:grid;grid-template-columns:1fr 288px;gap:40px;align-items:start}
 .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.gcard{padding:22px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);display:block;transition:border-color .15s}
+.gcard{padding:24px;border:1px solid var(--bd);background:var(--bg);display:block;transition:border-color .15s}
 .gcard:hover{border-color:var(--blue)}
 .gcard:hover .gc-ti{color:var(--blue)}
-.gc-tag{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;display:block}
-.gc-ti{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);line-height:1.35;margin-bottom:6px;transition:color .15s}
-.gc-de{font-family:var(--body);font-size:15px;color:var(--ink3);line-height:1.7}
-.sidebar{border:1px solid var(--bd);border-radius:6px;background:var(--bg);overflow:hidden}
+.gc-tag{font-family:var(--data);font-size:9.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:9px;display:block}
+.gc-ti{font-family:var(--display);font-size:20px;font-weight:500;color:var(--ink);line-height:1.3;margin-bottom:7px;transition:color .15s;text-wrap:balance}
+.gc-de{font-family:var(--ui);font-size:14px;color:var(--ink3);line-height:1.75;font-weight:300}
+
+/* ── SIDEBAR ── */
+.sidebar{border:1px solid var(--bd);background:var(--bg);overflow:hidden}
 .sb-pad{padding:24px}
-.sb-ti{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);margin-bottom:8px}
-.sb-de{font-family:var(--body);font-size:14px;color:var(--ink2);line-height:1.7;margin-bottom:20px}
-.sb-btn{display:block;width:100%;padding:12px;text-align:center;background:var(--blue);color:#fff;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border:none;font-family:var(--ui);border-radius:3px}
+.sb-ti{font-family:var(--display);font-size:22px;font-weight:500;color:var(--ink);margin-bottom:9px;text-wrap:balance}
+.sb-de{font-family:var(--ui);font-size:13.5px;color:var(--ink2);line-height:1.75;margin-bottom:20px;font-weight:300}
+.sb-btn{display:block;width:100%;padding:12px;text-align:center;background:var(--blue);color:#fff;font-family:var(--data);font-size:11px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;cursor:pointer;border:none;border-radius:2px}
 .sb-btn:hover{background:var(--blue-dk)}
 .sb-lks{border-top:1px solid var(--bd)}
-.sb-lk{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--ink2);padding:12px 24px;border-bottom:1px solid var(--bd);transition:background .1s,color .1s}
+.sb-lk{display:flex;align-items:center;justify-content:space-between;font-family:var(--ui);font-size:13px;color:var(--ink2);padding:12px 24px;border-bottom:1px solid var(--bd);transition:background .1s,color .1s}
 .sb-lk:last-child{border-bottom:none}
 .sb-lk:hover{background:var(--bg2);color:var(--blue)}
-.app-strip{background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px}
-.app-ey{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px}
-.app-ti{font-family:var(--serif);font-size:26px;font-weight:400;color:#fff;margin-bottom:8px}
-.app-de{font-family:var(--body);font-size:15px;color:rgba(255,255,255,.55);line-height:1.65;max-width:420px}
-.app-btns{display:flex;gap:12px;flex-shrink:0}
-.app-btn{display:flex;align-items:center;gap:12px;padding:12px 22px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:5px;transition:background .15s}
-.app-btn:hover{background:rgba(255,255,255,.14)}
-.app-bl{font-size:9px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;display:block}
-.app-bn{font-size:14px;font-weight:600;color:#fff;display:block}
+
+/* ── MISSION STRIP ── */
+.mission-strip{background:var(--charcoal);padding:56px 48px;border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}
+[data-theme=dark] .mission-strip,[data-theme=dark] .footer{background:#080b10}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .mission-strip,:root:not([data-theme=light]) .footer{background:#080b10}}
+.mission-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:900px}
+.mission-ey{font-family:var(--data);font-size:9px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px}
+.mission-ti{font-family:var(--display);font-size:34px;font-weight:400;color:#fff;line-height:1.12;margin-bottom:16px;font-style:italic}
+.mission-de{font-family:var(--ui);font-size:15px;color:rgba(255,255,255,.5);line-height:1.8;font-weight:300}
+.mission-vals{display:flex;flex-direction:column;gap:18px;justify-content:center}
+.mval{display:flex;align-items:flex-start;gap:16px}
+.mval-n{font-family:var(--display);font-size:28px;color:var(--blue);line-height:1;flex-shrink:0;font-weight:400}
+.mval-t{font-family:var(--data);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);margin-bottom:3px}
+.mval-d{font-family:var(--ui);font-size:13px;color:rgba(255,255,255,.32);line-height:1.7;font-weight:300}
+
+/* ── FOOTER ── */
 .footer{background:var(--charcoal)}
-[data-theme=dark] .footer{background:#080b10}
 .ft-main{padding:52px 48px 0}
-.ft-grid{display:grid;grid-template-columns:260px 1fr;gap:52px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
-.ft-logo{display:flex;align-items:center;margin-bottom:14px}
-.ft-lf{font-family:var(--ui);font-size:20px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:-.3px}
-.ft-lm{font-family:var(--ui);font-size:20px;font-weight:600;color:var(--blue);letter-spacing:-.3px}
-.ft-tag{font-family:var(--body);font-size:13px;color:rgba(255,255,255,.3);line-height:1.8}
+.ft-grid{display:grid;grid-template-columns:240px 1fr;gap:52px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ft-logo{display:flex;align-items:baseline;margin-bottom:12px;gap:0}
+.ft-lf{font-family:var(--display);font-size:22px;font-weight:600;color:rgba(255,255,255,.8);font-style:italic}
+.ft-lm{font-family:var(--display);font-size:22px;font-weight:600;color:var(--blue);font-style:italic}
+.ft-tag{font-family:var(--ui);font-size:13px;color:rgba(255,255,255,.27);line-height:1.85;font-weight:300}
 .ft-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.ft-col-ti{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.22);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.07)}
-.ft-cols a{display:block;font-size:13px;color:rgba(255,255,255,.42);margin-bottom:9px;transition:color .1s}
-.ft-cols a:hover{color:rgba(255,255,255,.85)}
+.ft-col-ti{font-family:var(--data);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.8px;color:rgba(255,255,255,.2);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ft-cols a{display:block;font-family:var(--ui);font-size:13px;color:rgba(255,255,255,.38);margin-bottom:9px;transition:color .1s;font-weight:300}
+.ft-cols a:hover{color:rgba(255,255,255,.8)}
 .ft-btm{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.ft-copy{font-size:11px;color:rgba(255,255,255,.18)}
+.ft-copy{font-family:var(--data);font-size:10px;color:rgba(255,255,255,.16);letter-spacing:.3px}
 .ft-social{display:flex;gap:18px}
-.ft-social a{font-size:11px;font-weight:500;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:.7px;transition:color .1s}
-.ft-social a:hover{color:rgba(255,255,255,.7)}
-@media(max-width:1024px){.nav-top,.nav-mid,.sec,.ft-main{padding-left:24px;padding-right:24px}.nav-logo{padding:14px 16px}.hero{grid-template-columns:1fr}.hero-l{padding:40px 24px;border-right:none;border-bottom:1px solid var(--bd)}.hero-r{padding:40px 24px}h1{font-size:38px}.proc-row{grid-template-columns:1fr 1fr}.proc:nth-child(2){border-right:none}.proc:nth-child(3),.proc:nth-child(4){border-top:1px solid var(--bd)}.proc:nth-child(4){border-right:none}.brand-grid{grid-template-columns:1fr}.guide-wrap{grid-template-columns:1fr}.app-strip{flex-direction:column;align-items:flex-start;padding:32px 24px}.ft-grid{grid-template-columns:1fr;gap:32px}.ft-main{padding:40px 24px 0}.ft-cols{grid-template-columns:repeat(2,1fr)}.ft-btm{flex-direction:column;gap:10px}}
-@media(max-width:640px){.nav-links{display:none}h1{font-size:32px}.srch-grid{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}.app-btns{flex-direction:column;width:100%}.ft-cols{grid-template-columns:1fr}}
+.ft-social a{font-family:var(--data);font-size:10px;font-weight:500;color:rgba(255,255,255,.2);text-transform:uppercase;letter-spacing:.8px;transition:color .1s}
+.ft-social a:hover{color:rgba(255,255,255,.65)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .nav-top,.nav-mid,.sec,.ft-main,.mission-strip{padding-left:24px;padding-right:24px}
+  .nav-logo{padding:13px 16px}
+  .hero{grid-template-columns:1fr}
+  .hero-l{padding:44px 24px;border-right:none;border-bottom:1px solid var(--bd)}
+  .hero-r{padding:40px 24px}
+  h1{font-size:44px}
+  .proc-row{grid-template-columns:1fr 1fr}
+  .proc:nth-child(2){border-right:none}
+  .proc:nth-child(3),.proc:nth-child(4){border-top:1px solid var(--bd)}
+  .proc:nth-child(4){border-right:none}
+  .brand-grid{grid-template-columns:1fr 1fr}
+  .guide-wrap{grid-template-columns:1fr}
+  .mission-inner{grid-template-columns:1fr;gap:32px}
+  .ft-grid{grid-template-columns:1fr;gap:32px}
+  .ft-main{padding:40px 24px 0}
+  .ft-cols{grid-template-columns:repeat(2,1fr)}
+  .ft-btm{flex-direction:column;gap:10px}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  h1{font-size:36px}
+  .srch-grid{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:1fr}
+  .brand-grid{grid-template-columns:1fr}
+  .ft-cols{grid-template-columns:1fr}
+  .proc-row{grid-template-columns:1fr}
+  .proc{border-right:none!important;border-top:1px solid var(--bd)}
+  .proc:first-child{border-top:none}
+}
 </style>
 </head>
 <body>
-<nav class="nav">
+
+<nav class="nav" aria-label="Main navigation">
   <div class="nav-top">
-    <div class="nav-top-left"><a href="about.html">About</a><a href="how-we-review.html">How we review</a><a href="advertise.html">Advertise</a></div>
+    <div class="nav-top-left">
+      <a href="about.html">About</a>
+      <a href="how-we-review.html">How we review</a>
+      <a href="advertise.html">Advertise</a>
+    </div>
     <div class="nav-top-right">
-      <button class="ibtn" onclick="openSearch()" aria-label="Search"><svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5.5" cy="5.5" r="4"/><path d="M9 9l2.5 2.5" stroke-linecap="round"/></svg></button>
-      <button class="ibtn" id="thbtn" onclick="toggleTheme()" aria-label="Toggle dark mode"><svg id="thico" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/></svg></button>
+      <button class="ibtn" onclick="openSearch()" aria-label="Search brands">
+        <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5.5" cy="5.5" r="4"/><path d="M9 9l2.5 2.5" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ibtn" id="thbtn" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <svg id="thico" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
   <div class="nav-mid">
-    <div class="nav-links"><a href="brands.html">Brands</a><a href="guides.html">Clothing guides</a><a href="find-your-fit.html">Find your perfect fit</a></div>
-    <a href="index.html" class="nav-logo"><span class="nl-f">Fabric</span><span class="nl-m">Mark</span></a>
+    <nav class="nav-links" aria-label="Site sections">
+      <a href="brands.html">Brand reviews</a>
+      <a href="guides.html">Clothing guides</a>
+      <a href="find-your-fit.html">Find your fit</a>
+    </nav>
+    <a href="/" class="nav-logo" aria-label="FabricMark home">
+      <span class="nl-f">Fabric</span><span class="nl-m">Mark</span>
+    </a>
     <div class="nav-right"><a href="signup.html" class="btn-cta">Sign up</a></div>
   </div>
 </nav>
-<div class="sov" id="sov">
+
+<div class="sov" id="sov" role="dialog" aria-modal="true" aria-label="Search">
   <div class="sov-box">
-    <div class="sov-row"><input type="text" id="sinput" placeholder='Search brands — try "Zara" or "ethical denim"...' onkeydown="if(event.key==='Enter')doSearch();if(event.key==='Escape')closeSov()"><button onclick="doSearch()">Search</button></div>
-    <span class="sov-close" onclick="closeSov()">Close &times;</span>
+    <div class="sov-row">
+      <input type="search" id="sinput" placeholder='Search — try "Zara", "ethical denim" or "wool coats"...' onkeydown="if(event.key==='Enter')doSearch();if(event.key==='Escape')closeSov()">
+      <button onclick="doSearch()">Search</button>
+    </div>
+    <span class="sov-close" onclick="closeSov()" role="button" tabindex="0">Close ×</span>
   </div>
 </div>
+
 <main>
-<section class="hero">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h1">
   <div class="hero-l">
     <div>
-      <div class="kicker"><span class="kicker-dot"></span>fabricmark.co.uk</div>
-      <h1>The honest guide to clothing brands</h1>
-      <p class="deck">We review clothing brands on quality, ethics, transparency and price &mdash; giving you the technical information the industry doesn&rsquo;t want you to have.</p>
+      <div class="kicker"><span class="kicker-rule"></span>fabricmark.co.uk</div>
+      <h1 id="hero-h1">The <em>honest</em> guide to clothing brands</h1>
+      <p class="deck">We review clothing brands on quality, ethics, transparency and price — giving you the technical information the industry doesn't want you to have.</p>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-n">240+</div><div class="stat-l">Brands reviewed</div></div>
-      <div class="stat"><div class="stat-n">12</div><div class="stat-l">Categories</div></div>
-      <div class="stat"><div class="stat-n">4</div><div class="stat-l">Score dimensions</div></div>
+    <div class="stats" role="list" aria-label="Site statistics">
+      <div class="stat" role="listitem"><div class="stat-n">100+</div><div class="stat-l">Brands reviewed</div></div>
+      <div class="stat" role="listitem"><div class="stat-n">8</div><div class="stat-l">Categories</div></div>
+      <div class="stat" role="listitem"><div class="stat-n">3</div><div class="stat-l">Score dimensions</div></div>
     </div>
   </div>
   <div class="hero-r">
-    <div class="srch-lbl"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5" cy="5" r="3.5"/><path d="M8 8l2 2" stroke-linecap="round"/></svg>Search &amp; filter brands</div>
-    <div class="srch-bar"><input type="text" id="hsrch" placeholder='Try "Zara", "wool coats" or "ethical denim"...' onkeydown="if(event.key==='Enter')doHeroSearch()"><button onclick="doHeroSearch()">Search brands</button></div>
+    <div class="srch-lbl">
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="5" cy="5" r="3.5"/><path d="M8 8l2 2" stroke-linecap="round"/></svg>
+      Search &amp; filter brands
+    </div>
+    <form role="search" onsubmit="event.preventDefault();doHeroSearch()">
+      <div class="srch-bar">
+        <input type="search" id="hsrch" placeholder='Try "Patagonia", "ethical denim" or "wool coats"...' aria-label="Search brands">
+        <button type="submit">Search brands</button>
+      </div>
+    </form>
     <div class="srch-sec">
       <div class="srch-sec-lbl">Category</div>
-      <div class="pills"><button class="pill on" onclick="setPill(this)">All</button><button class="pill" onclick="setPill(this)">Fast fashion</button><button class="pill" onclick="setPill(this)">Contemporary</button><button class="pill" onclick="setPill(this)">Premium</button><button class="pill" onclick="setPill(this)">Sustainable</button><button class="pill" onclick="setPill(this)">Luxury</button><button class="pill" onclick="setPill(this)">Sportswear</button></div>
+      <div class="pills" role="group" aria-label="Filter by category">
+        <button class="pill on" onclick="setPill(this)">All</button>
+        <button class="pill" onclick="setPill(this)">Fast fashion</button>
+        <button class="pill" onclick="setPill(this)">High street</button>
+        <button class="pill" onclick="setPill(this)">Premium</button>
+        <button class="pill" onclick="setPill(this)">Sustainable</button>
+        <button class="pill" onclick="setPill(this)">Luxury</button>
+        <button class="pill" onclick="setPill(this)">Sportswear</button>
+      </div>
     </div>
     <div class="srch-sec">
       <div class="srch-sec-lbl">Refine further</div>
       <div class="srch-grid">
-        <select><option value="">Fabric preference</option><option>Natural only</option><option>Mostly natural</option><option>Mixed fabrics</option><option>Mostly synthetic</option></select>
-        <select><option value="">Price range</option><option>&pound; &mdash; Budget</option><option>&pound;&pound; &mdash; Affordable</option><option>&pound;&pound;&pound; &mdash; Mid-range</option><option>&pound;&pound;&pound;&pound; &mdash; Premium</option><option>&pound;&pound;&pound;&pound;&pound; &mdash; Luxury</option></select>
-        <select><option value="">Ethics rating</option><option>5/5 &mdash; Exemplary</option><option>4/5 &mdash; Good</option><option>3/5 &mdash; Average</option><option>2/5 or below</option></select>
-        <select><option value="">Quality rating</option><option>5/5 &mdash; Exceptional</option><option>4/5 &mdash; Good</option><option>3/5 &mdash; Average</option><option>2/5 or below</option></select>
+        <select aria-label="Fabric preference"><option value="">Fabric preference</option><option>Natural only</option><option>Mostly natural</option><option>Mixed fabrics</option><option>Mostly synthetic</option></select>
+        <select aria-label="Price range"><option value="">Price range</option><option>£ — Budget</option><option>££ — Affordable</option><option>£££ — Mid-range</option><option>££££ — Premium</option><option>£££££ — Luxury</option></select>
+        <select aria-label="Ethics rating"><option value="">Ethics rating</option><option>5/5 — Exemplary</option><option>4/5 — Good</option><option>3/5 — Average</option><option>2/5 or below</option></select>
+        <select aria-label="Quality rating"><option value="">Quality rating</option><option>5/5 — Exceptional</option><option>4/5 — Good</option><option>3/5 — Average</option><option>2/5 or below</option></select>
       </div>
     </div>
   </div>
 </section>
-<section class="sec sec-alt">
-  <div class="sec-hd"><div><div class="sec-ey">Our methodology</div><h2 class="sec-ti">How we review clothing brands</h2></div><a href="how-we-review.html" class="sec-more">Full methodology &rarr;</a></div>
+
+<!-- HOW WE REVIEW -->
+<section class="sec sec-alt" aria-labelledby="review-hd">
+  <div class="sec-hd">
+    <div>
+      <div class="sec-ey">Our methodology</div>
+      <h2 class="sec-ti" id="review-hd">How we review clothing brands</h2>
+    </div>
+    <a href="how-we-review.html" class="sec-more">Full methodology →</a>
+  </div>
   <div class="proc-row">
-    <div class="proc"><div class="proc-n">01</div><div class="proc-t">Quality</div><p class="proc-d">Fabric composition, construction quality, stitching and longevity. What garments are actually made from &mdash; not what the marketing claims.</p><span class="proc-b">Scored 1&ndash;5</span></div>
-    <div class="proc"><div class="proc-n">02</div><div class="proc-t">Ethics</div><p class="proc-d">Labour rights, environmental practices, chemical use, textile waste and diversity across the full supply chain and manufacturing base.</p><span class="proc-b">Scored 1&ndash;5</span></div>
-    <div class="proc"><div class="proc-n">03</div><div class="proc-t">Transparency</div><p class="proc-d">How openly a brand publishes supplier data, fabric compositions and sustainability progress. Opacity scores lower &mdash; it is that simple.</p><span class="proc-b">Scored 1&ndash;5</span></div>
-    <div class="proc"><div class="proc-n">04</div><div class="proc-t">Price</div><p class="proc-d">We benchmark pricing across the full range and assess whether cost genuinely reflects the quality of materials and construction.</p><span class="proc-b">&pound; to &pound;&pound;&pound;&pound;&pound;</span></div>
+    <article class="proc">
+      <div class="proc-n">01</div>
+      <h3 class="proc-t">Quality</h3>
+      <p class="proc-d">Fabric composition, construction quality, stitching and longevity. What garments are actually made from — not what the marketing claims.</p>
+      <span class="proc-b">Scored 1–5</span>
+    </article>
+    <article class="proc">
+      <div class="proc-n">02</div>
+      <h3 class="proc-t">Ethics</h3>
+      <p class="proc-d">Labour rights, environmental practices, chemical use, textile waste and diversity across the full supply chain and manufacturing base.</p>
+      <span class="proc-b">Scored 1–5</span>
+    </article>
+    <article class="proc">
+      <div class="proc-n">03</div>
+      <h3 class="proc-t">Transparency</h3>
+      <p class="proc-d">How openly a brand publishes supplier data, fabric compositions and sustainability progress. Opacity scores lower — it is that simple.</p>
+      <span class="proc-b">Scored 1–5</span>
+    </article>
+    <article class="proc">
+      <div class="proc-n">04</div>
+      <h3 class="proc-t">Price</h3>
+      <p class="proc-d">We benchmark pricing across the full range and assess whether cost genuinely reflects the quality of materials and construction.</p>
+      <span class="proc-b">£ to £££££</span>
+    </article>
   </div>
 </section>
-<section class="sec">
-  <div class="sec-hd"><div><div class="sec-ey">Reviews</div><h2 class="sec-ti">Latest brand reviews</h2></div><a href="brands.html" class="sec-more">View all brands &rarr;</a></div>
+
+<!-- LATEST REVIEWS -->
+<section class="sec" aria-labelledby="reviews-hd">
+  <div class="sec-hd">
+    <div>
+      <div class="sec-ey">Reviews</div>
+      <h2 class="sec-ti" id="reviews-hd">Latest brand reviews</h2>
+    </div>
+    <a href="brands.html" class="sec-more">View all 100+ brands →</a>
+  </div>
   <div class="brand-grid">
-    <a href="brands/zara.html" class="bcard"><div class="bc-top bc-t1"></div><div class="bc-body"><div class="bc-meta"><span class="bc-tag">Fast fashion</span><span class="bc-dt">Apr 2026</span></div><div class="bc-nm">Zara</div><div class="bc-sub">Inditex Group &middot; Spain</div><div class="bc-scores"><div><div class="bcs-l">Quality</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Ethics</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Transp.</div><div class="bcs-v">4/5</div></div><div><div class="bcs-l">Price</div><div class="bcs-v">&pound;&pound;&pound;</div></div></div><span class="bc-lnk">Read full review &rarr;</span></div></a>
-    <a href="brands/arket.html" class="bcard"><div class="bc-top bc-t2"></div><div class="bc-body"><div class="bc-meta"><span class="bc-tag">Contemporary</span><span class="bc-dt">Apr 2026</span></div><div class="bc-nm">Arket</div><div class="bc-sub">H&amp;M Group &middot; Sweden</div><div class="bc-scores"><div><div class="bcs-l">Quality</div><div class="bcs-v">4/5</div></div><div><div class="bcs-l">Ethics</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Transp.</div><div class="bcs-v">4/5</div></div><div><div class="bcs-l">Price</div><div class="bcs-v">&pound;&pound;&pound;&pound;</div></div></div><span class="bc-lnk">Read full review &rarr;</span></div></a>
-    <a href="brands/hm.html" class="bcard"><div class="bc-top bc-t3"></div><div class="bc-body"><div class="bc-meta"><span class="bc-tag">Fast fashion</span><span class="bc-dt">Mar 2026</span></div><div class="bc-nm">H&amp;M</div><div class="bc-sub">H&amp;M Group &middot; Sweden</div><div class="bc-scores"><div><div class="bcs-l">Quality</div><div class="bcs-v">2/5</div></div><div><div class="bcs-l">Ethics</div><div class="bcs-v">2/5</div></div><div><div class="bcs-l">Transp.</div><div class="bcs-v">3/5</div></div><div><div class="bcs-l">Price</div><div class="bcs-v">&pound;&pound;</div></div></div><span class="bc-lnk">Read full review &rarr;</span></div></a>
+    <a href="brands/zara" class="bcard" aria-label="Zara — Fast fashion brand review">
+      <div class="bc-top bc-t1"></div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-tag">Fast fashion</span><span class="bc-dt">Apr 2026</span></div>
+        <div class="bc-nm">Zara</div>
+        <div class="bc-sub">Inditex Group · Spain</div>
+        <div class="bc-scores">
+          <div><div class="bcs-l">Quality</div><div class="bcs-v">3/5</div></div>
+          <div><div class="bcs-l">Ethics</div><div class="bcs-v">2/5</div></div>
+          <div><div class="bcs-l">Transp.</div><div class="bcs-v">3/5</div></div>
+          <div><div class="bcs-l">Price</div><div class="bcs-v">£££</div></div>
+        </div>
+        <span class="bc-lnk">Read full review →</span>
+      </div>
+    </a>
+    <a href="brands/patagonia" class="bcard" aria-label="Patagonia — Sustainable brand review">
+      <div class="bc-top bc-t2"></div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-tag">Sustainable</span><span class="bc-dt">Apr 2026</span></div>
+        <div class="bc-nm">Patagonia</div>
+        <div class="bc-sub">Patagonia Inc. · USA</div>
+        <div class="bc-scores">
+          <div><div class="bcs-l">Quality</div><div class="bcs-v">5/5</div></div>
+          <div><div class="bcs-l">Ethics</div><div class="bcs-v">5/5</div></div>
+          <div><div class="bcs-l">Transp.</div><div class="bcs-v">5/5</div></div>
+          <div><div class="bcs-l">Price</div><div class="bcs-v">££££</div></div>
+        </div>
+        <span class="bc-lnk">Read full review →</span>
+      </div>
+    </a>
+    <a href="brands/arket" class="bcard" aria-label="Arket — Premium high street brand review">
+      <div class="bc-top bc-t3"></div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-tag">Premium</span><span class="bc-dt">Apr 2026</span></div>
+        <div class="bc-nm">Arket</div>
+        <div class="bc-sub">H&amp;M Group · Sweden</div>
+        <div class="bc-scores">
+          <div><div class="bcs-l">Quality</div><div class="bcs-v">4/5</div></div>
+          <div><div class="bcs-l">Ethics</div><div class="bcs-v">3/5</div></div>
+          <div><div class="bcs-l">Transp.</div><div class="bcs-v">4/5</div></div>
+          <div><div class="bcs-l">Price</div><div class="bcs-v">££££</div></div>
+        </div>
+        <span class="bc-lnk">Read full review →</span>
+      </div>
+    </a>
   </div>
 </section>
-<section class="sec sec-blue">
+
+<!-- GUIDES + SIDEBAR -->
+<section class="sec sec-blue" aria-labelledby="guides-hd">
   <div class="guide-wrap">
     <div>
-      <div class="sec-hd"><div><div class="sec-ey">Guides</div><h2 class="sec-ti">Clothing guides</h2></div><a href="guides.html" class="sec-more">All guides &rarr;</a></div>
+      <div class="sec-hd">
+        <div>
+          <div class="sec-ey">Guides</div>
+          <h2 class="sec-ti" id="guides-hd">Clothing guides</h2>
+        </div>
+        <a href="guides.html" class="sec-more">All guides →</a>
+      </div>
       <div class="guide-grid">
-        <a href="guides/how-to-read-a-clothing-label.html" class="gcard"><span class="gc-tag">Fabrics</span><div class="gc-ti">How to read a clothing label</div><p class="gc-de">What fabric content percentages actually mean, and what to look for before you buy.</p></a>
-        <a href="guides/natural-vs-synthetic-fibres.html" class="gcard"><span class="gc-tag">Fabrics</span><div class="gc-ti">Natural vs synthetic fibres</div><p class="gc-de">The real difference between cotton, polyester, viscose, lyocell and everything in between.</p></a>
-        <a href="guides/what-is-fast-fashion.html" class="gcard"><span class="gc-tag">Sustainability</span><div class="gc-ti">What is fast fashion?</div><p class="gc-de">The environmental and human cost of the fast fashion model &mdash; without the greenwashing.</p></a>
-        <a href="guides/shopping-sustainably-on-a-budget.html" class="gcard"><span class="gc-tag">Buying</span><div class="gc-ti">Shopping sustainably on a budget</div><p class="gc-de">How to find better quality clothing without spending more than you need to.</p></a>
+        <a href="guides/how-to-read-a-clothing-label.html" class="gcard">
+          <span class="gc-tag">Fabrics</span>
+          <div class="gc-ti">How to read a clothing label</div>
+          <p class="gc-de">What fabric content percentages actually mean, and what to look for before you buy.</p>
+        </a>
+        <a href="guides/natural-vs-synthetic-fibres.html" class="gcard">
+          <span class="gc-tag">Fabrics</span>
+          <div class="gc-ti">Natural vs synthetic fibres</div>
+          <p class="gc-de">The real difference between cotton, polyester, viscose, lyocell and everything in between.</p>
+        </a>
+        <a href="guides/what-is-fast-fashion.html" class="gcard">
+          <span class="gc-tag">Sustainability</span>
+          <div class="gc-ti">What is fast fashion?</div>
+          <p class="gc-de">The environmental and human cost of the fast fashion model — without the greenwashing.</p>
+        </a>
+        <a href="guides/shopping-sustainably-on-a-budget.html" class="gcard">
+          <span class="gc-tag">Buying</span>
+          <div class="gc-ti">Shopping sustainably on a budget</div>
+          <p class="gc-de">How to find better quality clothing without spending more than you need to.</p>
+        </a>
       </div>
     </div>
-    <div class="sidebar">
-      <div class="sb-pad"><div class="sb-ti">Find your perfect fit</div><p class="sb-de">Tell us your budget, fabric preferences and ethical priorities. We will match you to brands that genuinely suit your needs.</p><a href="find-your-fit.html" class="sb-btn">Start matching</a></div>
-      <div class="sb-lks">
-        <a href="brands.html" class="sb-lk"><span>Browse all brands</span><span>&rarr;</span></a>
-        <a href="brands/category/fast-fashion.html" class="sb-lk"><span>Browse by category</span><span>&rarr;</span></a>
-        <a href="guides/natural-vs-synthetic-fibres.html" class="sb-lk"><span>Browse by fabric type</span><span>&rarr;</span></a>
-        <a href="brands/category/sustainable.html" class="sb-lk"><span>Sustainable brands</span><span>&rarr;</span></a>
-        <a href="brands/best-value.html" class="sb-lk"><span>Best value brands</span><span>&rarr;</span></a>
+    <aside class="sidebar" aria-label="Quick links">
+      <div class="sb-pad">
+        <div class="sb-ti">Find your perfect fit</div>
+        <p class="sb-de">Tell us your budget, fabric preferences and ethical priorities. We'll match you to brands that genuinely suit your needs.</p>
+        <a href="find-your-fit.html" class="sb-btn">Start matching</a>
+      </div>
+      <nav class="sb-lks" aria-label="Browse by">
+        <a href="brands.html" class="sb-lk"><span>Browse all brands</span><span>→</span></a>
+        <a href="brands.html?category=fast-fashion" class="sb-lk"><span>Browse by category</span><span>→</span></a>
+        <a href="guides/natural-vs-synthetic-fibres.html" class="sb-lk"><span>Browse by fabric type</span><span>→</span></a>
+        <a href="brands.html?category=sustainable" class="sb-lk"><span>Sustainable brands</span><span>→</span></a>
+        <a href="brands.html?sort=value" class="sb-lk"><span>Best value brands</span><span>→</span></a>
+      </nav>
+    </aside>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission-strip" aria-labelledby="mission-hd">
+  <div class="mission-inner">
+    <div>
+      <div class="mission-ey">Why FabricMark exists</div>
+      <h2 class="mission-ti" id="mission-hd">Clothes should come with honest answers</h2>
+      <p class="mission-de">The fashion industry thrives on opacity. We exist to change that — publishing independent assessments of fabric quality, ethical practices and supply-chain transparency so that you can buy with your eyes open. All profits after operating costs go to charities supporting fast fashion workers and animals.</p>
+    </div>
+    <div class="mission-vals" role="list" aria-label="Our values">
+      <div class="mval" role="listitem">
+        <div class="mval-n">01</div>
+        <div><div class="mval-t">Independent</div><p class="mval-d">No brand sponsorship, no paid placements. Scores are ours alone.</p></div>
+      </div>
+      <div class="mval" role="listitem">
+        <div class="mval-n">02</div>
+        <div><div class="mval-t">Technical</div><p class="mval-d">We read fabric labels so you don't have to — composition, not claims.</p></div>
+      </div>
+      <div class="mval" role="listitem">
+        <div class="mval-n">03</div>
+        <div><div class="mval-t">Charitable</div><p class="mval-d">Profits go to fast fashion workers and animal rescue charities.</p></div>
       </div>
     </div>
   </div>
 </section>
-<div class="app-strip">
-  <div><div class="app-ey">FabricMark on mobile</div><div class="app-ti">Research brands in-store, on the go</div><p class="app-de">Check what a brand&rsquo;s clothes are actually made of before you buy. Compare alternatives and find better options &mdash; all from your phone.</p></div>
-  <div class="app-btns">
-    <a href="#" class="app-btn"><svg width="22" height="22" viewBox="0 0 22 22" fill="white" opacity=".7"><path d="M16 11.5c0-2.4 2-3.6 2.1-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.9.9-3.6.9-.8 0-1.9-.8-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8 1.4 0 1.8.8 3 .8 1.3 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.8z"/><path d="M13.5 5c.7-.8 1.1-1.9 1-3-.9.1-2 .7-2.7 1.4-.6.6-1.1 1.6-1 2.6 1 .1 2.1-.5 2.7-1z"/></svg><div><span class="app-bl">Download on the</span><span class="app-bn">App Store</span></div></a>
-    <a href="#" class="app-btn"><svg width="22" height="22" viewBox="0 0 22 22" fill="white" opacity=".7"><path d="M4 3.5l9 7.5-9 7.5V3.5z" opacity=".4"/><path d="M4 3.5l7 2-2.5 2.8L4 3.5z" opacity=".7"/><path d="M4 18.5l7-2-2.5-2.8L4 18.5z" opacity=".7"/><path d="M11 5.5l6.5 5.5-6.5 5.5 2.5-5.5-2.5-5.5z" opacity=".55"/></svg><div><span class="app-bl">Get it on</span><span class="app-bn">Google Play</span></div></a>
-  </div>
-</div>
+
 </main>
-<footer class="footer">
+
+<footer class="footer" role="contentinfo">
   <div class="ft-main">
     <div class="ft-grid">
-      <div><a href="index.html" class="ft-logo"><span class="ft-lf">Fabric</span><span class="ft-lm">Mark</span></a><p class="ft-tag">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p></div>
+      <div>
+        <a href="/" class="ft-logo" aria-label="FabricMark home">
+          <span class="ft-lf">Fabric</span><span class="ft-lm">Mark</span>
+        </a>
+        <p class="ft-tag">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p>
+      </div>
       <div class="ft-cols">
-        <div><div class="ft-col-ti">Brands</div><a href="brands/category/fast-fashion.html">Fast fashion</a><a href="brands/category/contemporary.html">Contemporary</a><a href="brands/category/premium.html">Premium</a><a href="brands/category/luxury.html">Luxury</a><a href="brands/category/sustainable.html">Sustainable</a><a href="brands/category/sportswear.html">Sportswear</a></div>
-        <div><div class="ft-col-ti">Guides</div><a href="guides/natural-vs-synthetic-fibres.html">Fabric types explained</a><a href="guides/how-to-read-a-clothing-label.html">Reading clothing labels</a><a href="guides/what-is-fast-fashion.html">Ethical fashion</a><a href="guides.html">All guides</a></div>
-        <div><div class="ft-col-ti">FabricMark</div><a href="about.html">About us</a><a href="how-we-review.html">How we review</a><a href="submit-a-brand.html">Submit a brand</a><a href="advertise.html">Advertise</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy policy</a></div>
+        <div>
+          <div class="ft-col-ti">Brands</div>
+          <a href="brands.html?category=fast-fashion">Fast fashion</a>
+          <a href="brands.html?category=high-street">High street</a>
+          <a href="brands.html?category=premium">Premium</a>
+          <a href="brands.html?category=luxury">Luxury</a>
+          <a href="brands.html?category=sustainable">Sustainable</a>
+          <a href="brands.html?category=sportswear">Sportswear</a>
+        </div>
+        <div>
+          <div class="ft-col-ti">Guides</div>
+          <a href="guides/natural-vs-synthetic-fibres.html">Fabric types explained</a>
+          <a href="guides/how-to-read-a-clothing-label.html">Reading clothing labels</a>
+          <a href="guides/what-is-fast-fashion.html">Ethical fashion</a>
+          <a href="guides.html">All guides</a>
+        </div>
+        <div>
+          <div class="ft-col-ti">FabricMark</div>
+          <a href="about.html">About us</a>
+          <a href="how-we-review.html">How we review</a>
+          <a href="advertise.html">Advertise</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy policy</a>
+        </div>
       </div>
     </div>
-    <div class="ft-btm"><div class="ft-copy">&copy; 2026 FabricMark &middot; fabricmark.co.uk &middot; All rights reserved</div><div class="ft-social"><a href="https://instagram.com/fabricmark" rel="noopener">Instagram</a><a href="https://x.com/fabricmark" rel="noopener">X</a><a href="https://pinterest.com/fabricmark" rel="noopener">Pinterest</a><a href="https://facebook.com/fabricmark" rel="noopener">Facebook</a></div></div>
+    <div class="ft-btm">
+      <div class="ft-copy">© 2026 FabricMark · fabricmark.co.uk · All rights reserved</div>
+      <div class="ft-social">
+        <a href="https://instagram.com/fabricmark" rel="noopener noreferrer">Instagram</a>
+        <a href="https://x.com/fabricmark" rel="noopener noreferrer">X / Twitter</a>
+        <a href="https://pinterest.com/fabricmark" rel="noopener noreferrer">Pinterest</a>
+        <a href="https://facebook.com/fabricmark" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
   </div>
 </footer>
+
 <script>
-(function(){var s=localStorage.getItem('fm-theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');setDark();}})();
+(function(){
+  var s=localStorage.getItem('fm-theme');
+  if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
+    document.documentElement.setAttribute('data-theme','dark');
+    setDark();
+  }
+})();
 function setDark(){var i=document.getElementById('thico');if(i)i.innerHTML='<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';}
 function setLight(){var i=document.getElementById('thico');if(i)i.innerHTML='<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';}
-function toggleTheme(){var d=document.documentElement.getAttribute('data-theme')==='dark';if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fm-theme','light');setLight();}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fm-theme','dark');setDark();}}
+function toggleTheme(){
+  var d=document.documentElement.getAttribute('data-theme')==='dark';
+  if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fm-theme','light');setLight();}
+  else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fm-theme','dark');setDark();}
+}
 function openSearch(){document.getElementById('sov').classList.add('open');setTimeout(function(){document.getElementById('sinput').focus();},50);}
 function closeSov(){document.getElementById('sov').classList.remove('open');}
 function doSearch(){var q=document.getElementById('sinput').value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
