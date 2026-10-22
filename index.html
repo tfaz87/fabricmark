@@ -630,7 +630,7 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 function toggleTheme(){
   var d=document.documentElement.getAttribute('data-theme')==='dark';
-  if(d){document.documentElement.removeAttribute('data-theme');localStorage.setItem('fm-theme','light');setLight();}
+  if(d){document.documentElement.setAttribute('data-theme','light');localStorage.setItem('fm-theme','light');setLight();}
   else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('fm-theme','dark');setDark();}
 }
 function openSearch(){document.getElementById('sov').classList.add('open');setTimeout(function(){document.getElementById('sinput').focus();},50);}
