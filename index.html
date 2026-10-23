@@ -52,9 +52,9 @@
       "url": "https://fabricmark.co.uk/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fabricmark.co.uk/og-home.jpg",
-        "width": 1200,
-        "height": 630
+        "url": "https://fabricmark.co.uk/img/logo.png",
+        "width": 400,
+        "height": 80
       },
       "sameAs": [
         "https://instagram.com/fabricmark",
@@ -71,9 +71,9 @@
       "name": "Latest brand reviews",
       "url": "https://fabricmark.co.uk/brands.html",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "url": "https://fabricmark.co.uk/brands/zara" },
-        { "@type": "ListItem", "position": 2, "url": "https://fabricmark.co.uk/brands/arket" },
-        { "@type": "ListItem", "position": 3, "url": "https://fabricmark.co.uk/brands/hm" }
+        { "@type": "ListItem", "position": 1, "url": "https://fabricmark.co.uk/brands/zara.html" },
+        { "@type": "ListItem", "position": 2, "url": "https://fabricmark.co.uk/brands/patagonia.html" },
+        { "@type": "ListItem", "position": 3, "url": "https://fabricmark.co.uk/brands/arket.html" }
       ]
     }
   ]
@@ -132,11 +132,13 @@ img{max-width:100%}
 .nav-links{display:flex;gap:28px}
 .nav-links a{font-family:var(--data);font-size:10.5px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.9px}
 .nav-links a:hover{color:var(--blue)}
-.nav-logo{display:flex;align-items:center;justify-content:center;padding:13px 32px;gap:0}
-.nl-f{font-family:var(--display);font-size:26px;font-weight:600;color:var(--charcoal);letter-spacing:-.2px;font-style:italic}
-.nl-m{font-family:var(--display);font-size:26px;font-weight:600;color:var(--blue);letter-spacing:-.2px;font-style:italic}
+.nav-logo{display:flex;align-items:center;justify-content:center;padding:10px 32px}
+.nav-logo img{height:32px;width:auto}
+/* dark mode: invert logo so it reads on dark bg */
+[data-theme=dark] .nav-logo img{filter:brightness(0) invert(1)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .nav-logo img{filter:brightness(0) invert(1)}}
 .nav-right{display:flex;justify-content:flex-end}
-.btn-cta{font-family:var(--data);font-size:10px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:2px;text-transform:uppercase;letter-spacing:.9px;border:none;cursor:pointer}
+.btn-cta{font-family:var(--data);font-size:10px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:2px;text-transform:uppercase;letter-spacing:.9px;border:none;cursor:pointer;display:inline-block}
 .btn-cta:hover{background:var(--blue-dk)}
 
 /* ── SEARCH OVERLAY ── */
@@ -151,14 +153,15 @@ img{max-width:100%}
 .sov-close{display:block;font-size:10px;color:var(--ink3);text-align:center;padding:8px;cursor:pointer;border-top:1px solid var(--bd);font-family:var(--data);text-transform:uppercase;letter-spacing:.8px}
 
 /* ── HERO ── */
-.hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid var(--charcoal)}
+.hero{display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid var(--charcoal);min-height:360px}
 .hero-l{padding:60px 48px 52px;border-right:1px solid var(--bd);display:flex;flex-direction:column;justify-content:space-between;gap:36px}
-.hero-r{padding:52px 48px;background:var(--bg2)}
+.hero-r{position:relative;background:var(--bg2);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;padding:40px 44px}
+.hero-img{position:absolute;bottom:0;right:0;width:55%;max-width:320px;pointer-events:none;user-select:none}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--data);font-size:9.5px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
 .kicker-rule{width:28px;height:1px;background:var(--blue)}
 h1{font-family:var(--display);font-size:56px;font-weight:500;color:var(--ink);line-height:1.05;letter-spacing:-.5px;margin-bottom:20px;text-wrap:balance}
 h1 em{font-style:italic;color:var(--blue)}
-.deck{font-family:var(--ui);font-size:16.5px;color:var(--ink2);line-height:1.8;font-weight:300;max-width:420px}
+.deck{font-family:var(--ui);font-size:16px;color:var(--ink2);line-height:1.8;font-weight:300;max-width:420px}
 .stats{display:flex;gap:0;padding-top:24px;border-top:1px solid var(--bd)}
 .stat{flex:1;padding-right:20px;border-right:1px solid var(--bd);margin-right:20px}
 .stat:last-child{border-right:none;margin-right:0;padding-right:0}
@@ -261,9 +264,9 @@ select:focus{border-color:var(--blue)}
 .footer{background:var(--charcoal)}
 .ft-main{padding:52px 48px 0}
 .ft-grid{display:grid;grid-template-columns:240px 1fr;gap:52px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
-.ft-logo{display:flex;align-items:baseline;margin-bottom:12px;gap:0}
-.ft-lf{font-family:var(--display);font-size:22px;font-weight:600;color:rgba(255,255,255,.8);font-style:italic}
-.ft-lm{font-family:var(--display);font-size:22px;font-weight:600;color:var(--blue);font-style:italic}
+.ft-logo{display:block;margin-bottom:12px}
+.ft-logo img{height:28px;width:auto;filter:brightness(0) invert(1);opacity:.7}
+.ft-logo:hover img{opacity:1}
 .ft-tag{font-family:var(--ui);font-size:13px;color:rgba(255,255,255,.27);line-height:1.85;font-weight:300}
 .ft-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .ft-col-ti{font-family:var(--data);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1.8px;color:rgba(255,255,255,.2);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -278,10 +281,11 @@ select:focus{border-color:var(--blue)}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .nav-top,.nav-mid,.sec,.ft-main,.mission-strip{padding-left:24px;padding-right:24px}
-  .nav-logo{padding:13px 16px}
+  .nav-logo{padding:10px 16px}
   .hero{grid-template-columns:1fr}
   .hero-l{padding:44px 24px;border-right:none;border-bottom:1px solid var(--bd)}
-  .hero-r{padding:40px 24px}
+  .hero-r{padding:40px 24px;min-height:280px}
+  .hero-img{width:45%;max-width:220px}
   h1{font-size:44px}
   .proc-row{grid-template-columns:1fr 1fr}
   .proc:nth-child(2){border-right:none}
@@ -313,9 +317,9 @@ select:focus{border-color:var(--blue)}
 <nav class="nav" aria-label="Main navigation">
   <div class="nav-top">
     <div class="nav-top-left">
-      <a href="about.html">About</a>
-      <a href="how-we-review.html">How we review</a>
-      <a href="advertise.html">Advertise</a>
+      <a href="/about.html">About</a>
+      <a href="/how-we-review.html">How we review</a>
+      <a href="/advertise.html">Advertise</a>
     </div>
     <div class="nav-top-right">
       <button class="ibtn" onclick="openSearch()" aria-label="Search brands">
@@ -328,14 +332,14 @@ select:focus{border-color:var(--blue)}
   </div>
   <div class="nav-mid">
     <nav class="nav-links" aria-label="Site sections">
-      <a href="brands.html">Brand reviews</a>
-      <a href="guides.html">Clothing guides</a>
-      <a href="find-your-fit.html">Find your fit</a>
+      <a href="/brands.html">Brand reviews</a>
+      <a href="/guides.html">Clothing guides</a>
+      <a href="/find-your-fit.html">Find your fit</a>
     </nav>
     <a href="/" class="nav-logo" aria-label="FabricMark home">
-      <span class="nl-f">Fabric</span><span class="nl-m">Mark</span>
+      <img src="/img/logo.png" alt="FabricMark" width="160" height="32">
     </a>
-    <div class="nav-right"><a href="signup.html" class="btn-cta">Sign up</a></div>
+    <div class="nav-right"><a href="/signup.html" class="btn-cta">Sign up</a></div>
   </div>
 </nav>
 
@@ -361,8 +365,8 @@ select:focus{border-color:var(--blue)}
     </div>
     <div class="stats" role="list" aria-label="Site statistics">
       <div class="stat" role="listitem"><div class="stat-n">100+</div><div class="stat-l">Brands reviewed</div></div>
+      <div class="stat" role="listitem"><div class="stat-n">4</div><div class="stat-l">Score dimensions</div></div>
       <div class="stat" role="listitem"><div class="stat-n">8</div><div class="stat-l">Categories</div></div>
-      <div class="stat" role="listitem"><div class="stat-n">3</div><div class="stat-l">Score dimensions</div></div>
     </div>
   </div>
   <div class="hero-r">
@@ -397,6 +401,7 @@ select:focus{border-color:var(--blue)}
         <select aria-label="Quality rating"><option value="">Quality rating</option><option>5/5 — Exceptional</option><option>4/5 — Good</option><option>3/5 — Average</option><option>2/5 or below</option></select>
       </div>
     </div>
+    <img src="/img/hero-thread.jpg" alt="" class="hero-img" aria-hidden="true">
   </div>
 </section>
 
@@ -407,7 +412,7 @@ select:focus{border-color:var(--blue)}
       <div class="sec-ey">Our methodology</div>
       <h2 class="sec-ti" id="review-hd">How we review clothing brands</h2>
     </div>
-    <a href="how-we-review.html" class="sec-more">Full methodology →</a>
+    <a href="/how-we-review.html" class="sec-more">Full methodology →</a>
   </div>
   <div class="proc-row">
     <article class="proc">
@@ -444,10 +449,10 @@ select:focus{border-color:var(--blue)}
       <div class="sec-ey">Reviews</div>
       <h2 class="sec-ti" id="reviews-hd">Latest brand reviews</h2>
     </div>
-    <a href="brands.html" class="sec-more">View all 100+ brands →</a>
+    <a href="/brands.html" class="sec-more">View all 100+ brands →</a>
   </div>
   <div class="brand-grid">
-    <a href="brands/zara" class="bcard" aria-label="Zara — Fast fashion brand review">
+    <a href="/brands/zara.html" class="bcard" aria-label="Zara — Fast fashion brand review">
       <div class="bc-top bc-t1"></div>
       <div class="bc-body">
         <div class="bc-meta"><span class="bc-tag">Fast fashion</span><span class="bc-dt">Apr 2026</span></div>
@@ -462,7 +467,7 @@ select:focus{border-color:var(--blue)}
         <span class="bc-lnk">Read full review →</span>
       </div>
     </a>
-    <a href="brands/patagonia" class="bcard" aria-label="Patagonia — Sustainable brand review">
+    <a href="/brands/patagonia.html" class="bcard" aria-label="Patagonia — Sustainable brand review">
       <div class="bc-top bc-t2"></div>
       <div class="bc-body">
         <div class="bc-meta"><span class="bc-tag">Sustainable</span><span class="bc-dt">Apr 2026</span></div>
@@ -477,7 +482,7 @@ select:focus{border-color:var(--blue)}
         <span class="bc-lnk">Read full review →</span>
       </div>
     </a>
-    <a href="brands/arket" class="bcard" aria-label="Arket — Premium high street brand review">
+    <a href="/brands/arket.html" class="bcard" aria-label="Arket — Premium high street brand review">
       <div class="bc-top bc-t3"></div>
       <div class="bc-body">
         <div class="bc-meta"><span class="bc-tag">Premium</span><span class="bc-dt">Apr 2026</span></div>
@@ -504,25 +509,25 @@ select:focus{border-color:var(--blue)}
           <div class="sec-ey">Guides</div>
           <h2 class="sec-ti" id="guides-hd">Clothing guides</h2>
         </div>
-        <a href="guides.html" class="sec-more">All guides →</a>
+        <a href="/guides.html" class="sec-more">All guides →</a>
       </div>
       <div class="guide-grid">
-        <a href="guides/how-to-read-a-clothing-label.html" class="gcard">
+        <a href="/guides/how-to-read-a-clothing-label.html" class="gcard">
           <span class="gc-tag">Fabrics</span>
           <div class="gc-ti">How to read a clothing label</div>
           <p class="gc-de">What fabric content percentages actually mean, and what to look for before you buy.</p>
         </a>
-        <a href="guides/natural-vs-synthetic-fibres.html" class="gcard">
+        <a href="/guides/natural-vs-synthetic-fibres.html" class="gcard">
           <span class="gc-tag">Fabrics</span>
           <div class="gc-ti">Natural vs synthetic fibres</div>
           <p class="gc-de">The real difference between cotton, polyester, viscose, lyocell and everything in between.</p>
         </a>
-        <a href="guides/what-is-fast-fashion.html" class="gcard">
+        <a href="/guides/what-is-fast-fashion.html" class="gcard">
           <span class="gc-tag">Sustainability</span>
           <div class="gc-ti">What is fast fashion?</div>
           <p class="gc-de">The environmental and human cost of the fast fashion model — without the greenwashing.</p>
         </a>
-        <a href="guides/shopping-sustainably-on-a-budget.html" class="gcard">
+        <a href="/guides/shopping-sustainably-on-a-budget.html" class="gcard">
           <span class="gc-tag">Buying</span>
           <div class="gc-ti">Shopping sustainably on a budget</div>
           <p class="gc-de">How to find better quality clothing without spending more than you need to.</p>
@@ -533,14 +538,14 @@ select:focus{border-color:var(--blue)}
       <div class="sb-pad">
         <div class="sb-ti">Find your perfect fit</div>
         <p class="sb-de">Tell us your budget, fabric preferences and ethical priorities. We'll match you to brands that genuinely suit your needs.</p>
-        <a href="find-your-fit.html" class="sb-btn">Start matching</a>
+        <a href="/find-your-fit.html" class="sb-btn">Start matching</a>
       </div>
       <nav class="sb-lks" aria-label="Browse by">
-        <a href="brands.html" class="sb-lk"><span>Browse all brands</span><span>→</span></a>
-        <a href="brands.html?category=fast-fashion" class="sb-lk"><span>Browse by category</span><span>→</span></a>
-        <a href="guides/natural-vs-synthetic-fibres.html" class="sb-lk"><span>Browse by fabric type</span><span>→</span></a>
-        <a href="brands.html?category=sustainable" class="sb-lk"><span>Sustainable brands</span><span>→</span></a>
-        <a href="brands.html?sort=value" class="sb-lk"><span>Best value brands</span><span>→</span></a>
+        <a href="/brands.html" class="sb-lk"><span>Browse all brands</span><span>→</span></a>
+        <a href="/brands.html?category=fast-fashion" class="sb-lk"><span>Browse by category</span><span>→</span></a>
+        <a href="/guides/natural-vs-synthetic-fibres.html" class="sb-lk"><span>Browse by fabric type</span><span>→</span></a>
+        <a href="/brands.html?category=sustainable" class="sb-lk"><span>Sustainable brands</span><span>→</span></a>
+        <a href="/brands.html?sort=value" class="sb-lk"><span>Best value brands</span><span>→</span></a>
       </nav>
     </aside>
   </div>
@@ -578,34 +583,34 @@ select:focus{border-color:var(--blue)}
     <div class="ft-grid">
       <div>
         <a href="/" class="ft-logo" aria-label="FabricMark home">
-          <span class="ft-lf">Fabric</span><span class="ft-lm">Mark</span>
+          <img src="/img/logo.png" alt="FabricMark" width="140" height="28">
         </a>
         <p class="ft-tag">Where clothing brands get reviewed, technically. Independent, impartial, honest.</p>
       </div>
       <div class="ft-cols">
         <div>
           <div class="ft-col-ti">Brands</div>
-          <a href="brands.html?category=fast-fashion">Fast fashion</a>
-          <a href="brands.html?category=high-street">High street</a>
-          <a href="brands.html?category=premium">Premium</a>
-          <a href="brands.html?category=luxury">Luxury</a>
-          <a href="brands.html?category=sustainable">Sustainable</a>
-          <a href="brands.html?category=sportswear">Sportswear</a>
+          <a href="/brands.html?category=fast-fashion">Fast fashion</a>
+          <a href="/brands.html?category=high-street">High street</a>
+          <a href="/brands.html?category=premium">Premium</a>
+          <a href="/brands.html?category=luxury">Luxury</a>
+          <a href="/brands.html?category=sustainable">Sustainable</a>
+          <a href="/brands.html?category=sportswear">Sportswear</a>
         </div>
         <div>
           <div class="ft-col-ti">Guides</div>
-          <a href="guides/natural-vs-synthetic-fibres.html">Fabric types explained</a>
-          <a href="guides/how-to-read-a-clothing-label.html">Reading clothing labels</a>
-          <a href="guides/what-is-fast-fashion.html">Ethical fashion</a>
-          <a href="guides.html">All guides</a>
+          <a href="/guides/natural-vs-synthetic-fibres.html">Fabric types explained</a>
+          <a href="/guides/how-to-read-a-clothing-label.html">Reading clothing labels</a>
+          <a href="/guides/what-is-fast-fashion.html">Ethical fashion</a>
+          <a href="/guides.html">All guides</a>
         </div>
         <div>
           <div class="ft-col-ti">FabricMark</div>
-          <a href="about.html">About us</a>
-          <a href="how-we-review.html">How we review</a>
-          <a href="advertise.html">Advertise</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="/about.html">About us</a>
+          <a href="/how-we-review.html">How we review</a>
+          <a href="/advertise.html">Advertise</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy-policy.html">Privacy policy</a>
         </div>
       </div>
     </div>
@@ -624,7 +629,6 @@ select:focus{border-color:var(--blue)}
 <script>
 function setDark(){var i=document.getElementById('thico');if(i)i.innerHTML='<path d="M9.5 6.5A3.5 3.5 0 1 1 5.5 3a2.7 2.7 0 0 0 4 3.5z" fill="currentColor" opacity=".8"/>';}
 function setLight(){var i=document.getElementById('thico');if(i)i.innerHTML='<circle cx="6" cy="6" r="2.5"/><path d="M6 1v.8M6 10.2V11M1 6h.8M10.2 6H11M2.3 2.3l.6.6M9.1 9.1l.6.6M9.1 2.3l-.6.6M3 9.1l-.6.6" stroke-linecap="round"/>';}
-// Sync icon to current theme after DOM ready (attribute already set in <head>)
 document.addEventListener('DOMContentLoaded',function(){
   if(document.documentElement.getAttribute('data-theme')==='dark')setDark();else setLight();
 });
@@ -635,8 +639,8 @@ function toggleTheme(){
 }
 function openSearch(){document.getElementById('sov').classList.add('open');setTimeout(function(){document.getElementById('sinput').focus();},50);}
 function closeSov(){document.getElementById('sov').classList.remove('open');}
-function doSearch(){var q=document.getElementById('sinput').value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
-function doHeroSearch(){var q=document.getElementById('hsrch').value.trim();if(q)window.location.href='search.html?q='+encodeURIComponent(q);}
+function doSearch(){var q=document.getElementById('sinput').value.trim();if(q)window.location.href='/search.html?q='+encodeURIComponent(q);}
+function doHeroSearch(){var q=document.getElementById('hsrch').value.trim();if(q)window.location.href='/search.html?q='+encodeURIComponent(q);}
 document.getElementById('sov').addEventListener('click',function(e){if(e.target===this)closeSov();});
 function setPill(el){document.querySelectorAll('.pill').forEach(function(p){p.classList.remove('on');});el.classList.add('on');}
 </script>
