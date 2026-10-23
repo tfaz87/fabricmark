@@ -81,7 +81,7 @@
 </script>
 
 <!-- Theme: set before paint to avoid flash -->
-<script>(function(){var s=localStorage.getItem('fm-theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<script>(function(){var s=localStorage.getItem('fm-theme');if(s==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.setAttribute('data-theme','light');}})();</script>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,13 +100,7 @@ html{scroll-behavior:smooth}
   --ui:'DM Sans',system-ui,sans-serif;
   --data:'Space Grotesk',system-ui,sans-serif;
 }
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
-  --bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;
-  --ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;
-  --bd:#252d3a;--bd2:#323d4e;--blue:#2e8fcc;--blue-dk:#1a72a8;
-  --charcoal:#e6eaf0;--navy:#2952c8;
-  color-scheme:dark;
-}}
+/* dark mode only when user has explicitly chosen it */
 :root[data-theme=dark]{
   --bg:#0d1117;--bg2:#161b22;--bg3:#1c2230;--bg-blue:#0a1e2e;--bg-navy:#0a1228;
   --ink:#e6eaf0;--ink2:#9aa3b2;--ink3:#5a6478;--ink4:#2a3040;
@@ -136,7 +130,6 @@ img{max-width:100%}
 .nav-logo img{height:32px;width:auto}
 /* dark mode: invert logo so it reads on dark bg */
 [data-theme=dark] .nav-logo img{filter:brightness(0) invert(1)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .nav-logo img{filter:brightness(0) invert(1)}}
 .nav-right{display:flex;justify-content:flex-end}
 .btn-cta{font-family:var(--data);font-size:10px;font-weight:600;padding:8px 22px;background:var(--blue);color:#fff;border-radius:2px;text-transform:uppercase;letter-spacing:.9px;border:none;cursor:pointer;display:inline-block}
 .btn-cta:hover{background:var(--blue-dk)}
@@ -249,7 +242,6 @@ select:focus{border-color:var(--blue)}
 /* ── MISSION STRIP ── */
 .mission-strip{background:var(--charcoal);padding:56px 48px;border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}
 [data-theme=dark] .mission-strip,[data-theme=dark] .footer{background:#080b10}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .mission-strip,:root:not([data-theme=light]) .footer{background:#080b10}}
 .mission-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:900px}
 .mission-ey{font-family:var(--data);font-size:9px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px}
 .mission-ti{font-family:var(--display);font-size:34px;font-weight:400;color:#fff;line-height:1.12;margin-bottom:16px;font-style:italic}
