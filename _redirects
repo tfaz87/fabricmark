@@ -5,11 +5,5 @@
 /guides    /guides.html    301
 /suppliers /suppliers/index.html    301
 
-# Clean URL redirects for brand pages (no .html extension)
-/brands/:slug    /brands/:slug.html    301
-
-# Clean URL redirects for guide pages
-/guides/:slug    /guides/:slug.html    301
-
 # Custom 404
 /*    /404.html    404
